@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cf1fbc90-9cec-46c7-8f93-33f56c724833"
+  name="DKD" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="14b61dd6-99c7-415e-97ba-5bb8645129a3">
+      <body>Hoe tekenen we de pionnen en de locaties van de barricades... (of beter gezegt, hoe updaten we de locaties in het grid?)</body>
+    </comment>
+    <comment
+      Id="6f60d39a-8844-4489-a430-c4564ac7db5a">
+      <body>Mijn gevoel zegt me dat we meer model klasses nodig hebben...
+voor dingen zoals:
+Fields[,] array
+Player start fields
+Player base fields
+Pawn locaties
+
+players met isHuman attribuut. 
+Momenteel staan pawn en player in controller, maar zijn dit niet meer models?
+Behalve dan dat pawn een complexe move() methode heeft?</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="669c2368-3ed5-42a2-8edf-f106e54b38d3">
+      <profileInstance
+        Id="49e84980-b6fb-418c-8a07-c721dca4283b"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="10ddc2d5-1c66-4f76-a75f-4705d322d9d9">
+      <profileInstance
+        Id="7241418c-bc99-4e40-85ed-6ed575261952"
+        name="TextTemplateBindings" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="223ca3ef-1a73-4da3-9e68-6c26bf316c58"
+        LastKnownName="Jeu_De_Barricade_Eindproject"
+        LastKnownLocation="Package_1544.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dc37b80c-80d4-4c36-b2e6-17a259ec7a78"
+        LastKnownName="System"
+        LastKnownLocation="Package1_1544.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b48c596c-bdb2-4448-893b-89b2df1729cf"
+        LastKnownName="View/Controller"
+        LastKnownLocation="Package_1545.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ba2bacd2-b4c8-4c9d-9419-cccd71be3b54"
+        LastKnownName="Controller"
+        LastKnownLocation="Package1_1545.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7aad24e8-0f98-4a6c-b86f-1106e6aa4c8e"
+        LastKnownName="Model"
+        LastKnownLocation="Package2_1545.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

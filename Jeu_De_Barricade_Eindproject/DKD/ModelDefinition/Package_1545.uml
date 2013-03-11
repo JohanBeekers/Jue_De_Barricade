@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b48c596c-bdb2-4448-893b-89b2df1729cf"
+  name="View/Controller" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="90a1d820-fb84-4766-a4aa-795c7e91bd93"
+        name="MainWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1e348704-4c10-4522-9483-dd3da4aa4a50"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="664ad306-1c6d-4d06-a9e0-c63e407682bf"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5919bc2-4c0c-4256-9a6a-347344d33e81">
+                <propertyInstance
+                  Id="01df5769-3022-4eb2-963d-37726eff828c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f48e8e6-5109-4c37-8c9f-f3aba114679b">
+                <propertyInstance
+                  Id="d62a148c-3924-43b4-bf2c-664420b0ec31"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5d487061-0fdc-462d-bba5-688354586c6e">
+                <propertyInstance
+                  Id="b158f778-515e-4622-b51b-cc09d66b1d91"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="30d13f6a-2b85-4b74-93a9-a7751d6c896f">
+                <propertyInstance
+                  Id="ec169c8e-bd0e-462d-a5d9-0522ad0135f2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1175e839-f375-4154-8522-5adab94b59fd">
+                <propertyInstance
+                  Id="55fe7e81-661b-472e-b0c2-2de6797be294"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="254b528e-ec1e-4c00-a05b-a81476e77913">
+            <interfaceMoniker
+              Id="e88164d8-95fe-4beb-8ae8-64c16301a0c9"
+              LastKnownName="IComponentConnector"
+              LastKnownLocation="Package3_1544.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="dcd0fcd3-f85e-467d-b76a-33a069276f14"
+            isSubstitutable="false">
+            <classMoniker
+              Id="e89ef87f-d60c-4cea-afa2-583324250bc3"
+              LastKnownName="Window"
+              LastKnownLocation="Package2_1544.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="826ba2e8-fcc2-45ba-acc4-5947dc228aae"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fd1ced84-d69e-4214-942d-0ca84ec3b405"
+              LastKnownName="Game"
+              LastKnownLocation="Package1_1545.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2f5fbe3a-9ac9-463a-954f-e26e22cf84e8"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="866289f3-65ea-42c8-b740-cc9379888eb0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="cef6f1fc-8d59-4e82-ae21-87a7be31c055"
+            name="_contentLoaded"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="8da638fe-ae20-4ae5-bea6-210065ce47f4"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow Member%3D_contentLoaded"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a72d7d3c-ec85-417f-9d47-aefc06f958c9"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc5fc9bc-b7a2-4571-bde7-7e1623f5dea7">
+                    <propertyInstance
+                      Id="af344d0f-0a6b-4ab9-8698-07770d20b3e9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1a198e8-2bee-4115-ac60-7f1e4575d109">
+                    <propertyInstance
+                      Id="28f7b2d9-244a-46e0-a741-c44ada73ff2f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d161a3a4-534b-4e31-bf3b-32d5b2c60839">
+                    <propertyInstance
+                      Id="a3ca2fc7-d533-482d-b5a5-8f8ac1588106"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78f693e1-0f01-4016-9b3b-798d20238265">
+                    <propertyInstance
+                      Id="867f8ec0-f90d-422a-b51c-2f9d5a505639"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="632bd570-98c1-433f-a775-53843011ac7b">
+                    <propertyInstance
+                      Id="734ed890-0bd2-4794-a153-09edf8bc629f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="DKD.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bae38005-8a05-4de9-bd9d-213b259c6580"
+            name="MainWindow"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ae12b84a-85b2-4e60-911d-504da0b5d784"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6ab2ee9a-2b30-412e-bbeb-f30d8e9b0430"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2e1decd-de66-4e34-9e11-a2956aecc3a4">
+                    <propertyInstance
+                      Id="a8442004-679a-4785-a500-ac8e360026e0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea3ab293-9763-4f7a-a623-c54a3dd902dc">
+                    <propertyInstance
+                      Id="c6ec4bbc-c2c9-434d-ae4f-b92a57e7e8f6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ebe099a-59a2-4307-a835-5cf85ee4ac13">
+                    <propertyInstance
+                      Id="196188ac-05a2-4723-9016-9f8556b403cd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc51835e-4b99-41cb-82f0-3e5f8e968b8e">
+                    <propertyInstance
+                      Id="646a0eaf-cc2d-41b3-9278-9f39c78d11ef"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="355aab76-6fb7-44f6-bfea-82eae3761eac">
+                    <propertyInstance
+                      Id="c862d65a-3cfd-4a19-99f6-f0c414b45e1a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e06cf95-3049-4aa1-8a51-12096cf417e5">
+                    <propertyInstance
+                      Id="acc377e4-b1e2-44d8-8b33-3d00f833c012"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="c3661956-3a46-47d5-a189-5c2aa26bbda0"
+            name="InitializeComponent"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5c243e76-b955-4f06-b514-23c5216c3339"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow Member%3DInitializeComponent"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="366b1108-54ee-4aaa-8805-8549516b52ef"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="917eb962-f0e5-4358-8619-efd08a1461eb">
+                    <propertyInstance
+                      Id="20c6b5d6-dad7-4c26-bf99-f74df3e812f8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5159db08-067d-4f7a-88ee-1230e20f9397">
+                    <propertyInstance
+                      Id="e2fa1bef-d05f-455d-a86b-8afb7bd0599c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e24946f5-5727-42fb-b3e7-b049078ad2f7">
+                    <propertyInstance
+                      Id="3d942f32-be51-492d-a903-c9fab9f35c37"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfd9a3ad-5715-4b93-b4d0-90c4e01c6ab2">
+                    <propertyInstance
+                      Id="3e17a218-4d44-4123-80c4-99615aa90469"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c692a304-667e-4e49-90a6-18d7550576af">
+                    <propertyInstance
+                      Id="0f61f6d9-3dcd-4022-9af0-56732ee6a15a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0880ed2-d668-4e2a-baff-c71bbe479ae3">
+                    <propertyInstance
+                      Id="3542fe78-5f90-430c-a233-e0405688769e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="ab247d15-094a-4dc9-ae00-cd28f7d7d6c3"
+            name="System‎.Windows‎.Markup‎.IComponentConnector‎.Connect"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bcf6cf55-3f20-451a-a467-036cf277b5c3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow Member%3D(Name%3DSystem.Windows.Markup.IComponentConnector.Connect OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="497ff768-ca75-45d3-a710-da7993d6d8d6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9243d1e2-e11e-432e-94d3-3637c80281fc">
+                    <propertyInstance
+                      Id="4bdf44dd-758a-4a37-a0aa-66b9d4a8642a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4d3e15d-0e37-421f-804e-d302a69cf207">
+                    <propertyInstance
+                      Id="783ea9d6-8955-440f-b0f6-139f6e55f7c0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2083365-3765-44ad-8ff8-cd0b415456ff">
+                    <propertyInstance
+                      Id="0634a036-68d9-4be2-967e-1e0e4e991049"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2dc576ad-277e-473a-bdd6-0faf07b5e157">
+                    <propertyInstance
+                      Id="5c908598-86ef-40cd-aec6-09128916d9e9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83ff7b0b-b7cd-45e3-97e8-54e9b8cb83cd">
+                    <propertyInstance
+                      Id="78d69f94-ea41-46eb-a21e-9ecb480e903d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3ccb47f-a8f1-45a7-ad7d-1fd111a30c22">
+                    <propertyInstance
+                      Id="6088b9cb-a001-49b5-9eaa-792d59d58ce7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8286dd37-86d1-4147-8534-6b664eec47b7"
+                  name="connectionId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="36c6c7ef-1357-44b1-8c92-29b9ef2e1afd"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow Member%3D(Name%3DSystem.Windows.Markup.IComponentConnector.Connect OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DconnectionId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="DKD.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="852b731d-476e-49fb-b306-0d3b74e8370c"
+                  name="target"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ef063f89-0313-4041-837a-06bf2c2e98f1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FEINDPROJECT%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow Member%3D(Name%3DSystem.Windows.Markup.IComponentConnector.Connect OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dtarget"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="db535361-83bf-4ff8-bdc6-b6bc75aa1aa5"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1544.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="15b51144-12a8-44c1-8321-bbb5f5221ab9"
+            name="mainMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8adf2c84-d2e9-4962-b9b7-59c541662a9f"
+        name="LevelFast"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f141b377-2162-43e1-b11e-2959681cc33e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bbd999a5-8a36-4310-af6f-d74d8822fc68"
+              LastKnownName="Level"
+              LastKnownLocation="Package_1545.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="2e5b4b61-6443-4aef-a847-4b15a858b2a8"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="28770477-b823-4bb8-b224-97b617ac70ae"
+              LastKnownName="Field"
+              LastKnownLocation="Package2_1545.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b2dbd38-79b1-43d1-ba6b-e5532cf269e2"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d5dd7cd3-a470-44c9-8afd-e8ed309b375b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="cb8e0556-51d4-4f21-b30c-fc682c228d75"
+                      name="Lower"
+                      value="76" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fd662e0f-c13a-4a2c-9426-8a5c37990d16"
+                      name="Upper"
+                      value="76" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6c4fdf28-ce33-4588-872c-a3e742648e93"
+        name="LevelSlow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="c3986c35-2c94-4e77-aec6-fe49ec52a83a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bbd999a5-8a36-4310-af6f-d74d8822fc68"
+              LastKnownName="Level"
+              LastKnownLocation="Package_1545.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="41e15790-b27a-475e-a373-30a4ea57a28f"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="28770477-b823-4bb8-b224-97b617ac70ae"
+              LastKnownName="Field"
+              LastKnownLocation="Package2_1545.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6db5320-6052-4d56-9b1e-223a91f4c9fb"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bcb3cf6b-2a50-4ff6-9fcf-086dd5a0fa34"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4ff1add0-0a49-4781-a580-e5538f0230f6"
+                      name="Lower"
+                      value="132" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="37189f88-69f7-4da2-8c5a-e4f767545778"
+                      name="Upper"
+                      value="132" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="2dbb0429-7cf6-4c09-952f-9e7666380d55"
+        name="File" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6a6645bc-af57-4571-aef7-e38ff693d75e"
+        name="Field[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bbd999a5-8a36-4310-af6f-d74d8822fc68"
+        name="Level"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e793937b-96c7-4040-b8cb-af24735feead"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5176df49-fc70-4bde-bb21-42ef93a0d38c"
+              LastKnownName="MapConverter"
+              LastKnownLocation="Package1_1545.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="705ad017-ce2e-4c5c-8c35-501bc4931948"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="596db453-62a2-478f-9dea-c309316e5a42"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0b420402-5879-4136-a3cf-eed43cc43f6e"
+            name="fields"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="799ecccb-4779-43c7-b307-de323c5535fd"
+                LastKnownName="Field[,]"
+                LastKnownLocation="Package_1545.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="661cc927-dc0e-4539-868f-bec7f0838c4f"
+            name="textMap"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b6a7e837-ecd1-43fb-b21e-1e8e86816101"
+                LastKnownName="String[]"
+                LastKnownLocation="Package2_1545.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7a33310e-4986-4ea9-9ce4-faad20ade2fb"
+            name="playerYellowStartFields"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b92fddc2-1864-4728-a861-8e7e95e94db3"
+                LastKnownName="startField[]"
+                LastKnownLocation="Package_1545.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e9f7391e-9921-4ca8-8238-63d90353b040"
+            name="playerGreenStartFields"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b92fddc2-1864-4728-a861-8e7e95e94db3"
+                LastKnownName="startField[]"
+                LastKnownLocation="Package_1545.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="101b239f-dd03-4437-b476-15cf40776455"
+            name="playerThreeStartFields"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b92fddc2-1864-4728-a861-8e7e95e94db3"
+                LastKnownName="startField[]"
+                LastKnownLocation="Package_1545.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="88d4fa99-0f28-47c4-a466-3d7382079664"
+            name="playerBlueStartFields"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="b92fddc2-1864-4728-a861-8e7e95e94db3"
+                LastKnownName="startField[]"
+                LastKnownLocation="Package_1545.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="58706ae4-fc71-4ec2-aad5-6c9fd6c31b3e"
+            name="drawFields"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d6441b97-688b-4f1e-ac09-6280928b6cbb"
+            name="initVariables"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="b92fddc2-1864-4728-a861-8e7e95e94db3"
+        name="startField[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="799ecccb-4779-43c7-b307-de323c5535fd"
+        name="Field[,]" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

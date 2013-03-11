@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -14,6 +16,7 @@ namespace Jeu_De_Barricade_Eindproject.View
     {
         protected Grid boardGrid;
         protected int pawnAmount;
+        protected static int CellSize = 32;
         protected int iMapWidth;
         protected int iMapHeight;
         protected Model.Field[] aPlayerRedStartFields, aPlayerGreenStartFields, aPlayerYellowStartFields, aPlayerBlueStartFields;
@@ -44,6 +47,8 @@ namespace Jeu_De_Barricade_Eindproject.View
         public Level()
         {
             initVariables();
+
+            boardGrid.MouseDown += new MouseButtonEventHandler(boardGrid_MouseDown);
 
             aPlayerRedStartFields = new Model.Field[pawnAmount];
             aPlayerGreenStartFields = new Model.Field[pawnAmount];
@@ -132,6 +137,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.ColumnProperty, iColumn);
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
+
                         }
                         //Yellow base
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.YellowBase))
@@ -189,6 +195,18 @@ namespace Jeu_De_Barricade_Eindproject.View
                     }
                 }
             }
+        }
+
+        private void boardGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            int mousePositionX = (int)Mouse.GetPosition(boardGrid).X;
+            int mousePositionY = (int)Mouse.GetPosition(boardGrid).Y;
+
+            int column = mousePositionX / CellSize;
+            int row = mousePositionY / CellSize;
+            
+
+
         }
 
     }

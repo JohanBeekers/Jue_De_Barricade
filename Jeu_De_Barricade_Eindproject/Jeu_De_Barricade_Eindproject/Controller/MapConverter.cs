@@ -149,6 +149,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                                             bDone = true;
                                             break;
                                     }
+
+                                    //Reset the row and column to the field we are creating links for.
+                                    iRowCheck = iRow;
+                                    iColCheck = iColumn;
                                 }
                                 //If the next link is a line link, do nothing. The whole while loop will start again another position in the current direction. 
                                 else if (fields[iColCheck, iRowCheck].GetType() == typeof(Model.LineField))
@@ -158,10 +162,6 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                                 //If the next link is one we can navigate to, set the link, reset the field we are checking and change direction.
                                 else
                                 {   
-                                    //Reset the row and column to the field we are creating links for.
-                                    iRowCheck = iRow;
-                                    iColCheck = iColumn;
-
                                     //Set the link and go to the next direction.
                                     switch (sCheck)
                                     {
@@ -182,6 +182,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                                             bDone = true;
                                             break;
                                     }
+
+                                    //Reset the row and column to the field we are creating links for.
+                                    iRowCheck = iRow;
+                                    iColCheck = iColumn;
                                 }
                             }
                         }

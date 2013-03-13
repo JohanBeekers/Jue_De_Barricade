@@ -20,9 +20,9 @@ namespace Jeu_De_Barricade_Eindproject.View
     /// </summary>
     public partial class LevelFast : Level
     {
-        
-        public LevelFast() 
-            : base()
+
+        public LevelFast(Controller.Game game) 
+            : base(game)
         {
         }
 
@@ -70,8 +70,9 @@ namespace Jeu_De_Barricade_Eindproject.View
             iMapHeight = 18;
             this.Width = iMapWidth * 32;
             this.Height = iMapHeight * 32;
+            ABarricadePawns = new Model.BarricadePawn[6];
 
-            boardGrid = mainGrid;
+            BoardGrid = mainGrid;
         }
     }
 }

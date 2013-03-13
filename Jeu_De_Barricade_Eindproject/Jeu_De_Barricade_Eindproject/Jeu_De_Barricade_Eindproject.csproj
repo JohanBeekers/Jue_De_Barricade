@@ -59,7 +59,11 @@
     <Compile Include="Controller\MapConverter.cs" />
     <Compile Include="Controller\Pawn.cs" />
     <Compile Include="Controller\Player.cs" />
+    <Compile Include="Model\BarricadePawn.cs" />
     <Compile Include="Model\Field.cs" />
+    <Compile Include="View\Dice.xaml.cs">
+      <DependentUpon>Dice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Level.cs" />
     <Compile Include="View\LevelFast.xaml.cs">
       <DependentUpon>LevelFast.xaml</DependentUpon>
@@ -88,6 +92,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Dice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LevelFast.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +214,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\barricade_pawn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

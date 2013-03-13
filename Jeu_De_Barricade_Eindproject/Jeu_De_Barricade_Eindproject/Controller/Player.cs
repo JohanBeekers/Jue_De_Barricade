@@ -10,31 +10,22 @@ namespace Jeu_De_Barricade_Eindproject.Controller
     {
         private Boolean bIsHuman;
         private Pawn[] aPawns;
+        private int iArrayAmount;
         private int iPawnAmount;
 
-        //Main constructor. Creates the player and sets the start and current locations of his pawns. (For loading a game)
-        public Player(Boolean isHuman, int pawns, Model.Field[] startLocations, Model.Field[] locations)
+        //Main constructor.
+        public Player(Boolean isHuman, int pawns)
         {
             this.bIsHuman = isHuman;
             this.iPawnAmount = pawns;
-
-            aPawns = new Pawn[iPawnAmount];
-            for (int i = 0; i < iPawnAmount; i++)
-            {
-                aPawns[i] = new Pawn(startLocations[i], locations[i]);
-            }
+            aPawns = new Pawn[pawns];
+            iArrayAmount = 0;
         }
 
-        //Constructor that sets the current locations of pawns to the same location as the start locations. (For starting a new game)
-        public Player(Boolean isHuman, int pawns, Model.Field[] startLocations) 
-            : this(isHuman, pawns, startLocations, startLocations) 
+        public void addPawn(Pawn pawn)
         {
-
-        }
-
-        public Model.Field[] getPossibleMoves()
-        {
-            return null;
+            aPawns[iArrayAmount] = pawn;
+            iArrayAmount++;
         }
     }
 }

@@ -14,46 +14,58 @@ namespace Jeu_De_Barricade_Eindproject.View
 {
     public abstract class Level : UserControl
     {
-        protected Grid boardGrid;
+        private Grid boardGrid;
         protected int pawnAmount;
         protected static int CellSize = 32;
         protected int iMapWidth;
         protected int iMapHeight;
-        protected Model.Field[] aPlayerRedStartFields, aPlayerGreenStartFields, aPlayerYellowStartFields, aPlayerBlueStartFields;
-        protected int iRedStartFields = 0, iGreenStartFields = 0, iYellowStartFields = 0, iBlueStartFields = 0;
+        protected Controller.Game game;
+        private Model.BarricadePawn[] aBarricadePawns;
 
-        protected Model.Field[,] fields;
+        protected int iArrayBarricadePawns = 0;
+        private Ellipse blur;
+
+        private Model.Field[,] fields;
 
         protected String[,] map;
 
         //properties
-        public Model.Field[] APlayerRedStartFields
+        public Grid BoardGrid
         {
-            get { return aPlayerRedStartFields; }
+            get { return boardGrid; }
+            set { boardGrid = value; }
         }
-        public Model.Field[] APlayerGreenStartFields
+        public Ellipse Blur
         {
-            get { return aPlayerRedStartFields; }
+            get { return blur; }
+            set { blur = value; }
         }
-        public Model.Field[] APlayerYellowStartFields
+        public Model.Field[,] Fields
         {
-            get { return aPlayerRedStartFields; }
+            get { return fields; }
+            set { fields = value; }
         }
-        public Model.Field[] APlayerBlueStartFields
+        protected Model.BarricadePawn[] ABarricadePawns
         {
-            get { return aPlayerRedStartFields; }
+            get { return aBarricadePawns; }
+            set { aBarricadePawns = value; }
         }
 
-        public Level()
+        public Level(Controller.Game game)
         {
+            this.game = game;
+
             initVariables();
 
             boardGrid.MouseDown += new MouseButtonEventHandler(boardGrid_MouseDown);
 
-            aPlayerRedStartFields = new Model.Field[pawnAmount];
-            aPlayerGreenStartFields = new Model.Field[pawnAmount];
-            aPlayerYellowStartFields = new Model.Field[pawnAmount];
-            aPlayerBlueStartFields = new Model.Field[pawnAmount];
+            //Create blur ellipse for selecting a pawn.
+            blur = new Ellipse();
+            blur.Width = 28;
+            blur.Height = 28;
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/blur.png"));
+            blur.Fill = myBrush;
 
             Controller.MapConverter mapConverter = new Controller.MapConverter();
             fields = mapConverter.convertMap(map, iMapWidth, iMapHeight);
@@ -96,6 +108,20 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.ColumnProperty, iColumn);
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
+
+                            Ellipse e2 = new Ellipse();
+                            e2.Width = 28;
+                            e2.Height = 28;
+
+                            ImageBrush myBrush = new ImageBrush();
+                            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/barricade_pawn.png"));
+                            e2.Fill = myBrush;
+                            e2.SetValue(Grid.ColumnProperty, iColumn);
+                            e2.SetValue(Grid.RowProperty, iRow);
+                            boardGrid.Children.Add(e2);
+
+                            aBarricadePawns[iArrayBarricadePawns] = new Model.BarricadePawn(e2, fields[iColumn, iRow]);
+                            iArrayBarricadePawns++;
                         }
                         //Safespot field
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.SafeSpot))
@@ -127,8 +153,6 @@ namespace Jeu_De_Barricade_Eindproject.View
                         //Blue base
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.BlueBase))
                         {
-                            aPlayerBlueStartFields[iBlueStartFields] = fields[iColumn, iRow];
-                            iBlueStartFields++;
 
                             Ellipse e = new Ellipse();
                             e.Width = 28;
@@ -138,12 +162,24 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
 
+                            Ellipse e2 = new Ellipse();
+                            e2.Width = 28;
+                            e2.Height = 28;
+
+                            ImageBrush myBrush = new ImageBrush();
+                            myBrush.ImageSource =
+                                new BitmapImage(new Uri("pack://application:,,,/Image/pawn_blue.png"));
+                            e2.Fill = myBrush;
+                            e2.SetValue(Grid.ColumnProperty, iColumn);
+                            e2.SetValue(Grid.RowProperty, iRow);
+                            boardGrid.Children.Add(e2);
+
+                            game.createPawn(fields[iColumn, iRow], e2, 3);
+
                         }
                         //Yellow base
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.YellowBase))
                         {
-                            aPlayerYellowStartFields[iYellowStartFields] = fields[iColumn, iRow];
-                            iYellowStartFields++;
 
                             Ellipse e = new Ellipse();
                             e.Width = 28;
@@ -152,12 +188,24 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.ColumnProperty, iColumn);
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
+
+                            Ellipse e2 = new Ellipse();
+                            e2.Width = 28;
+                            e2.Height = 28;
+
+                            ImageBrush myBrush = new ImageBrush();
+                            myBrush.ImageSource =
+                                new BitmapImage(new Uri("pack://application:,,,/Image/pawn_yellow.png"));
+                            e2.Fill = myBrush;
+                            e2.SetValue(Grid.ColumnProperty, iColumn);
+                            e2.SetValue(Grid.RowProperty, iRow);
+                            boardGrid.Children.Add(e2);
+
+                            game.createPawn(fields[iColumn, iRow], e2, 2);
                         }
                         //Green base
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.GreenBase))
                         {
-                            aPlayerGreenStartFields[iGreenStartFields] = fields[iColumn, iRow];
-                            iGreenStartFields++;
 
                             Ellipse e = new Ellipse();
                             e.Width = 28;
@@ -166,12 +214,24 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.ColumnProperty, iColumn);
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
+
+                            Ellipse e2 = new Ellipse();
+                            e2.Width = 28;
+                            e2.Height = 28;
+
+                            ImageBrush myBrush = new ImageBrush();
+                            myBrush.ImageSource =
+                                new BitmapImage(new Uri("pack://application:,,,/Image/pawn_green.png"));
+                            e2.Fill = myBrush;
+                            e2.SetValue(Grid.ColumnProperty, iColumn);
+                            e2.SetValue(Grid.RowProperty, iRow);
+                            boardGrid.Children.Add(e2);
+
+                            game.createPawn(fields[iColumn, iRow], e2, 1);
                         }
                         //Red base
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.RedBase))
                         {
-                            aPlayerRedStartFields[iRedStartFields] = fields[iColumn, iRow];
-                            iRedStartFields++;
 
                             Ellipse e = new Ellipse();
                             e.Width = 28;
@@ -180,6 +240,20 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.ColumnProperty, iColumn);
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
+
+                            Ellipse e2 = new Ellipse();
+                            e2.Width = 28;
+                            e2.Height = 28;
+
+                            ImageBrush myBrush = new ImageBrush();
+                            myBrush.ImageSource =
+                                new BitmapImage(new Uri("pack://application:,,,/Image/pawn_red.png"));
+                            e2.Fill = myBrush;
+                            e2.SetValue(Grid.ColumnProperty, iColumn);
+                            e2.SetValue(Grid.RowProperty, iRow);
+                            boardGrid.Children.Add(e2);
+
+                            game.createPawn(fields[iColumn, iRow], e2, 0);
                         }
                         //Line field
                         else if (fields[iColumn, iRow] is Model.LineField)
@@ -204,8 +278,16 @@ namespace Jeu_De_Barricade_Eindproject.View
 
             int column = mousePositionX / CellSize;
             int row = mousePositionY / CellSize;
-            
 
+            if(game.Barricade == null)
+            {
+                game.selectPawn(column, row);
+            }
+            else
+            {
+                game.moveBarricade(column, row);
+            }
+            
 
         }
 

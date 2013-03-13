@@ -72,6 +72,13 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                         default:
                             break;
                     }
+
+                    if(fields[iColumn, iRow] is Model.Field)
+                    {
+                        fields[iColumn, iRow].X = iColumn;
+                        fields[iColumn, iRow].Y = iRow;
+                    }
+                    
                 }
             }
 

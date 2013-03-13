@@ -21,8 +21,8 @@ namespace Jeu_De_Barricade_Eindproject.View
     public partial class LevelSlow : Level
     {
 
-        public LevelSlow()
-            : base()
+        public LevelSlow(Controller.Game game)
+            : base(game)
         {
         }
 
@@ -69,8 +69,9 @@ namespace Jeu_De_Barricade_Eindproject.View
             iMapHeight = 17;
             this.Width = iMapWidth * 32;
             this.Height = iMapHeight * 32;
+            ABarricadePawns = new Model.BarricadePawn[11];
 
-            boardGrid = mainGrid;
+            BoardGrid = mainGrid;
         }
 
     }

@@ -8,16 +8,52 @@ namespace Jeu_De_Barricade_Eindproject.Model
 {
     public class Field
     {
-        private Field linkNorth, linkEast, linkSouth, linkWest;
-        private Controller.Pawn pawn;
-        private Barricade barricade;
-        
-        public Field LinkNorth { get; set; }
-        public Field LinkEast { get; set; }
-        public Field LinkSouth { get; set; }
-        public Field LinkWest { get; set; }
-        public Controller.Pawn Pawn { get; set; }
-        public Barricade Barricade { get; set; }
+        protected Field linkNorth, linkEast, linkSouth, linkWest;
+        protected Controller.Pawn pawn;
+        protected Model.BarricadePawn barricadePawn;
+        protected int x, y;
+
+        //Properties:
+        public Field LinkNorth
+        {
+            get { return linkNorth; }
+            set { linkNorth = value; }
+        }
+        public Field LinkEast
+        {
+            get { return linkEast; }
+            set { linkEast = value; }
+        }
+        public Field LinkSouth
+        {
+            get { return linkSouth; }
+            set { linkSouth = value; }
+        }
+        public Field LinkWest
+        {
+            get { return linkWest; }
+            set { linkWest = value; }
+        }
+        public Controller.Pawn Pawn
+        {
+            get { return pawn; }
+            set { pawn = value; }
+        }
+        public BarricadePawn Barricade
+        {
+            get { return barricadePawn; }
+            set { barricadePawn = value; }
+        }
+        public int X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+        public int Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
     }
 
     public class Barricade : Field

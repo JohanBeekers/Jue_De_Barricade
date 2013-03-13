@@ -60,39 +60,29 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         private void createPlayers(int iHumanPlayers, Model.Field[] aPawnPositions)
         {
+            int amountPlayers;
             if (level.GetType() == typeof(View.LevelSlow))
             {
-                if (aPawnPositions == null)
-                {
-                    aPlayers[0] = new Player(iHumanPlayers <= 1, 5, level.APlayerRedStartFields);
-                    aPlayers[1] = new Player(iHumanPlayers <= 2, 5, level.APlayerRedStartFields);
-                    aPlayers[2] = new Player(iHumanPlayers <= 3, 5, level.APlayerRedStartFields);
-                    aPlayers[3] = new Player(iHumanPlayers <= 4, 5, level.APlayerRedStartFields);
-                }
-                else
-                {
-                    aPlayers[0] = new Player(iHumanPlayers <= 1, 5, level.APlayerRedStartFields, aPawnPositions);
-                    aPlayers[1] = new Player(iHumanPlayers <= 2, 5, level.APlayerRedStartFields, aPawnPositions);
-                    aPlayers[2] = new Player(iHumanPlayers <= 3, 5, level.APlayerRedStartFields, aPawnPositions);
-                    aPlayers[3] = new Player(iHumanPlayers <= 4, 5, level.APlayerRedStartFields, aPawnPositions);
-                }
+                amountPlayers = 5;
             }
             else
             {
-                if (aPawnPositions == null)
-                {
-                    aPlayers[0] = new Player(iHumanPlayers <= 1, 4, level.APlayerRedStartFields);
-                    aPlayers[1] = new Player(iHumanPlayers <= 2, 4, level.APlayerRedStartFields);
-                    aPlayers[2] = new Player(iHumanPlayers <= 3, 4, level.APlayerRedStartFields);
-                    aPlayers[3] = new Player(iHumanPlayers <= 4, 4, level.APlayerRedStartFields);
-                }
-                else
-                {
-                    aPlayers[0] = new Player(iHumanPlayers <= 1, 4, level.APlayerRedStartFields, aPawnPositions);
-                    aPlayers[1] = new Player(iHumanPlayers <= 2, 4, level.APlayerRedStartFields, aPawnPositions);
-                    aPlayers[2] = new Player(iHumanPlayers <= 3, 4, level.APlayerRedStartFields, aPawnPositions);
-                    aPlayers[3] = new Player(iHumanPlayers <= 4, 4, level.APlayerRedStartFields, aPawnPositions);
-                }
+                amountPlayers = 4;
+            }
+
+            if (aPawnPositions == null)
+            {
+                aPlayers[0] = new Player(iHumanPlayers <= 1, amountPlayers, level.APlayerRedStartFields);
+                aPlayers[1] = new Player(iHumanPlayers <= 2, amountPlayers, level.APlayerRedStartFields);
+                aPlayers[2] = new Player(iHumanPlayers <= 3, amountPlayers, level.APlayerRedStartFields);
+                aPlayers[3] = new Player(iHumanPlayers <= 4, amountPlayers, level.APlayerRedStartFields);
+            }
+            else
+            {
+                aPlayers[0] = new Player(iHumanPlayers <= 1, amountPlayers, level.APlayerRedStartFields, aPawnPositions);
+                aPlayers[1] = new Player(iHumanPlayers <= 2, amountPlayers, level.APlayerRedStartFields, aPawnPositions);
+                aPlayers[2] = new Player(iHumanPlayers <= 3, amountPlayers, level.APlayerRedStartFields, aPawnPositions);
+                aPlayers[3] = new Player(iHumanPlayers <= 4, amountPlayers, level.APlayerRedStartFields, aPawnPositions);
             }
         }
 

@@ -101,6 +101,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                         //Barricade field
                         else if (fields[iColumn, iRow].GetType() == typeof(Model.Barricade))
                         {
+                            //Barricade field
                             Ellipse e = new Ellipse();
                             e.Width = 28;
                             e.Height = 28;
@@ -109,6 +110,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e.SetValue(Grid.RowProperty, iRow);
                             boardGrid.Children.Add(e);
 
+                            //Barricade
                             Ellipse e2 = new Ellipse();
                             e2.Width = 28;
                             e2.Height = 28;
@@ -118,6 +120,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e2.Fill = myBrush;
                             e2.SetValue(Grid.ColumnProperty, iColumn);
                             e2.SetValue(Grid.RowProperty, iRow);
+                            Panel.SetZIndex(e2, 1);
                             boardGrid.Children.Add(e2);
 
                             aBarricadePawns[iArrayBarricadePawns] = new Model.BarricadePawn(e2, fields[iColumn, iRow]);
@@ -172,6 +175,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e2.Fill = myBrush;
                             e2.SetValue(Grid.ColumnProperty, iColumn);
                             e2.SetValue(Grid.RowProperty, iRow);
+                            Panel.SetZIndex(e2, 2);
                             boardGrid.Children.Add(e2);
 
                             game.createPawn(fields[iColumn, iRow], e2, 3);
@@ -199,6 +203,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e2.Fill = myBrush;
                             e2.SetValue(Grid.ColumnProperty, iColumn);
                             e2.SetValue(Grid.RowProperty, iRow);
+                            Panel.SetZIndex(e2, 2);
                             boardGrid.Children.Add(e2);
 
                             game.createPawn(fields[iColumn, iRow], e2, 2);
@@ -225,6 +230,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e2.Fill = myBrush;
                             e2.SetValue(Grid.ColumnProperty, iColumn);
                             e2.SetValue(Grid.RowProperty, iRow);
+                            Panel.SetZIndex(e2, 2);
                             boardGrid.Children.Add(e2);
 
                             game.createPawn(fields[iColumn, iRow], e2, 1);
@@ -251,6 +257,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             e2.Fill = myBrush;
                             e2.SetValue(Grid.ColumnProperty, iColumn);
                             e2.SetValue(Grid.RowProperty, iRow);
+                            Panel.SetZIndex(e2, 2);
                             boardGrid.Children.Add(e2);
 
                             game.createPawn(fields[iColumn, iRow], e2, 0);

@@ -11,6 +11,13 @@ namespace Jeu_De_Barricade_Eindproject.Model
     public class BarricadePawn
     {
         private Ellipse image;
+
+        public Ellipse Image
+        {
+            get { return image; }
+            set { image = value; }
+        }
+
         private Model.Field currentLocation;
 
         public BarricadePawn(Ellipse image, Model.Field startLocation)

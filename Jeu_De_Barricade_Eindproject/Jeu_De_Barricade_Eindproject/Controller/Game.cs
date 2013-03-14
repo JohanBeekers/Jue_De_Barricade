@@ -19,6 +19,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private int playerTurn;
         private Model.BarricadePawn barricade;
 
+
         public int PlayerTurn
         {
             get { return playerTurn; }
@@ -117,7 +118,9 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         public void selectPawn(int column, int row)
         {
-            if (level.BoardGrid.Children.Contains(level.Blur) && level.Fields[column, row].Pawn == null)
+            if (level.BoardGrid.Children.Contains(level.Blur) && 
+                level.Fields[column, row].Pawn == null 
+                /*&& mogelijke plaats die oplicht*/)
             {
                 level.Fields[Grid.GetColumn(level.Blur), Grid.GetRow(level.Blur)].Pawn.setLocation(level.Fields[column, row]);
                 if (level.Fields[column, row].Barricade != null)
@@ -126,6 +129,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 }
                 else
                 {
+                    MessageBox.Show("Ik beweeg nu");
                     nextPlayer();
                 }
                 level.BoardGrid.Children.Remove(level.Blur);
@@ -138,7 +142,11 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 level.BoardGrid.Children.Remove(level.Blur);
                 level.Blur.SetValue(Grid.ColumnProperty, column);
                 level.Blur.SetValue(Grid.RowProperty, row);
+                Panel.SetZIndex(level.Blur, 3);
                 level.BoardGrid.Children.Add(level.Blur);
+
+                //Get the pawn that is selected and get the possible moves
+                level.Fields[column, row].Pawn.GetPossibleMoves(dice.Worp);
             }
         }
 

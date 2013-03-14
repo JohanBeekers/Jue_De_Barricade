@@ -16,6 +16,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private Ellipse image;
         private int playerNumber;
 
+        private List<Model.Field> possibleOptions = new List<Model.Field>();
+
         public Model.Field CurrentLocation
         {
             get { return currentLocation; }
@@ -54,6 +56,12 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         public void move(Model.Field field)
         {
 
+        }
+
+        //Method to get the possible options where to it could walk
+        public void GetPossibleMoves(int worp)
+        {
+            //Methode van stackoverflow hierrrrr
         }
 
     }

@@ -59,9 +59,42 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         }
 
         //Method to get the possible options where to it could walk
-        public void GetPossibleMoves(int worp)
+        public List<Model.Field> getPossibleMoves(Model.Field curSpot, int remainingMoves, List<Model.Field> moveHistory)
         {
-            //Methode van stackoverflow hierrrrr
+            List<Model.Field> retMoves = new List<Model.Field>();
+            if( remainingMoves == 0 )
+            {
+                retMoves.Add(curSpot);
+                return retMoves;
+            }
+            else
+            {
+                moveHistory.Add(curSpot);
+                if( curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkNorth) )
+                {
+                    retMoves.AddRange( getPossibleMoves( curSpot.LinkNorth, remainingMoves - 1, moveHistory ));
+                }
+
+                if (curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkEast))
+                {
+                    retMoves.AddRange( getPossibleMoves( curSpot.LinkEast, remainingMoves - 1, moveHistory ));
+                }
+
+                if (curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkSouth))
+                {
+                    retMoves.AddRange( getPossibleMoves( curSpot.LinkSouth, remainingMoves - 1, moveHistory ));
+                }
+
+                if (curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkWest))
+                {
+                    retMoves.AddRange( getPossibleMoves( curSpot.LinkWest, remainingMoves - 1, moveHistory ));
+                }
+            }
+        }
+
+        public List<Model.Field> getPossibleMoves(int worp)
+        {
+            return getPossibleMoves(currentLocation, worp, new List<Model.Field>());
         }
 
     }

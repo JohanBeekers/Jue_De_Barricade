@@ -129,7 +129,6 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 }
                 else
                 {
-                    MessageBox.Show("Ik beweeg nu");
                     nextPlayer();
                 }
                 level.BoardGrid.Children.Remove(level.Blur);
@@ -146,7 +145,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 level.BoardGrid.Children.Add(level.Blur);
 
                 //Get the pawn that is selected and get the possible moves
-                level.Fields[column, row].Pawn.GetPossibleMoves(dice.Worp);
+                level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp);
             }
         }
 

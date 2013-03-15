@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 
@@ -67,6 +68,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 retMoves.Add(curSpot);
                 return retMoves;
             }
+            else if( remainingMoves >= 1 && curSpot.Barricade != null)
+            {
+                return retMoves;
+            }
             else
             {
                 moveHistory.Add(curSpot);
@@ -75,20 +80,22 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                     retMoves.AddRange( getPossibleMoves( curSpot.LinkNorth, remainingMoves - 1, moveHistory ));
                 }
 
-                if (curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkEast))
+                if (curSpot.LinkEast != null && !moveHistory.Contains(curSpot.LinkEast))
                 {
                     retMoves.AddRange( getPossibleMoves( curSpot.LinkEast, remainingMoves - 1, moveHistory ));
                 }
 
-                if (curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkSouth))
+                if (curSpot.LinkSouth != null && !moveHistory.Contains(curSpot.LinkSouth))
                 {
                     retMoves.AddRange( getPossibleMoves( curSpot.LinkSouth, remainingMoves - 1, moveHistory ));
                 }
 
-                if (curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkWest))
+                if (curSpot.LinkWest != null && !moveHistory.Contains(curSpot.LinkWest))
                 {
                     retMoves.AddRange( getPossibleMoves( curSpot.LinkWest, remainingMoves - 1, moveHistory ));
                 }
+
+                return retMoves;
             }
         }
 

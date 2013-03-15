@@ -136,10 +136,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                                     iRowCheck < 0 ||
                                     iRowCheck >= iRows ||
                                     fields[iColCheck, iRowCheck] == null ||
-                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.RedStart) ||
-                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.GreenStart) ||
-                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.YellowStart) ||
-                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.BlueStart))
+                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.RedBase) ||
+                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.GreenBase) ||
+                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.YellowBase) ||
+                                    fields[iColCheck, iRowCheck].GetType() == typeof(Model.BlueBase))
                                 {
                                     switch (sCheck)
                                     {

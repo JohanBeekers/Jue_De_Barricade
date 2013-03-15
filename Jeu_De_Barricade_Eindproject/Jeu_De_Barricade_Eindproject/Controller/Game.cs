@@ -146,6 +146,12 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
                 //Get the pawn that is selected and get the possible moves
                 level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp);
+                String testString = "Current location: " + level.Fields[column, row].X + " + " + level.Fields[column, row].Y + "\r\n";
+                foreach(Model.Field field in test)
+                {
+                    testString += field.X + " + " + field.Y + "\r\n";
+                }
+                MessageBox.Show(testString);
             }
         }
 

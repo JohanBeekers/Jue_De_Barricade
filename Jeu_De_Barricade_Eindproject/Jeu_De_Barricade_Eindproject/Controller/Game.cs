@@ -18,6 +18,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private Player[] aPlayers = new Player[4];
         private int playerTurn;
         private Model.BarricadePawn barricade;
+        private Model.Field[] aPawnMovementOptions;
+        private Pawn pawnSelected;
 
 
         public int PlayerTurn
@@ -116,13 +118,13 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             return dice.Gedobbeld;
         }
 
-        public void selectPawn(int column, int row)
+        public void fieldClick(int column, int row)
         {
-            if (level.BoardGrid.Children.Contains(level.Blur) && 
-                level.Fields[column, row].Pawn == null 
-                /*&& mogelijke plaats die oplicht*/)
+            if (pawnSelected != null && 
+                level.Fields[column, row].Pawn == null &&
+                aPawnMovementOptions.Contains(level.Fields[column, row]))
             {
-                level.Fields[Grid.GetColumn(level.Blur), Grid.GetRow(level.Blur)].Pawn.setLocation(level.Fields[column, row]);
+                level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(level.Fields[column, row]);
                 if (level.Fields[column, row].Barricade != null)
                 {
                     barricade = level.Fields[column, row].Barricade;
@@ -131,27 +133,19 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 {
                     nextPlayer();
                 }
-                level.BoardGrid.Children.Remove(level.Blur);
+                level.removeBlurs();
+                pawnSelected = null;
+
             }
             else if (level.Fields[column, row] != null &&
                 level.Fields[column, row].Pawn != null &&
                 getGedobbeld() &&
                 level.Fields[column, row].Pawn.PlayerNumber == PlayerTurn)
             {
-                level.BoardGrid.Children.Remove(level.Blur);
-                level.Blur.SetValue(Grid.ColumnProperty, column);
-                level.Blur.SetValue(Grid.RowProperty, row);
-                Panel.SetZIndex(level.Blur, 3);
-                level.BoardGrid.Children.Add(level.Blur);
-
                 //Get the pawn that is selected and get the possible moves
-                List<Model.Field> test = level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp);
-                String testString = "Current location: " + level.Fields[column, row].X + " + " + level.Fields[column, row].Y + "\r\n";
-                foreach(Model.Field field in test)
-                {
-                    testString += field.X + " + " + field.Y + "\r\n";
-                }
-                MessageBox.Show(testString);
+                aPawnMovementOptions = level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp).ToArray();
+                level.createBlurs(aPawnMovementOptions, level.Fields[column, row]);
+                pawnSelected = level.Fields[column, row].Pawn;
             }
         }
 

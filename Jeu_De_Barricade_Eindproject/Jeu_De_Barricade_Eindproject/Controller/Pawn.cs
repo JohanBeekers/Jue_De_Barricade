@@ -60,39 +60,38 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         }
 
         //Method to get the possible options where to it could walk
-        public List<Model.Field> getPossibleMoves(Model.Field curSpot, int remainingMoves, List<Model.Field> moveHistory)
+        public List<Model.Field> getPossibleMoves(Model.Field curSpot, int remainingMoves, String gotFrom)
         {
             List<Model.Field> retMoves = new List<Model.Field>();
-            if( remainingMoves == 0 )
+            if (remainingMoves == 0)
             {
                 retMoves.Add(curSpot);
                 return retMoves;
             }
-            else if( remainingMoves >= 1 && curSpot.Barricade != null)
+            else if (remainingMoves >= 1 && curSpot.Barricade != null)
             {
                 return retMoves;
             }
             else
             {
-                moveHistory.Add(curSpot);
-                if( curSpot.LinkNorth != null && !moveHistory.Contains(curSpot.LinkNorth) )
+                if (curSpot.LinkNorth != null && gotFrom != "north")
                 {
-                    retMoves.AddRange( getPossibleMoves( curSpot.LinkNorth, remainingMoves - 1, moveHistory ));
+                    retMoves.AddRange(getPossibleMoves(curSpot.LinkNorth, remainingMoves - 1, "south"));
                 }
 
-                if (curSpot.LinkEast != null && !moveHistory.Contains(curSpot.LinkEast))
+                if (curSpot.LinkEast != null && gotFrom != "east")
                 {
-                    retMoves.AddRange( getPossibleMoves( curSpot.LinkEast, remainingMoves - 1, moveHistory ));
+                    retMoves.AddRange(getPossibleMoves(curSpot.LinkEast, remainingMoves - 1, "west"));
                 }
 
-                if (curSpot.LinkSouth != null && !moveHistory.Contains(curSpot.LinkSouth))
+                if (curSpot.LinkSouth != null && gotFrom != "south")
                 {
-                    retMoves.AddRange( getPossibleMoves( curSpot.LinkSouth, remainingMoves - 1, moveHistory ));
+                    retMoves.AddRange(getPossibleMoves(curSpot.LinkSouth, remainingMoves - 1, "north"));
                 }
 
-                if (curSpot.LinkWest != null && !moveHistory.Contains(curSpot.LinkWest))
+                if (curSpot.LinkWest != null && gotFrom != "west")
                 {
-                    retMoves.AddRange( getPossibleMoves( curSpot.LinkWest, remainingMoves - 1, moveHistory ));
+                    retMoves.AddRange(getPossibleMoves(curSpot.LinkWest, remainingMoves - 1, "east"));
                 }
 
                 return retMoves;
@@ -101,7 +100,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         public List<Model.Field> getPossibleMoves(int worp)
         {
-            return getPossibleMoves(currentLocation, worp, new List<Model.Field>());
+            //return getPossibleMoves(currentLocation, worp, new List<Model.Field>());
+            return getPossibleMoves(currentLocation, worp, "");
         }
 
     }

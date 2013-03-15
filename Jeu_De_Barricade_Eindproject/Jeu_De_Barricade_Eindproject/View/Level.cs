@@ -23,7 +23,7 @@ namespace Jeu_De_Barricade_Eindproject.View
         private Model.BarricadePawn[] aBarricadePawns;
 
         protected int iArrayBarricadePawns = 0;
-        private Ellipse blur;
+        private List<Ellipse> blurLocations;
 
         private Model.Field[,] fields;
 
@@ -34,11 +34,6 @@ namespace Jeu_De_Barricade_Eindproject.View
         {
             get { return boardGrid; }
             set { boardGrid = value; }
-        }
-        public Ellipse Blur
-        {
-            get { return blur; }
-            set { blur = value; }
         }
         public Model.Field[,] Fields
         {
@@ -57,15 +52,9 @@ namespace Jeu_De_Barricade_Eindproject.View
 
             initVariables();
 
-            boardGrid.MouseDown += new MouseButtonEventHandler(boardGrid_MouseDown);
+            blurLocations = new List<Ellipse>();
 
-            //Create blur ellipse for selecting a pawn.
-            blur = new Ellipse();
-            blur.Width = 28;
-            blur.Height = 28;
-            ImageBrush myBrush = new ImageBrush();
-            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/blur.png"));
-            blur.Fill = myBrush;
+            boardGrid.MouseDown += new MouseButtonEventHandler(boardGrid_MouseDown);
 
             Controller.MapConverter mapConverter = new Controller.MapConverter();
             fields = mapConverter.convertMap(map, iMapWidth, iMapHeight);
@@ -288,7 +277,7 @@ namespace Jeu_De_Barricade_Eindproject.View
 
             if(game.Barricade == null)
             {
-                game.selectPawn(column, row);
+                game.fieldClick(column, row);
             }
             else
             {
@@ -298,5 +287,49 @@ namespace Jeu_De_Barricade_Eindproject.View
 
         }
 
+        public void createBlurs(Model.Field[] blurPositions, Model.Field pawnPosition)
+        {
+            removeBlurs();
+
+            //Create blur ellipse for selecting a pawn.
+            Ellipse blur;
+            blur = new Ellipse();
+            blur.Width = 28;
+            blur.Height = 28;
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/blur.png"));
+            blur.Fill = myBrush;
+            blur.SetValue(Grid.ColumnProperty, pawnPosition.X);
+            blur.SetValue(Grid.RowProperty, pawnPosition.Y);
+            Panel.SetZIndex(blur, 3);
+            boardGrid.Children.Add(blur);
+            blurLocations.Add(blur);
+
+            //Create blur ellipse for positions the pawn can move to.
+            foreach (Model.Field blurPosition in blurPositions)
+            {
+                Ellipse blur2;
+                blur2 = new Ellipse();
+                blur2.Width = 28;
+                blur2.Height = 28;
+                ImageBrush myBrush2 = new ImageBrush();
+                myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/blur.png"));
+                blur2.Fill = myBrush;
+                blur2.SetValue(Grid.ColumnProperty, blurPosition.X);
+                blur2.SetValue(Grid.RowProperty, blurPosition.Y);
+                Panel.SetZIndex(blur2, 3);
+                boardGrid.Children.Add(blur2);
+                blurLocations.Add(blur2);
+            }
+        }
+
+        public void removeBlurs()
+        {
+            foreach (Ellipse e in blurLocations)
+            {
+                e.Visibility = Visibility.Collapsed;
+            }
+            blurLocations.Clear();
+        }
     }
 }

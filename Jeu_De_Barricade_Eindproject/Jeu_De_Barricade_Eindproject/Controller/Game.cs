@@ -129,6 +129,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 {
                     barricade = level.Fields[column, row].Barricade;
                 }
+                else if (level.Fields[column, row] is Model.Finish)
+                {
+                    level.showWinAnimation(playerTurn);
+                }
                 else
                 {
                     nextPlayer();

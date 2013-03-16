@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 
 namespace Jeu_De_Barricade_Eindproject.View
 {
@@ -21,6 +22,7 @@ namespace Jeu_De_Barricade_Eindproject.View
         protected int iMapHeight;
         protected Controller.Game game;
         private Model.BarricadePawn[] aBarricadePawns;
+        protected Image animatedWinImage1, animatedWinImage2;
 
         protected int iArrayBarricadePawns = 0;
         private List<Ellipse> blurLocations;
@@ -53,7 +55,6 @@ namespace Jeu_De_Barricade_Eindproject.View
             initVariables();
 
             blurLocations = new List<Ellipse>();
-
             boardGrid.MouseDown += new MouseButtonEventHandler(boardGrid_MouseDown);
 
             Controller.MapConverter mapConverter = new Controller.MapConverter();
@@ -275,13 +276,16 @@ namespace Jeu_De_Barricade_Eindproject.View
             int column = mousePositionX / CellSize;
             int row = mousePositionY / CellSize;
 
-            if(game.Barricade == null)
+            if (fields[column, row] != null)
             {
-                game.fieldClick(column, row);
-            }
-            else
-            {
-                game.moveBarricade(column, row);
+                if (game.Barricade == null)
+                {
+                    game.fieldClick(column, row);
+                }
+                else
+                {
+                    game.moveBarricade(column, row);
+                }
             }
             
 
@@ -330,6 +334,34 @@ namespace Jeu_De_Barricade_Eindproject.View
                 e.Visibility = Visibility.Collapsed;
             }
             blurLocations.Clear();
+        }
+
+        public void showWinAnimation(int player)
+        {
+            switch (player)
+            {
+                case 0:
+                    ImageBehavior.SetAnimatedSource(animatedWinImage1, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_red.gif")));
+                    ImageBehavior.SetAnimatedSource(animatedWinImage2, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_red.gif")));
+                    break;
+                case 1:
+                    ImageBehavior.SetAnimatedSource(animatedWinImage1, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_green.gif")));
+                    ImageBehavior.SetAnimatedSource(animatedWinImage2, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_green.gif")));
+                    break;
+                case 2:
+                    ImageBehavior.SetAnimatedSource(animatedWinImage1, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_yellow.gif")));
+                    ImageBehavior.SetAnimatedSource(animatedWinImage2, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_yellow.gif")));
+                    break;
+                case 3:
+                    ImageBehavior.SetAnimatedSource(animatedWinImage1, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_blue.gif")));
+                    ImageBehavior.SetAnimatedSource(animatedWinImage2, new BitmapImage(new Uri("pack://application:,,,/Image/winAnimation_blue.gif")));
+                    break;
+            }
+            
+            animatedWinImage1.Visibility = Visibility.Visible;
+            animatedWinImage2.Visibility = Visibility.Visible;
+            ImageBehavior.GetAnimationController(animatedWinImage1).Play();
+            ImageBehavior.GetAnimationController(animatedWinImage2).Play();
         }
     }
 }

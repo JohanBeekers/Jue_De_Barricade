@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:src="clr-namespace:Jeu_De_Barricade_Eindproject.View"
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="608" Height="544">
     <Grid>
@@ -56,8 +57,18 @@
 
         <Image Width="40" Height="22.5" Margin="32,5,536,516" Source="/Jeu_De_Barricade_Eindproject;component/Image/gun.png" />
         <Image Source="/Jeu_De_Barricade_Eindproject;component/Image/gun_mirror.png" Width="40" Height="22.5" Margin="536,5,32,516" />
+        <Image Name="winAnimationLeft" Height="120" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" Margin="-25,0,72,424" Stretch="Fill" />
+        <Image x:Name="winAnimationRight" Height="120" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" Margin="72,0,-25,424" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        
         <Image Source="/Jeu_De_Barricade_Eindproject;component/Image/trees.png" Margin="53,145,413,321" />
         <Image Source="/Jeu_De_Barricade_Eindproject;component/Image/house.png" Margin="420,131,46,335" />
+        
 
     </Grid>
 </src:Level>

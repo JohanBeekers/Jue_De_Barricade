@@ -72,6 +72,8 @@ namespace Jeu_De_Barricade_Eindproject.View
             ABarricadePawns = new Model.BarricadePawn[11];
 
             BoardGrid = mainGrid;
+            animatedWinImage1 = winAnimationLeft;
+            animatedWinImage2 = winAnimationRight;
         }
 
     }

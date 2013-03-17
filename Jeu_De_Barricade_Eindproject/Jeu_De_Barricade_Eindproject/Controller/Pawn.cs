@@ -54,9 +54,9 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             return null;
         }
 
-        public void move(Model.Field field)
+        public void toStartLocation()
         {
-
+            setLocation(startLocation);
         }
 
         //Method to get the possible options where to it could walk
@@ -65,7 +65,14 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             List<Model.Field> retMoves = new List<Model.Field>();
             if (remainingMoves == 0)
             {
-                retMoves.Add(curSpot);
+                if (curSpot is Model.SafeSpot && curSpot.Pawn != null)
+                {
+                }
+                else
+                {
+                    retMoves.Add(curSpot);
+                }
+                
                 return retMoves;
             }
             else if (remainingMoves >= 1 && curSpot.Barricade != null)

@@ -21,7 +21,6 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private Model.Field[] aPawnMovementOptions;
         private Pawn pawnSelected;
 
-
         public int PlayerTurn
         {
             get { return playerTurn; }
@@ -120,36 +119,43 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         public void fieldClick(int column, int row)
         {
-            if (pawnSelected != null && 
-                level.Fields[column, row].Pawn == null &&
-                aPawnMovementOptions.Contains(level.Fields[column, row]))
+            if (level.Fields[column, row] != null &&
+                getGedobbeld())
             {
-                level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(level.Fields[column, row]);
-                if (level.Fields[column, row].Barricade != null)
+                if (level.Fields[column, row].Pawn != null &&
+                    level.Fields[column, row].Pawn.PlayerNumber == PlayerTurn)
                 {
-                    barricade = level.Fields[column, row].Barricade;
+                    //Get the pawn that is selected and get the possible moves
+                    aPawnMovementOptions = level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp).ToArray();
+                    level.createBlurs(aPawnMovementOptions, level.Fields[column, row]);
+                    pawnSelected = level.Fields[column, row].Pawn;
                 }
-                else if (level.Fields[column, row] is Model.Finish)
+                else if (pawnSelected != null && 
+                        aPawnMovementOptions.Contains(level.Fields[column, row]))
                 {
-                    level.showWinAnimation(playerTurn);
-                }
-                else
-                {
-                    nextPlayer();
-                }
-                level.removeBlurs();
-                pawnSelected = null;
+                    if (level.Fields[column, row].Pawn != null && 
+                        level.Fields[column, row].Pawn.PlayerNumber != playerTurn)
+                    {
+                        level.Fields[column, row].Pawn.toStartLocation();
+                    }
 
-            }
-            else if (level.Fields[column, row] != null &&
-                level.Fields[column, row].Pawn != null &&
-                getGedobbeld() &&
-                level.Fields[column, row].Pawn.PlayerNumber == PlayerTurn)
-            {
-                //Get the pawn that is selected and get the possible moves
-                aPawnMovementOptions = level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp).ToArray();
-                level.createBlurs(aPawnMovementOptions, level.Fields[column, row]);
-                pawnSelected = level.Fields[column, row].Pawn;
+                    level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(level.Fields[column, row]);
+                    if (level.Fields[column, row].Barricade != null)
+                    {
+                        barricade = level.Fields[column, row].Barricade;
+                    }
+                    else if (level.Fields[column, row] is Model.Finish)
+                    {
+                        level.showWinAnimation(playerTurn);
+                    }
+                    else
+                    {
+                        nextPlayer();
+                    }
+                    level.removeBlurs();
+                    pawnSelected = null;
+                }
+                
             }
         }
 

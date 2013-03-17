@@ -112,39 +112,33 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             dice.reset();
         }
 
-        public Boolean getGedobbeld()
+        public void fieldClick(Model.Field field)
         {
-            return dice.Gedobbeld;
-        }
-
-        public void fieldClick(int column, int row)
-        {
-            if (level.Fields[column, row] != null &&
-                getGedobbeld())
+            if (dice.Gedobbeld)
             {
-                if (level.Fields[column, row].Pawn != null &&
-                    level.Fields[column, row].Pawn.PlayerNumber == PlayerTurn)
+                if (field.Pawn != null &&
+                    field.Pawn.PlayerNumber == PlayerTurn)
                 {
                     //Get the pawn that is selected and get the possible moves
-                    aPawnMovementOptions = level.Fields[column, row].Pawn.getPossibleMoves(dice.Worp).ToArray();
-                    level.createBlurs(aPawnMovementOptions, level.Fields[column, row]);
-                    pawnSelected = level.Fields[column, row].Pawn;
+                    aPawnMovementOptions = field.Pawn.getPossibleMoves(dice.Worp).ToArray();
+                    level.createBlurs(aPawnMovementOptions, field);
+                    pawnSelected = field.Pawn;
                 }
-                else if (pawnSelected != null && 
-                        aPawnMovementOptions.Contains(level.Fields[column, row]))
+                else if (pawnSelected != null &&
+                        aPawnMovementOptions.Contains(field))
                 {
-                    if (level.Fields[column, row].Pawn != null && 
-                        level.Fields[column, row].Pawn.PlayerNumber != playerTurn)
+                    if (field.Pawn != null &&
+                        field.Pawn.PlayerNumber != playerTurn)
                     {
-                        level.Fields[column, row].Pawn.toStartLocation();
+                        field.Pawn.toStartLocation();
                     }
 
-                    level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(level.Fields[column, row]);
-                    if (level.Fields[column, row].Barricade != null)
+                    level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(field);
+                    if (field.Barricade != null)
                     {
-                        barricade = level.Fields[column, row].Barricade;
+                        barricade = field.Barricade;
                     }
-                    else if (level.Fields[column, row] is Model.Finish)
+                    else if (field is Model.Finish)
                     {
                         level.showWinAnimation(playerTurn);
                     }
@@ -155,15 +149,24 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                     level.removeBlurs();
                     pawnSelected = null;
                 }
-                
             }
         }
 
-        public void moveBarricade(int column, int row)
+        public void moveBarricade(Model.Field field)
         {
-            barricade.setLocation(level.Fields[column, row]);
-            barricade = null;
-            nextPlayer();
+            if (field.Pawn == null && 
+                field.Barricade == null &&
+                (field.GetType() == typeof(Model.Field) || 
+                field.GetType() == typeof(Model.Barricade)))
+            {
+                if((level is View.LevelFast && field.Y != 13) ||
+                    (level is View.LevelSlow && field.Y != 13))
+                {
+                    barricade.setLocation(field);
+                    barricade = null;
+                    nextPlayer();
+                }
+            }
         }
 
     }

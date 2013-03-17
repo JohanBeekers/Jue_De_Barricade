@@ -280,11 +280,11 @@ namespace Jeu_De_Barricade_Eindproject.View
             {
                 if (game.Barricade == null)
                 {
-                    game.fieldClick(column, row);
+                    game.fieldClick(fields[column, row]);
                 }
                 else
                 {
-                    game.moveBarricade(column, row);
+                    game.moveBarricade(fields[column, row]);
                 }
             }
             

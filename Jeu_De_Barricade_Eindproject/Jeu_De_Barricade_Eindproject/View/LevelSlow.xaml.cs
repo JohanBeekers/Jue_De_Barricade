@@ -65,10 +65,10 @@ namespace Jeu_De_Barricade_Eindproject.View
             };
 
             pawnAmount = 5;
-            iMapWidth = 19;
-            iMapHeight = 17;
-            this.Width = iMapWidth * 32;
-            this.Height = iMapHeight * 32;
+            IMapWidth = 19;
+            IMapHeight = 17;
+            this.Width = IMapWidth * 32;
+            this.Height = IMapHeight * 32;
             ABarricadePawns = new Model.BarricadePawn[11];
 
             ANoBarricades = new int[1];

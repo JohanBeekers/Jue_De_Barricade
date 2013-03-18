@@ -44,7 +44,7 @@ namespace Jeu_De_Barricade_Eindproject.View
              */
             map = new String[,]
             {
-                // 1    2    3    4    5    6    7    8    9   10   11  
+                //1   2    3    4    5    6    7    8    9   10   11   12   13
                 {" "," ", " ", " ", " ", " ", "f", " ", " ", " ", " ", " ", " "},
                 {" "," ", "o", "o", "o", "o", "#", "o", "o", "o", "o", " ", " "},
                 {" "," ", "|", " ", " ", " ", " ", " ", " ", " ", "|", " ", " "},
@@ -66,10 +66,10 @@ namespace Jeu_De_Barricade_Eindproject.View
             };
 
             pawnAmount = 4;
-            iMapWidth = 13;
-            iMapHeight = 18;
-            this.Width = iMapWidth * 32;
-            this.Height = iMapHeight * 32;
+            IMapWidth = 13;
+            IMapHeight = 18;
+            this.Width = IMapWidth * 32;
+            this.Height = IMapHeight * 32;
             ABarricadePawns = new Model.BarricadePawn[6];
 
             ANoBarricades = new int[1];

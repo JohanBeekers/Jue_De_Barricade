@@ -15,11 +15,13 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private MainWindow main;
         private View.Level level;
         private View.Dice dice;
+        private View.Skip skip;
         private Player[] aPlayers = new Player[4];
         private int playerTurn;
         private Model.BarricadePawn barricade;
         private Model.Field[] aPawnMovementOptions;
         private Pawn pawnSelected;
+        private Random random;
 
         public int PlayerTurn
         {
@@ -30,11 +32,16 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         {
             get { return barricade; }
         }
+        public Model.Field[] APawnMovementOptions
+        {
+            get { return aPawnMovementOptions; }
+            set { aPawnMovementOptions = value; }
+        }
         
         public Game(MainWindow main)
         {
-
             this.main = main;
+            random = new Random();
             playerTurn = 0;
 
             //Show the "hoofdmenu" button, allowing the user to return the the main menu
@@ -77,6 +84,11 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             dice.HorizontalAlignment = HorizontalAlignment.Right;
             dice.Margin = new Thickness(0,0,10,0);
             main.mainGrid.Children.Add(dice);
+
+            skip = new View.Skip(this);
+            skip.HorizontalAlignment = HorizontalAlignment.Right;
+            skip.Margin = new Thickness(0, 160, 10, 0);
+            main.mainGrid.Children.Add(skip);
         }
 
         public void loadBoard()
@@ -86,10 +98,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         private void createPlayers(int iHumanPlayers, int amountPawns)
         {
-            aPlayers[0] = new Player(iHumanPlayers <= 1, amountPawns);
-            aPlayers[1] = new Player(iHumanPlayers <= 2, amountPawns);
-            aPlayers[2] = new Player(iHumanPlayers <= 3, amountPawns);
-            aPlayers[3] = new Player(iHumanPlayers <= 4, amountPawns);
+            aPlayers[0] = new Player(iHumanPlayers >= 1, amountPawns, this);
+            aPlayers[1] = new Player(iHumanPlayers >= 2, amountPawns, this);
+            aPlayers[2] = new Player(iHumanPlayers >= 3, amountPawns, this);
+            aPlayers[3] = new Player(iHumanPlayers >= 4, amountPawns, this);
         }
 
         public void createPawn(Model.Field field, Ellipse image, int i)
@@ -117,6 +129,12 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
             //Empty the dice value
             dice.reset();
+
+            if (!aPlayers[playerTurn].BIsHuman)
+            {
+                dice.dobbelen();
+                aPlayers[playerTurn].automateTurn(dice.Worp);
+            }
         }
 
         //Method called when a player clicks on a field
@@ -164,8 +182,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                     //Else if the target field is a finish
                     else if (field is Model.Finish)
                     {
-                        //Show to finish animation
-                        level.showWinAnimation(playerTurn);
+                        //The game has been won. 
+                        winGame();
                     }
                     //Else the turn is over
                     else
@@ -181,7 +199,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
         }
 
-        public void moveBarricade(Model.Field field)
+        public Boolean moveBarricade(Model.Field field)
         {
             if (field.Pawn == null && 
                 field.Barricade == null &&
@@ -195,7 +213,24 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                     barricade = null;
                     level.setCursor("arrow", field);
                     nextPlayer();
+                    return true;
                 }
+            }
+            return false;
+        }
+
+        public void winGame()
+        {
+            level.showWinAnimation(playerTurn);
+        }
+
+        public void moveBarricadeRandom()
+        {
+            Model.Field field = level.Fields[random.Next(0, level.IMapWidth), random.Next(0, level.IMapHeight)];
+            while(field == null ||
+                !moveBarricade(field))
+            {
+                field = level.Fields[random.Next(0, level.IMapWidth), random.Next(0, level.IMapHeight)];
             }
         }
 

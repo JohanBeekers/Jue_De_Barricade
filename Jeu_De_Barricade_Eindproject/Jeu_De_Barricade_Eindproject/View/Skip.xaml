@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Jeu_De_Barricade_Eindproject.View.Skip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" BorderBrush="#FFE8C527" BorderThickness="2" Height="50" Width="100">
+    <Grid Background="LightGray">
+        <Button Content="Skip"  FontSize="18" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="76" Height="26" Click="Button_Click_1"/>
+
+    </Grid> 
+</UserControl>

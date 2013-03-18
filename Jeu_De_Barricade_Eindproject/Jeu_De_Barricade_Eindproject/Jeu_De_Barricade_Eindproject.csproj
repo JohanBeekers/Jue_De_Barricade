@@ -81,6 +81,9 @@
     <Compile Include="View\ReturnMainMenu.xaml.cs">
       <DependentUpon>ReturnMainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Skip.xaml.cs">
+      <DependentUpon>Skip.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StartLevelOption.xaml.cs">
       <DependentUpon>StartLevelOption.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ReturnMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Skip.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,7 +260,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\barricade_new.png">
+    <Resource Include="Image\barricade_pawn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

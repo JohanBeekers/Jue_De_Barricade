@@ -43,7 +43,12 @@ namespace Jeu_De_Barricade_Eindproject.View
 
         private void Dobbel_Click(object sender, RoutedEventArgs e)
         {
-            worp = random.Next(1,7);
+            dobbelen();
+        }
+
+        public void dobbelen()
+        {
+            worp = random.Next(1, 7);
             gedobbeld = true;
             LabelWorp.Content = worp;
             ButtonDobbel.Visibility = Visibility.Collapsed;

@@ -19,8 +19,8 @@ namespace Jeu_De_Barricade_Eindproject.View
         private Grid boardGrid;
         protected int pawnAmount;
         protected static int CellSize = 32;
-        protected int iMapWidth;
-        protected int iMapHeight;
+        private int iMapWidth;
+        private int iMapHeight;
         protected Controller.Game game;
         private Model.BarricadePawn[] aBarricadePawns;
         protected Image animatedWinImage1, animatedWinImage2;
@@ -42,6 +42,16 @@ namespace Jeu_De_Barricade_Eindproject.View
         {
             get { return boardGrid; }
             set { boardGrid = value; }
+        }
+        public int IMapWidth
+        {
+            get { return iMapWidth; }
+            set { iMapWidth = value; }
+        }
+        public int IMapHeight
+        {
+            get { return iMapHeight; }
+            set { iMapHeight = value; }
         }
         public Model.Field[,] Fields
         {
@@ -117,7 +127,7 @@ namespace Jeu_De_Barricade_Eindproject.View
                             r.Width = 28;
                             r.Height = 26;
                             ImageBrush myBrush = new ImageBrush();
-                            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/barricade_new.png"));
+                            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/barricade_pawn.png"));
                             r.Fill = myBrush;
                             r.SetValue(Grid.ColumnProperty, iColumn);
                             r.SetValue(Grid.RowProperty, iRow);

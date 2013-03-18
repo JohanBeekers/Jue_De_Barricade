@@ -35,9 +35,10 @@ namespace Jeu_De_Barricade_Eindproject.View
             set { gedobbeld = value; }
         }
 
-        public Dice()
+        public Dice(int playerTurn)
         {
             InitializeComponent();
+            changeButtonColor(playerTurn);
         }
 
         private void Dobbel_Click(object sender, RoutedEventArgs e)
@@ -53,6 +54,29 @@ namespace Jeu_De_Barricade_Eindproject.View
             ButtonDobbel.Visibility = Visibility.Visible;
             gedobbeld = false;
             worp = -1;
+        }
+
+        public void changeButtonColor(int playerTurn)
+        {
+            System.Windows.Media.Brush color = Brushes.Red;
+
+            switch (playerTurn)
+            {
+                case 0:
+                    color = Brushes.Red;
+                    break;
+                case 1:
+                    color = Brushes.Green;
+                    break;
+                case 2:
+                    color = Brushes.Yellow;
+                    break;
+                case 3:
+                    color = Brushes.RoyalBlue;
+                    break;
+            }
+            ButtonDobbel.Background = color;
+            Rectangle1.Fill = color;
         }
     }
 }

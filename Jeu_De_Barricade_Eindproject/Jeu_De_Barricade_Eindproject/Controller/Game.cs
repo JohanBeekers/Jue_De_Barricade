@@ -73,7 +73,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 level.Visibility = Visibility.Visible;
             }
 
-            dice = new View.Dice();
+            dice = new View.Dice(playerTurn);
             dice.HorizontalAlignment = HorizontalAlignment.Right;
             dice.Margin = new Thickness(0,0,10,0);
             main.mainGrid.Children.Add(dice);
@@ -98,55 +98,84 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             aPlayers[i].addPawn(pawn);
         }
 
+        //Method called to give the turn to the next player
         public void nextPlayer()
         {
+            //If the last player is done, give the turn to the first player
             if (playerTurn == 3)
             {
                 playerTurn = 0;
             }
+            //Else give the turn to the next player
             else
             {
                 playerTurn++;
             }
 
+            //Change dice button background color
+            dice.changeButtonColor(playerTurn);
+
+            //Empty the dice value
             dice.reset();
         }
 
+        //Method called when a player clicks on a field
         public void fieldClick(Model.Field field)
         {
+            //If the dice is rolled
             if (dice.Gedobbeld)
             {
+                //If the field does contain a Pawn and the Pawn belongs to the player
                 if (field.Pawn != null &&
                     field.Pawn.PlayerNumber == PlayerTurn)
                 {
-                    //Get the pawn that is selected and get the possible moves
+                    //Select the Pawn and get it's possible moves
                     aPawnMovementOptions = field.Pawn.getPossibleMoves(dice.Worp).ToArray();
                     level.createBlurs(aPawnMovementOptions, field);
+                    //Set the selected pawn
                     pawnSelected = field.Pawn;
+
+                    level.setCursor(PlayerTurn.ToString(), field);
                 }
+                //Else if there is an Pawn selected and the field you click on is added to the possible moves
                 else if (pawnSelected != null &&
                         aPawnMovementOptions.Contains(field))
                 {
+                    //If the possible move contains an enemy Pawn
                     if (field.Pawn != null &&
                         field.Pawn.PlayerNumber != playerTurn)
                     {
+                        //Send enemy Pawn back to it's start location
                         field.Pawn.toStartLocation();
                     }
-
+                    //Move the Pawn to it's new location
                     level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(field);
+                    //Change back the cursor to an arrow
+                    level.setCursor("arrow", field);
+
+                    //If the target field contains a barricade
                     if (field.Barricade != null)
                     {
+                        //Remember the barricade and do not end the players turn
                         barricade = field.Barricade;
+
+                        level.setCursor("barricade", field);
                     }
+                    //Else if the target field is a finish
                     else if (field is Model.Finish)
                     {
+                        //Show to finish animation
                         level.showWinAnimation(playerTurn);
                     }
+                    //Else the turn is over
                     else
                     {
+                        //Give the turn to the next player
                         nextPlayer();
                     }
+                    //Remove the possible moves- and selected pawn blurs
                     level.removeBlurs();
+                    //Empty the selected pawn
                     pawnSelected = null;
                 }
             }
@@ -159,11 +188,12 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 (field.GetType() == typeof(Model.Field) || 
                 field.GetType() == typeof(Model.Barricade)))
             {
-                if((level is View.LevelFast && field.Y != 13) ||
-                    (level is View.LevelSlow && field.Y != 13))
+                //If the row is in the array it can not contain a barricade
+                if (!level.ANoBarricades.Contains(field.Y))
                 {
                     barricade.setLocation(field);
                     barricade = null;
+                    level.setCursor("arrow", field);
                     nextPlayer();
                 }
             }

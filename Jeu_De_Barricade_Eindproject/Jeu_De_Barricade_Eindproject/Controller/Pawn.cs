@@ -65,7 +65,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             List<Model.Field> retMoves = new List<Model.Field>();
             if (remainingMoves == 0)
             {
-                if (curSpot is Model.SafeSpot && curSpot.Pawn != null)
+                if ((curSpot is Model.SafeSpot && curSpot.Pawn != null) ||
+                    (curSpot.Pawn != null && curSpot.Pawn.PlayerNumber == this.PlayerNumber))
                 {
                 }
                 else

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" BorderBrush="#FFE8C527" BorderThickness="2" Height="100" Width="100">
     <Grid Background="LightGray">
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="70" Margin="0" Stroke="Black" VerticalAlignment="Center" Width="70"/>
+        <Rectangle Name="Rectangle1" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="70" Margin="0" Stroke="Black" VerticalAlignment="Center" Width="70"/>
         <Label Content="0" Name="LabelWorp" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="48"/>
         <Button Content="Dobbel" Name="ButtonDobbel" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="70" Click="Dobbel_Click" Height="70" FontSize="18"/>
 

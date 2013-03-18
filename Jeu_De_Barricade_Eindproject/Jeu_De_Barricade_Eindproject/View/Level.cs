@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Resources;
 using System.Windows.Shapes;
 using WpfAnimatedGif;
 
@@ -29,6 +30,11 @@ namespace Jeu_De_Barricade_Eindproject.View
 
         private Model.Field[,] fields;
 
+        private int[] aNoBarricades;
+
+        private StreamResourceInfo sri;
+        private Cursor customCursor;
+        
         protected String[,] map;
 
         //properties
@@ -46,6 +52,12 @@ namespace Jeu_De_Barricade_Eindproject.View
         {
             get { return aBarricadePawns; }
             set { aBarricadePawns = value; }
+        }
+
+        public int[] ANoBarricades
+        {
+            get { return aNoBarricades; }
+            set { aNoBarricades = value; }
         }
 
         public Level(Controller.Game game)
@@ -101,19 +113,18 @@ namespace Jeu_De_Barricade_Eindproject.View
                             boardGrid.Children.Add(e);
 
                             //Barricade
-                            Ellipse e2 = new Ellipse();
-                            e2.Width = 28;
-                            e2.Height = 28;
-
+                            Rectangle r = new Rectangle();
+                            r.Width = 28;
+                            r.Height = 26;
                             ImageBrush myBrush = new ImageBrush();
-                            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/barricade_pawn.png"));
-                            e2.Fill = myBrush;
-                            e2.SetValue(Grid.ColumnProperty, iColumn);
-                            e2.SetValue(Grid.RowProperty, iRow);
-                            Panel.SetZIndex(e2, 1);
-                            boardGrid.Children.Add(e2);
+                            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/barricade_new.png"));
+                            r.Fill = myBrush;
+                            r.SetValue(Grid.ColumnProperty, iColumn);
+                            r.SetValue(Grid.RowProperty, iRow);
+                            Panel.SetZIndex(r, 5);
+                            boardGrid.Children.Add(r);
 
-                            aBarricadePawns[iArrayBarricadePawns] = new Model.BarricadePawn(e2, fields[iColumn, iRow]);
+                            aBarricadePawns[iArrayBarricadePawns] = new Model.BarricadePawn(r, fields[iColumn, iRow]);
                             iArrayBarricadePawns++;
                         }
                         //Safespot field
@@ -121,8 +132,8 @@ namespace Jeu_De_Barricade_Eindproject.View
                         {
                             Ellipse e = new Ellipse();
                             //A safespot is 2 px bigger
-                            e.Width = 30;
-                            e.Height = 30;
+                            e.Width = 28;
+                            e.Height = 28;
                             e.Fill = new SolidColorBrush(Colors.LightBlue);
                             e.SetValue(Grid.ColumnProperty, iColumn);
                             e.SetValue(Grid.RowProperty, iRow);
@@ -305,7 +316,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             blur.Fill = myBrush;
             blur.SetValue(Grid.ColumnProperty, pawnPosition.X);
             blur.SetValue(Grid.RowProperty, pawnPosition.Y);
-            Panel.SetZIndex(blur, 3);
+            Panel.SetZIndex(blur, 4);
             boardGrid.Children.Add(blur);
             blurLocations.Add(blur);
 
@@ -317,8 +328,8 @@ namespace Jeu_De_Barricade_Eindproject.View
                 blur2.Width = 28;
                 blur2.Height = 28;
                 ImageBrush myBrush2 = new ImageBrush();
-                myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/blur.png"));
-                blur2.Fill = myBrush;
+                myBrush2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Image/blur.png"));
+                blur2.Fill = myBrush2;
                 blur2.SetValue(Grid.ColumnProperty, blurPosition.X);
                 blur2.SetValue(Grid.RowProperty, blurPosition.Y);
                 Panel.SetZIndex(blur2, 3);
@@ -362,6 +373,53 @@ namespace Jeu_De_Barricade_Eindproject.View
             animatedWinImage2.Visibility = Visibility.Visible;
             ImageBehavior.GetAnimationController(animatedWinImage1).Play();
             ImageBehavior.GetAnimationController(animatedWinImage2).Play();
+        }
+
+        //Make the barricade image follow the cursor untill it's placed
+        public void setCursor(String cursor, Model.Field field)
+        {
+            switch (cursor)
+            {
+                case "barricade":
+                    field.Barricade.Image.Visibility = Visibility.Collapsed;
+
+                    sri = Application.GetResourceStream(new Uri("pack://application:,,,/Image/barricade_cur.cur"));
+                    customCursor = new Cursor(sri.Stream);
+                    this.Cursor = customCursor;
+                    break;
+                //Red player
+                case "0":
+                    sri = Application.GetResourceStream(new Uri("pack://application:,,,/Image/pawn_red_cur.cur"));
+                    customCursor = new Cursor(sri.Stream);
+                    this.Cursor = customCursor;
+                    break;
+                //Green player
+                case "1":
+                    sri = Application.GetResourceStream(new Uri("pack://application:,,,/Image/pawn_green_cur.cur"));
+                    customCursor = new Cursor(sri.Stream);
+                    this.Cursor = customCursor;
+                    break;
+                //Yellow player
+                case "2":
+                    sri = Application.GetResourceStream(new Uri("pack://application:,,,/Image/pawn_yellow_cur.cur"));
+                    customCursor = new Cursor(sri.Stream);
+                    this.Cursor = customCursor;
+                    break;                
+                //Blue player
+                case "3":
+                    sri = Application.GetResourceStream(new Uri("pack://application:,,,/Image/pawn_blue_cur.cur"));
+                    customCursor = new Cursor(sri.Stream);
+                    this.Cursor = customCursor;
+                    break;
+                case "arrow":
+                    if (field.Barricade != null)
+                    {
+                        field.Barricade.Image.Visibility = Visibility.Visible;
+                    }
+
+                    this.Cursor = Cursors.Arrow;
+                    break;
+            }
         }
     }
 }

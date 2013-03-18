@@ -10,9 +10,9 @@ namespace Jeu_De_Barricade_Eindproject.Model
 {
     public class BarricadePawn
     {
-        private Ellipse image;
+        private Rectangle image;
 
-        public Ellipse Image
+        public Rectangle Image
         {
             get { return image; }
             set { image = value; }
@@ -20,7 +20,7 @@ namespace Jeu_De_Barricade_Eindproject.Model
 
         private Model.Field currentLocation;
 
-        public BarricadePawn(Ellipse image, Model.Field startLocation)
+        public BarricadePawn(Rectangle image, Model.Field startLocation)
         {
             this.currentLocation = startLocation;
             this.currentLocation.Barricade = this;

@@ -72,6 +72,9 @@ namespace Jeu_De_Barricade_Eindproject.View
             this.Height = iMapHeight * 32;
             ABarricadePawns = new Model.BarricadePawn[6];
 
+            ANoBarricades = new int[1];
+            ANoBarricades[0] = 13;
+
             BoardGrid = mainGrid;
             animatedWinImage1 = winAnimationLeft;
             animatedWinImage2 = winAnimationRight;

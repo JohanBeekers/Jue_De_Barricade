@@ -1,0 +1,16 @@
+- Wanneer een speler wint niet alleen de 'strepen' maar ook nog een textuele melding in het midden
+- Spel kunnen opslaan en opnieuw inladen
+- Checken of alles nog werkt als we builden en de .exe ergens neerzetten
+  (ook de afbeeldingen?)
+- De classes beter opdelen volgens mvc, eventueel wat extra models o.i.d.
+- Bij elke methode duidelijke commentaar
+
+- In fast map als je bovenin af gaat -> naar bos ipv homebase
+- Tweede tekstuele view maken
+- Zorgen dat we beide alles weten en dat we de taakverdeling kunnen aantonen
+- Cheat-mode
+
+
+Would have:
+- Alleen skippen als geen één van de pionnen een zet kan maken
+- Slimmere AI

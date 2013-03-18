@@ -55,8 +55,10 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             {
                 main.mainGrid.Children.Remove(level);
                 main.mainGrid.Children.Remove(dice);
+                main.mainGrid.Children.Remove(skip);
                 level = null;
                 dice = null;
+                skip = null;
             }
             
             main.ToggleImageOpacityAndButtonGrid();

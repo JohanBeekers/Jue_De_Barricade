@@ -3,36 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace Jeu_De_Barricade_Eindproject.View
+namespace Jeu_De_Barricade_Eindproject.Model
 {
-    /// <summary>
-    /// Interaction logic for LevelSlow.xaml
-    /// </summary>
-    public partial class LevelSlow : Level
+    class ModelLevelSlow : ModelLevel
     {
-
-        public LevelSlow(Controller.Game game)
-            : base(game)
+        public ModelLevelSlow()
         {
-        }
+            //The array that contains the map
 
-        protected override void initVariables()
-        {
-            //Level should initialize before any other superclass methods are executed. 
-            InitializeComponent();
-
-            //set map specific variables, then continue with the superclass constructor.
-            
             /* Map legenda:
              * f = finish
              * # = barricade
@@ -58,26 +37,36 @@ namespace Jeu_De_Barricade_Eindproject.View
                 {" "," ", " ", "o", " ", " ", " ", "o", " ", " ", " ", "o", " ", " ", " ", "o", " ", " ", " "},
                 {" ","#", "o", "o", "o", "#", "o", "o", "o", "#", "o", "o", "o", "#", "o", "o", "o", "#", " "},
                 {" ","o", " ", " ", " ", "o", " ", " ", " ", "o", " ", " ", " ", "o", " ", " ", " ", "o", " "},
-                {" ","o", "o", "R", "o", "o", "o", "G", "o", "o", "o", "Y", "o", "o", "o", "B", "o", "o", " "},
+                {" ","o", "o", "R", "o", "o", "o", "G", "o", "o", "o", "Y", "o", "o", "o", "B", "o", "o", " "}, /* No barricades - line 13 */
                 {" "," ", " ", "r", " ", " ", " ", "g", " ", " ", " ", "y", " ", " ", " ", "b", " ", " ", " "},
                 {" "," ", "r", "r", "r", " ", "g", "g", "g", " ", "y", "y", "y", " ", "b", "b", "b", " ", " "},
                 {" "," ", " ", "r", " ", " ", " ", "g", " ", " ", " ", "y", " ", " ", " ", "b", " ", " ", " "},
             };
 
+            //Amount of pawns per player
             pawnAmount = 5;
-            IMapWidth = 19;
-            IMapHeight = 17;
-            this.Width = IMapWidth * 32;
-            this.Height = IMapHeight * 32;
-            ABarricadePawns = new Model.BarricadePawn[11];
 
-            ANoBarricades = new int[1];
-            ANoBarricades[0] = 13;
+            //Width of the map in cells
+            iMapWidth = 19;
 
-            BoardGrid = mainGrid;
-            animatedWinImage1 = winAnimationLeft;
-            animatedWinImage2 = winAnimationRight;
+            //Height of the map in cells
+            iMapHeight = 17;
+
+            //Width of the map in px
+            iWidth = iMapWidth * 32;
+
+            //Height of the map in px
+            iHeight = iMapHeight * 32;
+
+            //Set the array of barricades and give it the right size
+            ABarricades = new Model.BarricadePawn[11];
+
+            //Initialize the array witht he size of 1, there is just 1 row where barricades can not be added to
+            aNoBarricades = new int[1];
+            //Set the value '13' (row no barricades) in the array
+            aNoBarricades[0] = 13;
+
+            fillViewArray();
         }
-
     }
 }

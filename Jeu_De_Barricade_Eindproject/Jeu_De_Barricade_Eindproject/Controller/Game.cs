@@ -13,15 +13,19 @@ namespace Jeu_De_Barricade_Eindproject.Controller
     public class Game
     {
         private MainWindow main;
-        private View.Level level;
+        private Model.ModelLevel levelModel;
+        private View.ViewLevel level;
         private View.Dice dice;
         private View.Skip skip;
+        private View.WinnerMessage winner;
         private Player[] aPlayers = new Player[4];
         private int playerTurn;
         private Model.BarricadePawn barricade;
         private Model.Field[] aPawnMovementOptions;
         private Pawn pawnSelected;
         private Random random;
+
+        private Controller.SaveGame save;
 
         public int PlayerTurn
         {
@@ -46,6 +50,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
             //Show the "hoofdmenu" button, allowing the user to return the the main menu
             main.label_mainmenu.Visibility = Visibility.Visible;
+            main.label_save.Visibility = Visibility.Visible;
         }
 
         //Remove the object of the board and remove it as child from the grid so it's gone
@@ -56,9 +61,11 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 main.mainGrid.Children.Remove(level);
                 main.mainGrid.Children.Remove(dice);
                 main.mainGrid.Children.Remove(skip);
+                main.mainGrid.Children.Remove(winner);
                 level = null;
                 dice = null;
                 skip = null;
+                winner = null;
             }
             
             main.ToggleImageOpacityAndButtonGrid();
@@ -70,17 +77,18 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             if (sBoardType.Equals("Normaal"))
             {
                 createPlayers(iHumanPlayers, 5);
-                level = new View.LevelSlow(this);
-                main.mainGrid.Children.Add(level);
-                level.Visibility = Visibility.Visible;
+                levelModel = new Model.ModelLevelSlow();
+                level = new View.ViewLevel(this, levelModel);
             }
             else
             {
                 createPlayers(iHumanPlayers, 4);
-                level = new View.LevelFast(this);
-                main.mainGrid.Children.Add(level);
-                level.Visibility = Visibility.Visible;
+                levelModel = new Model.ModelLevelFast();
+                level = new View.ViewLevel(this, levelModel);
             }
+            main.mainGrid.Children.Add(level);
+            level.Visibility = Visibility.Visible;
+
 
             dice = new View.Dice(playerTurn);
             dice.HorizontalAlignment = HorizontalAlignment.Right;
@@ -91,6 +99,15 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             skip.HorizontalAlignment = HorizontalAlignment.Right;
             skip.Margin = new Thickness(0, 160, 10, 0);
             main.mainGrid.Children.Add(skip);
+
+            winner = new View.WinnerMessage();
+            winner.Visibility = Visibility.Collapsed;
+            winner.HorizontalAlignment = HorizontalAlignment.Center;
+            winner.VerticalAlignment = VerticalAlignment.Center;
+            main.mainGrid.Children.Add(winner);
+
+            //Create the save game controller and give it the model
+            save = new Controller.SaveGame(levelModel.ABarricades, aPlayers, levelModel.GetType().ToString());
         }
 
         public void loadBoard()
@@ -169,7 +186,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                         field.Pawn.toStartLocation();
                     }
                     //Move the Pawn to it's new location
-                    level.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(field);
+                    levelModel.Fields[pawnSelected.CurrentLocation.X, pawnSelected.CurrentLocation.Y].Pawn.setLocation(field);
                     //Change back the cursor to an arrow
                     level.setCursor("arrow", field);
 
@@ -223,18 +240,29 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         public void winGame()
         {
+            main.label_save.Visibility = Visibility.Collapsed;
+
             level.showWinAnimation(playerTurn);
+            skip.Visibility = Visibility.Collapsed;
+            dice.Visibility = Visibility.Collapsed;
+
+            winner.showWinner(playerTurn);
+            winner.Visibility = Visibility.Visible;
         }
 
         public void moveBarricadeRandom()
         {
-            Model.Field field = level.Fields[random.Next(0, level.IMapWidth), random.Next(0, level.IMapHeight)];
+            Model.Field field = levelModel.Fields[random.Next(0, level.LevelModel.IMapWidth), random.Next(0, level.LevelModel.IMapHeight)];
             while(field == null ||
                 !moveBarricade(field))
             {
-                field = level.Fields[random.Next(0, level.IMapWidth), random.Next(0, level.IMapHeight)];
+                field = levelModel.Fields[random.Next(0, level.LevelModel.IMapWidth), random.Next(0, level.LevelModel.IMapHeight)];
             }
         }
 
+        public void saveCurrentGame()
+        {
+            save.saveTheGame(playerTurn);
+        }
     }
 }

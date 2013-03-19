@@ -3,33 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace Jeu_De_Barricade_Eindproject.View
+namespace Jeu_De_Barricade_Eindproject.Model
 {
-    /// <summary>
-    /// Interaction logic for LevelFast.xaml
-    /// </summary>
-    public partial class LevelFast : Level
+    class ModelLevelFast : ModelLevel
     {
-
-        public LevelFast(Controller.Game game) 
-            : base(game)
+        public ModelLevelFast()
         {
-        }
-
-        protected override void initVariables()
-        {
-            //Level should initialize before any other superclass methods are executed. 
-            InitializeComponent();
+            //The array that contains the map
 
             /* Map legenda:
              * f = finish
@@ -58,26 +39,37 @@ namespace Jeu_De_Barricade_Eindproject.View
                 {" "," ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " ", " "},
                 {" ","s", "o", "s", "o", "o", "s", "o", "o", "s", "o", "s", " "},
                 {" ","|", " ", "|", " ", " ", "|", " ", " ", "|", " ", "|", " "},
-                {" ","o", "R", "o", "G", "o", "o", "o", "Y", "o", "B", "o", " "},
+                {" ","o", "R", "o", "G", "o", "o", "o", "Y", "o", "B", "o", " "}, /* No barricades - line 13 */
                 {" "," ", "r", " ", "g", " ", " ", " ", "y", " ", "b", " ", " "},
                 {" "," ", "r", " ", "g", " ", " ", " ", "y", " ", "b", " ", " "},
                 {" "," ", "r", " ", "g", " ", " ", " ", "y", " ", "b", " ", " "},
                 {" "," ", "r", " ", "g", " ", " ", " ", "y", " ", "b", " ", " "}
             };
 
+            //Amount of pawns per player
             pawnAmount = 4;
-            IMapWidth = 13;
-            IMapHeight = 18;
-            this.Width = IMapWidth * 32;
-            this.Height = IMapHeight * 32;
-            ABarricadePawns = new Model.BarricadePawn[6];
 
-            ANoBarricades = new int[1];
-            ANoBarricades[0] = 13;
+            //Width of the map in cells
+            iMapWidth = 13;
 
-            BoardGrid = mainGrid;
-            animatedWinImage1 = winAnimationLeft;
-            animatedWinImage2 = winAnimationRight;
+            //Height of the map in cells
+            iMapHeight = 18;
+
+            //Width of the map in px
+            iWidth = iMapWidth * 32;
+
+            //Height of the map in px
+            iHeight = iMapHeight * 32;
+
+            //Set the array of barricades and give it the right size
+            ABarricades = new Model.BarricadePawn[6];
+
+            //Initialize the array witht he size of 1, there is just 1 row where barricades can not be added to
+            aNoBarricades = new int[1];
+            //Set the value '13' (row no barricades) in the array
+            aNoBarricades[0] = 13;
+
+            fillViewArray();
         }
     }
 }

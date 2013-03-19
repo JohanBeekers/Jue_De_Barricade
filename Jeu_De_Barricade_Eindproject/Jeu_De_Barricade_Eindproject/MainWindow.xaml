@@ -13,26 +13,31 @@
             </Grid>
         </Grid>
         
-        <Grid  Name="mainGrid" Margin="0,36,0,0">
-            
+        <Grid  Name="mainGrid" Margin="0,36,0,0">            
         </Grid>
-        
-        <Grid Margin="0,0,0,596" Background="#00000000" MouseLeftButtonDown="grid_mouseleftdown" Height="36" VerticalAlignment="Bottom">
-            <Label x:Name="label_exit" Content="  X" Cursor="Hand" Margin="798,0,0,0" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontWeight="Bold" FontSize="20" MouseLeftButtonDown="label_exit_mousedown" ToolTip="Sluit het spel af" >
-                <Label.Background>
-                    <ImageBrush ImageSource="Image/button.png"/>
-                </Label.Background>
-            </Label>
-            <Label x:Name="label_minimize" Content="  -" Cursor="Hand" Margin="748,0,50,0" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontSize="20" MouseLeftButtonDown="label_minimize_mousedown" FontWeight="Bold" ToolTip="Minimaliseer het spel" >
-                <Label.Background>
-                    <ImageBrush ImageSource="Image/button.png"/>
-                </Label.Background>
-            </Label>
-            <Label x:Name="label_mainmenu" Visibility="Collapsed" Content="Hoofdmenu" Cursor="Hand" Margin="615,0,100,0" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontSize="20" MouseLeftButtonDown="label_mainmenu_mousedown" FontWeight="Bold" ToolTip="Keer terug naar hoofdmenu" >
-                <Label.Background>
-                    <ImageBrush ImageSource="Image/button.png"/>
-                </Label.Background>
-            </Label>
+
+        <Grid Margin="0,0,0,591" Background="#00000000" MouseLeftButtonDown="grid_mouseleftdown" Height="41" VerticalAlignment="Bottom">
         </Grid>
+
+        <Label x:Name="label_exit" Content="  X" Cursor="Hand" Margin="798,0,0,591" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontWeight="Bold" FontSize="20" MouseLeftButtonDown="label_exit_mousedown" ToolTip="Sluit het spel af" >
+            <Label.Background>
+                <ImageBrush ImageSource="Image/button.png"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="label_minimize" Content="  -" Cursor="Hand" Margin="748,0,50,591" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontSize="20" MouseLeftButtonDown="label_minimize_mousedown" FontWeight="Bold" ToolTip="Minimaliseer het spel" >
+            <Label.Background>
+                <ImageBrush ImageSource="Image/button.png"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="label_mainmenu" Visibility="Collapsed" Content="Hoofdmenu" Cursor="Hand" Margin="620,0,100,591" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontSize="20" MouseLeftButtonDown="label_mainmenu_mousedown" FontWeight="Bold" ToolTip="Keer terug naar hoofdmenu" >
+            <Label.Background>
+                <ImageBrush ImageSource="Image/button.png"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="label_save" Visibility="Collapsed" Content="Opslaan" Cursor="Hand" Margin="527,0,228,591" BorderBrush="#7FDCDCDC" BorderThickness="2" Foreground="White" FontSize="20" FontWeight="Bold" ToolTip="Keer terug naar hoofdmenu" MouseDown="label_save_mousedown" >
+            <Label.Background>
+                <ImageBrush ImageSource="Image/button.png"/>
+            </Label.Background>
+        </Label>
     </Grid>
 </Window>

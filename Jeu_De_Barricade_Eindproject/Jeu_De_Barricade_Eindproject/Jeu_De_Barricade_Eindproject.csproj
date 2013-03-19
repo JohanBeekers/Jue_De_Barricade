@@ -63,17 +63,14 @@
     <Compile Include="Controller\MapConverter.cs" />
     <Compile Include="Controller\Pawn.cs" />
     <Compile Include="Controller\Player.cs" />
+    <Compile Include="Controller\SaveGame.cs" />
     <Compile Include="Model\BarricadePawn.cs" />
     <Compile Include="Model\Field.cs" />
+    <Compile Include="Model\ModelLevel.cs" />
+    <Compile Include="Model\ModelLevelFast.cs" />
+    <Compile Include="Model\ModelLevelSlow.cs" />
     <Compile Include="View\Dice.xaml.cs">
       <DependentUpon>Dice.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Level.cs" />
-    <Compile Include="View\LevelFast.xaml.cs">
-      <DependentUpon>LevelFast.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\LevelSlow.xaml.cs">
-      <DependentUpon>LevelSlow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LoadLevelOption.xaml.cs">
       <DependentUpon>LoadLevelOption.xaml</DependentUpon>
@@ -86,6 +83,12 @@
     </Compile>
     <Compile Include="View\StartLevelOption.xaml.cs">
       <DependentUpon>StartLevelOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewLevel.xaml.cs">
+      <DependentUpon>ViewLevel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinnerMessage.xaml.cs">
+      <DependentUpon>WinnerMessage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -103,14 +106,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\LevelFast.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\LevelSlow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\LoadLevelOption.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +119,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\StartLevelOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewLevel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinnerMessage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,11 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\gun.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Image\gun_mirror.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

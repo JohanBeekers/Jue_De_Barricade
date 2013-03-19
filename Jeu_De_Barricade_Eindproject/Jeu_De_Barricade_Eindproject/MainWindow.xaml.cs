@@ -83,6 +83,7 @@ namespace Jeu_De_Barricade_Eindproject
         {
 
             label_mainmenu.Visibility = Visibility.Collapsed;
+            label_save.Visibility = Visibility.Collapsed;
 
             if (game != null)
             {
@@ -117,6 +118,12 @@ namespace Jeu_De_Barricade_Eindproject
         {
             game = new Controller.Game(this);
             game.newBoard(iRealPlayers, sBoardType);
+        }
+
+        //Trigger the save game method in game
+        private void label_save_mousedown(object sender, MouseButtonEventArgs e)
+        {
+            game.saveCurrentGame();
         }
     }
 }

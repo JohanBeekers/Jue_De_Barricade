@@ -46,9 +46,17 @@ namespace Jeu_De_Barricade_Eindproject.View
             dobbelen();
         }
 
+        //Dobbel een random getal 
         public void dobbelen()
         {
             worp = random.Next(1, 7);
+            dobbelen(worp);
+        }
+
+        //Dobbel een specifiek getal. 
+        public void dobbelen(int worp)
+        {
+            this.worp = worp;
             gedobbeld = true;
             LabelWorp.Content = worp;
             ButtonDobbel.Visibility = Visibility.Collapsed;

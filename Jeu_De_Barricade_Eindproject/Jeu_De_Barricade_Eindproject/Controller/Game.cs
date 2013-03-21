@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Shapes;
 
 namespace Jeu_De_Barricade_Eindproject.Controller
@@ -51,6 +52,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             //Show the "hoofdmenu" button, allowing the user to return the the main menu
             main.label_mainmenu.Visibility = Visibility.Visible;
             main.label_save.Visibility = Visibility.Visible;
+
+            main.KeyUp += keyPress;
         }
 
         //Remove the object of the board and remove it as child from the grid so it's gone
@@ -264,5 +267,14 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         {
             save.saveTheGame(playerTurn);
         }
+
+        private void keyPress(object sender, KeyEventArgs e)
+        {
+            if (e.Key >= Key.D0 && e.Key <= Key.D9)
+            {
+                dice.dobbelen((int)e.Key - 34);
+            }
+        }
+
     }
 }

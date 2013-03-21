@@ -254,7 +254,6 @@ namespace Jeu_De_Barricade_Eindproject.View
             int column = mousePositionX / levelModel.ICellSize;
             int row = mousePositionY / levelModel.ICellSize;
 
-
             if (levelModel.Fields[column, row] != null)
             {
                 if (gameController.Barricade == null)

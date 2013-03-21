@@ -22,8 +22,8 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image Name="animatedWinImage1" Height="120" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" Margin="-25,0,60,456" Stretch="Fill" />
-        <Image x:Name="animatedWinImage2" Height="120" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" Margin="60,0,-25,456" Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
+        <Image Name="animatedWinImage1" Height="120" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" Margin="-25,0,60,0" Stretch="Fill" VerticalAlignment="Top" />
+        <Image x:Name="animatedWinImage2" Height="120" Visibility="Collapsed" gif:ImageBehavior.RepeatBehavior="1x" Margin="60,0,-25,0" Stretch="Fill" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" >
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>

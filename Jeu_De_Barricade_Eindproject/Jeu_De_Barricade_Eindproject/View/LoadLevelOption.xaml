@@ -11,12 +11,7 @@
         <Label Content="Spel laden" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <Button x:Name="buttonLoad" Content="laden" HorizontalAlignment="Left" Margin="358,363,0,0" VerticalAlignment="Top" Width="87" Height="25" FontSize="16" Click="buttonLoad_Click"/>
         <Button x:Name="buttonCancel" Content="cancel" HorizontalAlignment="Left" Margin="256,363,0,0" VerticalAlignment="Top" Width="87" Height="25" FontSize="16" Click="buttonCancel_Click"/>
-        <ListBox HorizontalAlignment="Left" Height="250" Margin="10,99,0,0" VerticalAlignment="Top" Width="435">
-            <ListBoxItem Content="Spel 1"/>
-            <ListBoxItem Content="Deze zooi verwijderen via properties in xaml"/>
-            <ListBoxItem Content="Spel 2"/>
-            <ListBoxItem Content="Spel 3"/>
-        </ListBox>
+        <ListBox Name="listSavedGames" HorizontalAlignment="Left" Height="250" Margin="10,99,0,0" VerticalAlignment="Top" Width="435"/>
 
     </Grid>
 </UserControl>

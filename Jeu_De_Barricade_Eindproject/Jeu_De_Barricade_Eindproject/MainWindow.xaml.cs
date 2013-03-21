@@ -74,6 +74,9 @@ namespace Jeu_De_Barricade_Eindproject
         {
             ToggleImageOpacityAndButtonGrid();
 
+            //Update the list of saved games
+            loadLevel.updateAllSavedGames();
+
             //Show the load level view
             loadLevel.Visibility = Visibility.Visible;
         }
@@ -124,6 +127,11 @@ namespace Jeu_De_Barricade_Eindproject
         private void label_save_mousedown(object sender, MouseButtonEventArgs e)
         {
             game.saveCurrentGame();
+        }
+
+        public void loadGame()
+        {
+            game.loadBoard();
         }
     }
 }

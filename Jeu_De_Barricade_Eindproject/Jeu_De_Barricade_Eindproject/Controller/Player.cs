@@ -22,6 +22,11 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             set { bIsHuman = value; }
         }
 
+        public Pawn[] APawns
+        {
+            get { return aPawns; }
+        }
+
         //Main constructor.
         public Player(Boolean isHuman, int pawns, Game game)
         {

@@ -10,32 +10,42 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 {
     class SaveGame
     {
-        private Model.BarricadePawn[] aBarricades;
+        private Model.ModelLevel levelModel;
         private Player[] aPlayers;
 
-        private String boardType;
+        private String[,] saveMap;
+
+        private String path;
+
         private int iHumanPlayers = 0;
+        private int iPlayerNumber = 0;
 
 
-        public SaveGame(Model.BarricadePawn[] aBarricades, Player[] aPlayers, String boardType)
+
+        public SaveGame(Model.ModelLevel levelModel, Player[] aPlayers)
         {
-            this.aBarricades = aBarricades;
+            this.levelModel = levelModel;
             this.aPlayers = aPlayers;
-            this.boardType = boardType;
 
             foreach (Controller.Player player in aPlayers)
             {
-                iHumanPlayers++;
+                if (player.BIsHuman)
+                {
+                    iHumanPlayers++;
+                }
             }
         }
 
         public void saveTheGame(int playerTurn)
         {
+            createSaveFolder();
+            createSaveMap();
+
             String date = DateTime.Now.ToString();
             date =  date.Replace(":", "-");
             String saveName = date + ".save";
 
-            StreamWriter sw = new StreamWriter(saveName);
+            StreamWriter sw = new StreamWriter(path + "/" +  saveName);
 
             //Write amount of human players             LINE 1
             sw.WriteLine("humanplayers:" + iHumanPlayers);
@@ -58,7 +68,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
 
             //Write what board we are playing           LINE 3
-            if(boardType.Contains("Slow"))
+            if(levelModel.GetType() == typeof(Model.ModelLevelSlow))
             {
                 sw.WriteLine("boardtype:normaal");
             }
@@ -67,10 +77,107 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                 sw.WriteLine("boardtype:snel");
             }
 
-            //Write the board itself - pawn and barricade location
-            sw.WriteLine("test johan");
-            sw.WriteLine("test bas");
+            //Write the board itself
+            for (int iRow = 0; iRow < levelModel.IMapHeight; iRow++)
+            {
+                String sRow = "";
+
+                for (int iColumn = 0; iColumn < levelModel.IMapWidth; iColumn++)
+                {
+                    sRow += saveMap[iRow, iColumn] + " ";
+                }
+
+                sw.WriteLine(sRow);
+            }
+
+
+            //Close the stream
             sw.Close();
+
+            MessageBox.Show("Het spel is opgeslagen.");
         }
+
+        private void createSaveFolder()
+        {
+            path = "Opgeslagen spellen";
+
+            try
+            {
+                // Determine whether the directory exists.
+                if (Directory.Exists(path))
+                {
+                    return;
+                }
+
+                // Try to create the directory.
+                DirectoryInfo di = Directory.CreateDirectory(path);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Kan geen map aanmaken voor de saved games.  " + e);
+            } 
+        }
+
+        //Method to fill the array saveMap with the right content
+        private void createSaveMap()
+        {
+            //Initialize the saveMap array with the right size
+            saveMap = new String[levelModel.IMapHeight, levelModel.IMapWidth];
+
+            //Loop through the orginial map
+            for (int iRow = 0; iRow < levelModel.IMapHeight; iRow++)
+            {
+                for (int iColumn = 0; iColumn < levelModel.IMapWidth; iColumn++)
+                {
+                    if (levelModel.Map[iRow, iColumn].Equals(" "))
+                    {
+                        saveMap[iRow, iColumn] = "( )";
+                    }
+                    else if (!levelModel.Map[iRow, iColumn].Equals(" "))
+                    {
+                        saveMap[iRow, iColumn] = "(o)";
+                    }
+                }
+            }
+
+            //Loop through all barricades
+            foreach (Model.BarricadePawn barricade in levelModel.ABarricades)
+            {
+                saveMap[barricade.CurrentLocation.Y, barricade.CurrentLocation.X] = "(#)";
+            }
+            
+            //Loop through all player and pawns
+            foreach (Controller.Player player in aPlayers)
+            {
+                String sPlayer = "";
+
+                switch (iPlayerNumber)
+                {
+                    case 0:
+                        sPlayer = "(r)";
+                        break;
+                    case 1:
+                        sPlayer = "(g)";
+                        break;
+                    case 2:
+                        sPlayer = "(y)";
+                        break;
+                    case 3:
+                        sPlayer = "(b)";
+                        break;
+                }
+
+                foreach (Controller.Pawn pawn in player.APawns)
+                {
+                    saveMap[pawn.CurrentLocation.Y, pawn.CurrentLocation.X] = sPlayer;
+                }
+
+                iPlayerNumber++;
+            }
+
+            iPlayerNumber = 0;
+        }
+
     }
 }

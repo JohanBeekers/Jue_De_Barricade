@@ -20,6 +20,11 @@ namespace Jeu_De_Barricade_Eindproject.Model
 
         private Model.Field currentLocation;
 
+        public Model.Field CurrentLocation
+        {
+            get { return currentLocation; }
+        }
+
         public BarricadePawn(Rectangle image, Model.Field startLocation)
         {
             this.currentLocation = startLocation;

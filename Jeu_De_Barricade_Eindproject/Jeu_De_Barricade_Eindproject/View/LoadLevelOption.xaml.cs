@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,9 +30,24 @@ namespace Jeu_De_Barricade_Eindproject.View
             this.main = main;
         }
 
+        public void updateAllSavedGames()
+        {
+            List<String> savedGamesArray = new List<String>();
+
+            foreach (String saved in Directory.GetFiles("Opgeslagen spellen"))
+            {
+                if (saved.EndsWith(".save"))
+                {
+                    savedGamesArray.Add(saved.Substring(19, saved.Length -24));
+                }
+            }
+
+            listSavedGames.ItemsSource = savedGamesArray;
+        }
+
         private void buttonLoad_Click(object sender, RoutedEventArgs e)
         {
-
+            main.loadGame();
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)

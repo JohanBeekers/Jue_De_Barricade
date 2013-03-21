@@ -110,7 +110,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             main.mainGrid.Children.Add(winner);
 
             //Create the save game controller and give it the model
-            save = new Controller.SaveGame(levelModel.ABarricades, aPlayers, levelModel.GetType().ToString());
+            save = new Controller.SaveGame(levelModel, aPlayers);
         }
 
         public void loadBoard()

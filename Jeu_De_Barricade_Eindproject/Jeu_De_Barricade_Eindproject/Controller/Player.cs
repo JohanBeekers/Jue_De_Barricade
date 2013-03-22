@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace Jeu_De_Barricade_Eindproject.Controller
 {
-    class Player
+    public class Player
     {
         private Game game;
         private Boolean bIsHuman;
@@ -81,28 +81,6 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             {
                 game.moveBarricadeRandom();
             }
-
-            /*
-            Model.Field randomMove = possibleMoves[random.Next(0, possibleMoves.Count())];
-            tempPawn.setLocation(randomMove);
-
-            //If the target field contains a barricade
-            if (randomMove.Barricade != null)
-            {
-                Model.Field barricadeMove = game.randomField();
-                MessageBox.Show(barricadeMove.X + " " + barricadeMove.Y);
-            }
-            //Else if the target field is a finish
-            else if (randomMove is Model.Finish)
-            {
-                game.winGame();
-            }
-            //Else the turn is over
-            else
-            {
-                //Give the turn to the next player
-                game.nextPlayer();
-            }*/
         }
     }
 }

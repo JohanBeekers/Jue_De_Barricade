@@ -40,6 +40,8 @@ namespace Jeu_De_Barricade_Eindproject
             mainGrid.Children.Add(loadLevel);
             //Hide untill needed
             loadLevel.Visibility = Visibility.Collapsed;
+            
+            game = new Controller.Game(this);
         }
 
         //Method when the user left clicks on the upper grid
@@ -119,7 +121,6 @@ namespace Jeu_De_Barricade_Eindproject
         //Start a new game which creates a new board
         public void startGame(int iRealPlayers, String sBoardType)
         {
-            game = new Controller.Game(this);
             game.newBoard(iRealPlayers, sBoardType);
         }
 
@@ -129,9 +130,9 @@ namespace Jeu_De_Barricade_Eindproject
             game.saveCurrentGame();
         }
 
-        public void loadGame()
+        public void loadGame(String fileName)
         {
-            game.loadBoard();
+            game.loadBoard(fileName);
         }
     }
 }

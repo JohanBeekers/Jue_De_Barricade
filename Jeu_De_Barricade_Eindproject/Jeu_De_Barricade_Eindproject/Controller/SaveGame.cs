@@ -17,15 +17,16 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         private String path;
 
-        private int iHumanPlayers = 0;
+        private int iHumanPlayers;
         private int iPlayerNumber = 0;
 
 
-
-        public SaveGame(Model.ModelLevel levelModel, Player[] aPlayers)
+        public void saveTheGame(int playerTurn, Model.ModelLevel levelModel, Player[] aPlayers)
         {
             this.levelModel = levelModel;
             this.aPlayers = aPlayers;
+
+            iHumanPlayers = 0;
 
             foreach (Controller.Player player in aPlayers)
             {
@@ -34,10 +35,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
                     iHumanPlayers++;
                 }
             }
-        }
 
-        public void saveTheGame(int playerTurn)
-        {
             createSaveFolder();
             createSaveMap();
 

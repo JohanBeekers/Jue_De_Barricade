@@ -47,7 +47,13 @@ namespace Jeu_De_Barricade_Eindproject.View
 
         private void buttonLoad_Click(object sender, RoutedEventArgs e)
         {
-            main.loadGame();
+            if(listSavedGames.SelectedIndex >= 0)
+            {
+                String fileName = listSavedGames.SelectedItem.ToString();
+                main.loadGame(fileName);
+
+                this.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)

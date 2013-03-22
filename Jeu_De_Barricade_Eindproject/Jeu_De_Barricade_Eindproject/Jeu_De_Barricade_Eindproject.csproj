@@ -60,6 +60,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controller\Game.cs" />
+    <Compile Include="Controller\LoadGame.cs" />
     <Compile Include="Controller\MapConverter.cs" />
     <Compile Include="Controller\Pawn.cs" />
     <Compile Include="Controller\Player.cs" />

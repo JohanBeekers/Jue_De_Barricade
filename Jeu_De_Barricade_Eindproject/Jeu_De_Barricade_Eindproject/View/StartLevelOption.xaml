@@ -15,8 +15,8 @@
         <Label Content="Met hoeveel spelers gaat u het spel spelen?" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Wilt u de normale of snelle map spelen?" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontSize="16"/>
         <ComboBox Name="comboType" HorizontalAlignment="Left" Margin="354,98,0,0" VerticalAlignment="Top" Width="88" SelectedIndex="0" FontSize="16" Height="27">
-            <ComboBoxItem Content="Normaal"/>
-            <ComboBoxItem Content="Snel"/>
+            <ComboBoxItem Content="normaal"/>
+            <ComboBoxItem Content="snel"/>
         </ComboBox>
         <Label Content="Spel opties" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <Button Name="buttonStart" Content="Start" HorizontalAlignment="Left" Margin="354,147,0,0" VerticalAlignment="Top" Width="87" Height="25" FontSize="16" Click="buttonStart_Click"/>

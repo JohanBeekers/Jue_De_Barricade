@@ -26,6 +26,8 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private Pawn pawnSelected;
         private Random random;
 
+        private Controller.LoadGame loadGame;
+
         private Controller.SaveGame save;
 
         public int PlayerTurn
@@ -42,18 +44,21 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             get { return aPawnMovementOptions; }
             set { aPawnMovementOptions = value; }
         }
+
+        public Player[] APlayers
+        {
+            get { return aPlayers; }
+        }
         
         public Game(MainWindow main)
         {
             this.main = main;
             random = new Random();
-            playerTurn = 0;
-
-            //Show the "hoofdmenu" button, allowing the user to return the the main menu
-            main.label_mainmenu.Visibility = Visibility.Visible;
-            main.label_save.Visibility = Visibility.Visible;
-
+            
             main.KeyUp += keyPress;
+
+            loadGame = new Controller.LoadGame(this);
+            save = new Controller.SaveGame();
         }
 
         //Remove the object of the board and remove it as child from the grid so it's gone
@@ -75,9 +80,15 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         }
 
         //Create a new board according to the type of board selected by the user input
-        public void newBoard(int iHumanPlayers, String sBoardType)
+        public void newBoard(int iHumanPlayers, String sBoardType, int playerTurn)
         {
-            if (sBoardType.Equals("Normaal"))
+            this.playerTurn = playerTurn;
+
+            //Show the "hoofdmenu" button, allowing the user to return the the main menu
+            main.label_mainmenu.Visibility = Visibility.Visible;
+            main.label_save.Visibility = Visibility.Visible;
+
+            if (sBoardType.Equals("normaal"))
             {
                 createPlayers(iHumanPlayers, 5);
                 levelModel = new Model.ModelLevelSlow();
@@ -108,14 +119,32 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             winner.HorizontalAlignment = HorizontalAlignment.Center;
             winner.VerticalAlignment = VerticalAlignment.Center;
             main.mainGrid.Children.Add(winner);
-
-            //Create the save game controller and give it the model
-            save = new Controller.SaveGame(levelModel, aPlayers);
         }
 
-        public void loadBoard()
+        public void newBoard(int iHumanPlayers, String sBoardType)
         {
-            
+            newBoard(iHumanPlayers, sBoardType, 0);
+        }
+
+        public void loadBoard(String fileName)
+        {
+
+            //Show the "hoofdmenu" button, allowing the user to return the the main menu
+            main.label_mainmenu.Visibility = Visibility.Visible;
+            main.label_save.Visibility = Visibility.Visible;
+
+            try
+            {
+                loadGame.loadSavedGame(fileName);
+                loadGame.placePawns(levelModel);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Er is een probleem ontstaan bij het openen van het opgeslagen spel. \nWaarschijnlijk zijn er verkeerde wijzigingen aangebracht in het bestand.", "Fout bij inladen bestand");
+                destoryMap();
+                return;
+            }
+
         }
 
         private void createPlayers(int iHumanPlayers, int amountPawns)
@@ -265,7 +294,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         public void saveCurrentGame()
         {
-            save.saveTheGame(playerTurn);
+            save.saveTheGame(playerTurn, levelModel, aPlayers);
         }
 
         private void keyPress(object sender, KeyEventArgs e)

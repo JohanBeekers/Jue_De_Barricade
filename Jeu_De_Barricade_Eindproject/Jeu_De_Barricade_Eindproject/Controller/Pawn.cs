@@ -49,11 +49,6 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             location.Pawn = this;
         }
 
-        public Model.Field[] getPossibleMoves()
-        {
-            return null;
-        }
-
         public void toStartLocation()
         {
             setLocation(startLocation);

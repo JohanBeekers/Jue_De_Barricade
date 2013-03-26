@@ -6,6 +6,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="500">
     <Grid Background="LightGray">
-          <Label Content="Gefeliciteerd speler " Name="labelWinner" FontSize="70" FontWeight="Bold" />  
+          <Label Content="Gefeliciteerd speler " Name="labelWinner" FontSize="65" FontWeight="Bold" />  
     </Grid>
 </UserControl>

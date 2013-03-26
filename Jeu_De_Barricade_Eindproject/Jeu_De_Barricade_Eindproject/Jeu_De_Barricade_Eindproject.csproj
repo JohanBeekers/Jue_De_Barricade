@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -88,6 +91,10 @@
     <Compile Include="View\ViewLevel.xaml.cs">
       <DependentUpon>ViewLevel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewMessage.xaml.cs">
+      <DependentUpon>ViewMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewMessageMap.cs" />
     <Compile Include="View\WinnerMessage.xaml.cs">
       <DependentUpon>WinnerMessage.xaml</DependentUpon>
     </Compile>
@@ -124,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ViewLevel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewMessage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,9 @@
+﻿<Window x:Class="Jeu_De_Barricade_Eindproject.View.ViewMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Console" Height="300" Width="300" FontFamily="Consolas" ResizeMode="NoResize" Background="Black" Foreground="White">
+    <Grid>
+        <Label x:Name="labelMap" Height="auto" Width="auto" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+
+    </Grid>
+</Window>

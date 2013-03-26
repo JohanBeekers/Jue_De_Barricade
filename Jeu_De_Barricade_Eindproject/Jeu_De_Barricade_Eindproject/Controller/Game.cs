@@ -14,15 +14,21 @@ namespace Jeu_De_Barricade_Eindproject.Controller
     public class Game
     {
         private MainWindow main;
+
         private Model.ModelLevel levelModel;
+
         private View.ViewLevel level;
         private View.Dice dice;
         private View.Skip skip;
         private View.WinnerMessage winner;
-        private Player[] aPlayers = new Player[4];
-        private int playerTurn;
+        private View.ViewMessage viewMessage;
+
         private Model.BarricadePawn barricade;
         private Model.Field[] aPawnMovementOptions;
+
+        private Player[] aPlayers = new Player[4];
+        private int playerTurn;
+
         private Pawn pawnSelected;
         private Random random;
 
@@ -119,6 +125,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             winner.HorizontalAlignment = HorizontalAlignment.Center;
             winner.VerticalAlignment = VerticalAlignment.Center;
             main.mainGrid.Children.Add(winner);
+
         }
 
         public void newBoard(int iHumanPlayers, String sBoardType)
@@ -299,10 +306,25 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         private void keyPress(object sender, KeyEventArgs e)
         {
-            if (e.Key >= Key.D0 && e.Key <= Key.D9)
+            if (dice != null)
             {
-                dice.dobbelen((int)e.Key - 34);
+                if (e.Key >= Key.D0 && e.Key <= Key.D9)
+                {
+                    dice.dobbelen((int)e.Key - 34);
+                }
+
+                if (e.Key == Key.C)
+                {
+                    showMessageBoxMap();
+                }
             }
+        }
+
+        private void showMessageBoxMap()
+        {
+            viewMessage = new View.ViewMessage(levelModel, aPlayers);
+            viewMessage.show();
+            viewMessage.Visibility = Visibility.Visible;
         }
 
     }

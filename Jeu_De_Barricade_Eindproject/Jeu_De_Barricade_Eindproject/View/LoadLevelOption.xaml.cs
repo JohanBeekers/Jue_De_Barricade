@@ -32,17 +32,23 @@ namespace Jeu_De_Barricade_Eindproject.View
 
         public void updateAllSavedGames()
         {
-            List<String> savedGamesArray = new List<String>();
-
-            foreach (String saved in Directory.GetFiles("Opgeslagen spellen"))
+            try
             {
-                if (saved.EndsWith(".save"))
-                {
-                    savedGamesArray.Add(saved.Substring(19, saved.Length -24));
-                }
-            }
+                List<String> savedGamesArray = new List<String>();
 
-            listSavedGames.ItemsSource = savedGamesArray;
+                foreach (String saved in Directory.GetFiles("Opgeslagen spellen"))
+                {
+                    if (saved.EndsWith(".save"))
+                    {
+                        savedGamesArray.Add(saved.Substring(19, saved.Length - 24));
+                    }
+                }
+
+                listSavedGames.ItemsSource = savedGamesArray;
+            }
+            catch (Exception e)
+            {
+            }
         }
 
         private void buttonLoad_Click(object sender, RoutedEventArgs e)

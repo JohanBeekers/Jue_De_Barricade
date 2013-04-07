@@ -21,6 +21,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             this.game = game;
         }
 
+        //Load a specific file.
         public void loadSavedGame(String file)
         {
             fileName = file;
@@ -89,6 +90,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             sr.Close();
         }
 
+        //Place all the pawns to their correct locations.
         public void placePawns(Model.ModelLevel levelModel)
         {
             int lineNumber = 0;

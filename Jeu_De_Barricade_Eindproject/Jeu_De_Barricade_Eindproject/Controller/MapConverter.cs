@@ -13,6 +13,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private int iRows, iColumns;
         private Model.Field redStart, greenStart, yellowStart, blueStart;
 
+        //Convert a 2d String array map to a map of linked fields. 
         public Model.Field[,] convertMap(String[,] stringMap, int width, int height)
         {
             iRows = height;

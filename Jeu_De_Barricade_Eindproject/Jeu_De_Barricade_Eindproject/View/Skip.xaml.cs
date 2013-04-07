@@ -29,6 +29,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             this.game = game;
         }
 
+        //Skip the turn of the current player.
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             game.nextPlayer();

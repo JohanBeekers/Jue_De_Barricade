@@ -29,12 +29,14 @@ namespace Jeu_De_Barricade_Eindproject.View
             this.main = main;
         }
 
+        //Cancel button has been clicked.
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;
             main.ToggleImageOpacityAndButtonGrid();
         }
 
+        //Start button has been clicked.
         private void buttonStart_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;

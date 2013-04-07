@@ -130,6 +130,7 @@ namespace Jeu_De_Barricade_Eindproject
             game.saveCurrentGame();
         }
 
+        //Load a file.
         public void loadGame(String fileName)
         {
             game.loadBoard(fileName);

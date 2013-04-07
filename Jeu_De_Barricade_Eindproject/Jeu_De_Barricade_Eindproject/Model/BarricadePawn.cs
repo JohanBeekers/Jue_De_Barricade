@@ -32,6 +32,7 @@ namespace Jeu_De_Barricade_Eindproject.Model
             this.image = image;
         }
 
+        //Place the barricade pawn on a certain location.
         public void setLocation(Model.Field location)
         {
             image.SetValue(Grid.ColumnProperty, location.X);

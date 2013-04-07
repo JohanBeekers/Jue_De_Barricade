@@ -38,18 +38,22 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             random = new Random();
         }
 
+        //Add a new pawn to this player.
         public void addPawn(Pawn pawn)
         {
             aPawns[iArrayAmount] = pawn;
             iArrayAmount++;
         }
 
+        //Get a random pawn of this player (for the AI)
         private Pawn getRandomPawn()
         {
             int pawn = random.Next(0, iPawnAmount);
             return aPawns[pawn];
         }
 
+        //Place a random pawn on a random possible location (for the AI)
+        //If placed on a barricade, it will place the barricade on a random field. 
         public void automateTurn(int worp)
         {
             List<Pawn> pawnNoOption = new List<Pawn>();

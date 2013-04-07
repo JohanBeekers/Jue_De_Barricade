@@ -268,6 +268,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             
         }
 
+        //Show circles on the position of the pawn, and all locations it can move to. 
         public void createBlurs(Model.Field[] blurPositions, Model.Field pawnPosition)
         {
             removeBlurs();
@@ -304,6 +305,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             }
         }
 
+        //Remove all of the blurs.
         public void removeBlurs()
         {
             foreach (Ellipse e in blurLocations)
@@ -360,6 +362,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             }
         }
 
+        //Show the win animation for a certain player color. 
         public void showWinAnimation(int player)
         {
             switch (player)

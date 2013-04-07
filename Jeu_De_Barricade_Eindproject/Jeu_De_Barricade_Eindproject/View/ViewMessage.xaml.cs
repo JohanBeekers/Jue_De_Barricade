@@ -38,6 +38,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             viewMap = new String[levelModel.IMapHeight, levelModel.IMapWidth];
         }
 
+        //Create the string map of the current map layout. 
         public void generateViewMap()
         {
             //Loop through the orginial map
@@ -95,6 +96,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             iPlayerNumber = 0;
         }
 
+        //Show the current map. 
         public void show()
         {
             sTotal = "";

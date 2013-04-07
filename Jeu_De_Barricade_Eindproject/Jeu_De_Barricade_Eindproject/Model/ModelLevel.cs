@@ -83,6 +83,7 @@ namespace Jeu_De_Barricade_Eindproject.Model
             set { iArrayBarricadePawns = value; }
         }
 
+        //Convert the 2d String array to a 2d array of fields.
         protected void fillViewArray()
         {
             //Initialize and fill the array with view components

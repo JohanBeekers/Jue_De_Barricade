@@ -30,6 +30,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             this.main = main;
         }
 
+        //Refresh the list of save games.
         public void updateAllSavedGames()
         {
             try
@@ -51,6 +52,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             }
         }
 
+        //Load game button has been clicked.
         private void buttonLoad_Click(object sender, RoutedEventArgs e)
         {
             if(listSavedGames.SelectedIndex >= 0)
@@ -62,6 +64,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             }
         }
 
+        //Cancel button has been clicked.
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Collapsed;

@@ -39,6 +39,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             this.playerNumber = playerNumber;
         }
 
+        //Put the pawn on a new location.
         public void setLocation(Model.Field location)
         {
             image.SetValue(Grid.ColumnProperty, location.X);
@@ -49,6 +50,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             location.Pawn = this;
         }
 
+        //Put the pawn back to his starting location.
         public void toStartLocation()
         {
             setLocation(startLocation);
@@ -101,6 +103,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
         }
 
+        //Get all the possible moves for this pawn. 
         public List<Model.Field> getPossibleMoves(int worp)
         {
             //return getPossibleMoves(currentLocation, worp, new List<Model.Field>());

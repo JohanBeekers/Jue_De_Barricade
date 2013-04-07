@@ -133,6 +133,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             newBoard(iHumanPlayers, sBoardType, 0);
         }
 
+        //Load a save.
         public void loadBoard(String fileName)
         {
 
@@ -154,6 +155,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
 
         }
 
+        //Create the players.
         private void createPlayers(int iHumanPlayers, int amountPawns)
         {
             aPlayers[0] = new Player(iHumanPlayers >= 1, amountPawns, this);
@@ -162,6 +164,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             aPlayers[3] = new Player(iHumanPlayers >= 4, amountPawns, this);
         }
 
+        //Create new pawns for each player.
         public void createPawn(Model.Field field, Ellipse image, int i)
         {
             Pawn pawn = new Pawn(image, field, i);
@@ -257,6 +260,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
         }
 
+        //Move the selected barricade to a location.
         public Boolean moveBarricade(Model.Field field)
         {
             if (field.Pawn == null && 
@@ -277,6 +281,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             return false;
         }
 
+        //End the game, show the winner.
         public void winGame()
         {
             main.label_save.Visibility = Visibility.Collapsed;
@@ -289,6 +294,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             winner.Visibility = Visibility.Visible;
         }
 
+        //Move a barricade to a random location. (for the AI)
         public void moveBarricadeRandom()
         {
             Model.Field field = levelModel.Fields[random.Next(0, level.LevelModel.IMapWidth), random.Next(0, level.LevelModel.IMapHeight)];
@@ -299,11 +305,13 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
         }
 
+        //Save the game.
         public void saveCurrentGame()
         {
             save.saveTheGame(playerTurn, levelModel, aPlayers);
         }
 
+        //Key press event actions. (for cheats)
         private void keyPress(object sender, KeyEventArgs e)
         {
             if (dice != null)
@@ -320,6 +328,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
         }
 
+        //Show the secondary console view
         private void showMessageBoxMap()
         {
             viewMessage = new View.ViewMessage(levelModel, aPlayers);

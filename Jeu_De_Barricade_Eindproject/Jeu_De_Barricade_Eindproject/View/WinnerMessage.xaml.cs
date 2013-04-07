@@ -25,6 +25,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             InitializeComponent();
         }
 
+        //Show the win message of a certain player color. 
         public void showWinner(int playerTurn)
         {
             switch (playerTurn)

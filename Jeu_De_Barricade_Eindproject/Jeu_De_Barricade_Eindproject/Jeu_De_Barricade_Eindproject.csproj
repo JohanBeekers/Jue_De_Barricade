@@ -79,9 +79,6 @@
     <Compile Include="View\LoadLevelOption.xaml.cs">
       <DependentUpon>LoadLevelOption.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ReturnMainMenu.xaml.cs">
-      <DependentUpon>ReturnMainMenu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Skip.xaml.cs">
       <DependentUpon>Skip.xaml</DependentUpon>
     </Compile>
@@ -114,10 +111,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LoadLevelOption.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ReturnMainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

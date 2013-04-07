@@ -20,7 +20,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
         private int iHumanPlayers;
         private int iPlayerNumber = 0;
 
-
+        //Save the current game to a new file.
         public void saveTheGame(int playerTurn, Model.ModelLevel levelModel, Player[] aPlayers)
         {
             this.levelModel = levelModel;
@@ -95,6 +95,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             MessageBox.Show("Het spel is opgeslagen.");
         }
 
+        //Create the save folder if it does not exist. 
         private void createSaveFolder()
         {
             path = "Opgeslagen spellen";

@@ -41,19 +41,20 @@ namespace Jeu_De_Barricade_Eindproject.View
             changeButtonColor(playerTurn);
         }
 
+        //The 'dobbelen' button has been clicked.
         private void Dobbel_Click(object sender, RoutedEventArgs e)
         {
             dobbelen();
         }
 
-        //Dobbel een random getal 
+        //Throw a random number.
         public void dobbelen()
         {
             worp = random.Next(1, 7);
             dobbelen(worp);
         }
 
-        //Dobbel een specifiek getal. 
+        //Throw a specified number.
         public void dobbelen(int worp)
         {
             this.worp = worp;
@@ -62,6 +63,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             ButtonDobbel.Visibility = Visibility.Collapsed;
         }
 
+        //Reset the dice. 
         public void reset()
         {
             ButtonDobbel.Visibility = Visibility.Visible;
@@ -69,6 +71,7 @@ namespace Jeu_De_Barricade_Eindproject.View
             worp = -1;
         }
 
+        //Change the color of the button the the current players color. 
         public void changeButtonColor(int playerTurn)
         {
             System.Windows.Media.Brush color = Brushes.Red;

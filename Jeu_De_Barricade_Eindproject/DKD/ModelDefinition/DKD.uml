@@ -79,6 +79,24 @@ Behalve dan dat pawn een complexe move() methode heeft?</body>
         LastKnownName="Model"
         LastKnownLocation="Package2_1545.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="271eb4e1-36bd-4750-8c33-10fa49c1b5d5"
+        LastKnownName="View"
+        LastKnownLocation="Package_1352.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="cc0ed31b-bb62-4a45-a0ab-cccba5cc9e4a"
+        LastKnownName="Controller"
+        LastKnownLocation="Package_1353.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="50874c34-d0fc-473c-bb7c-044e923a1750"
+        LastKnownName="Model"
+        LastKnownLocation="Package1_1353.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

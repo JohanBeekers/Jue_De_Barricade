@@ -1,100 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="223ca3ef-1a73-4da3-9e68-6c26bf316c58"
-  name="Jeu_De_Barricade_Eindproject"
+  Id="36d9e16b-5d60-4f47-98c4-548c8a531bfa"
+  name="Controller"
   visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <referencesInternal>
     <reference
-      Id="7ec8d42c-373f-4066-b470-0812b7bee06a"
-      handle="viewcode://./CodeSchema_Namespace?Namespace%3DJeu_De_Barricade_Eindproject"
+      Id="fb6b24e8-fa56-441b-a50c-4d84e695f375"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DJeu_De_Barricade_Eindproject.Controller"
       tag="ViewCode" />
   </referencesInternal>
   <packagedElements>
     <packageHasNamedElement>
-      <packageMoniker
-        Id="fdfd3509-2cf4-4aa4-ac53-a0c979d75571"
-        LastKnownName="View"
-        LastKnownLocation="Package_1354.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="36d9e16b-5d60-4f47-98c4-548c8a531bfa"
-        LastKnownName="Controller"
-        LastKnownLocation="Package2_1354.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
-        Id="b80e35a0-eb1f-480f-8e17-0fde7a9ceece"
-        LastKnownName="Model"
-        LastKnownLocation="Package3_1354.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <class
-        Id="344a4286-b013-496a-bebd-b43fd9e91b0f"
-        name="MainWindow"
+        Id="2580ffeb-1c0e-4973-a43c-a7c42b6289b0"
+        name="Pawn"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
-            Id="9544a663-4834-458c-9027-b7c89b7f3bf2"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow"
+            Id="3a98fc70-c193-4544-8b69-4b5e2c63bdb6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.Controller Type%3DPawn"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
           <stereotypeInstance
-            Id="c3b9d826-d0fb-4738-90e2-a9360142d610"
+            Id="51ef546c-b6d0-43ae-af06-56d4ee20af28"
             name="class"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="114b6279-8424-4f81-b495-93bebe85db73">
+                Id="11ce3ae2-79c8-49ab-b57d-01761962656b">
                 <propertyInstance
-                  Id="7c2438dd-61ae-47a4-8b3b-f18b2dd03618"
+                  Id="9c9b39ca-b020-495c-b231-f8309c43b4e9"
                   name="ClrAttributes" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="07f03b1d-0cfb-4753-a145-441154d8cf0b">
+                Id="4fe3384b-2d4e-4b1d-9514-b05b9bacfe6d">
                 <propertyInstance
-                  Id="ca064ae7-c54e-4a70-89ed-a91d4e27b5c4"
+                  Id="f108f3d9-0484-48b3-8432-128a0aad2402"
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="24af3187-b04a-4bc1-9069-9de0cf9a6994">
+                Id="5c638ce0-622f-4898-99df-1259ed0f8f76">
                 <propertyInstance
-                  Id="7e8e5e94-4c09-42a6-a819-71f71140c51e"
+                  Id="3de870f7-0363-4f53-a86f-575b89fad583"
                   name="IsStatic"
                   value="False" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="da090923-0719-4d72-bc08-09a59142d959">
+                Id="73477668-b412-4979-b9f6-ded87fca73b8">
                 <propertyInstance
-                  Id="7f2ac715-ff1c-46fb-aa66-09289d41c31a"
+                  Id="2126a7b9-fa8a-4bca-8f0f-683f24be663a"
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-                Id="a1bba41a-5793-43b6-b729-0bf91fa2b9e9">
+                Id="8deb526b-49b7-44c5-9b7a-da58e4b424b1">
                 <propertyInstance
-                  Id="0d33db0d-6611-4160-85b0-c2cb4e1850a3"
+                  Id="b66a0d59-0100-40d6-9c9a-98f523838e95"
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <generalsInternal>
-          <generalization
-            Id="c2fda6cc-19e9-48ec-85f4-05d217ca88c3"
-            isSubstitutable="false">
-            <classMoniker
-              Id="e89ef87f-d60c-4cea-afa2-583324250bc3"
-              LastKnownName="Window"
-              LastKnownLocation="Package2_1544.uml" />
-          </generalization>
-        </generalsInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

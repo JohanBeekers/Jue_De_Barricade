@@ -94,7 +94,6 @@
     <Compile Include="View\ViewMessage.xaml.cs">
       <DependentUpon>ViewMessage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewMessageMap.cs" />
     <Compile Include="View\WinnerMessage.xaml.cs">
       <DependentUpon>WinnerMessage.xaml</DependentUpon>
     </Compile>

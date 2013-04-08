@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3fd4e86a-5d26-458c-b0ab-bb18e2a2122b"
+  name="DKD-abstract" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0ef6c2af-4276-4e5c-b51b-078d7a0fef24"
+        name="DKD::Controller::Game" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e5eb521b-cc55-4930-89d7-4504aac9c4f3"
+        name="DKD::System::Windows::Controls::Button" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="850a56b8-b42a-4915-9444-e817e0e0d053"
+        name="DKD::System::Windows::Controls::ComboBox" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8eb6342d-03b6-4332-8968-6e02a0e7c645"
+        name="DKD::View::MainWindow" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6e44d4cc-0438-4f0a-83aa-0178455479d6"
+        name="DKD::Model::ModelLevel" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7ecd900c-5778-4a09-beb6-5fdfd43da4da"
+        name="DKD::System::Windows::Controls::Image" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9c529ab9-d45d-47e9-ab3b-b89bc52dcc87"
+        name="DKD::System::Collections::Generic::List&lt;Ellipse‎&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5c2f8a17-ec8b-4a9c-b3c0-8aba7059ea0b"
+        name="DKD::System::Windows::Input::Cursor" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4ac2de69-5a83-4cfd-96e9-d501e0c85a93"
+        name="DKD::System::Windows::Controls::Grid" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1b3288c2-9389-4157-aead-3c2655a1a2f8"
+        name="DKD::System::Windows::Resources::StreamResourceInfo" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="50840259-0e2b-451f-9972-1d7721d15ccb"
+        name="DKD::Controller::Player" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0a87cec7-2e11-4933-a556-419dfb6c3d76"
+        name="DKD::System::Windows::Controls::Label" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="89d969aa-b7a2-43d3-9349-065dcea6ac44"
+        name="DKD::System::Windows::Shapes::Rectangle" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6b38ac48-f3c3-4f93-92f6-4ceeb0570db4"
+        name="DKD::System::Random" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6759b35b-41eb-4ab4-9e96-d75756ec0be4"
+        name="DKD::System::Windows::Controls::ListBox" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7c92898c-d6b3-4631-910b-66791b68ac9c"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::StartLevelOption" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="623dece2-52f7-4513-b157-30e6a6ef1672"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::LoadLevelOption" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="28f1a5da-45f4-489d-92d9-8eb3d36e74f7"
+        name="DKD::System::Object" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8babc43d-7996-46bd-a86a-121360eb46fb"
+        name="DKD::System::Windows::RoutedEventArgs" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="98e6e753-2ef6-4c55-8831-a275136326ca"
+        name="DKD::Model::Field" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7ccb978e-a046-4c6f-b231-2b50097418d7"
+        name="DKD::System::Windows::Shapes::Ellipse" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9f98b20b-81a7-46ee-a90c-db1d907f364c"
+        name="DKD::System::Windows::Media::Color" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1bdc95db-8fdf-4573-b889-6a09dd1def2a"
+        name="DKD::System::Windows::Input::MouseButtonEventArgs" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bb5386aa-b163-4df1-9655-cbdad615674a"
+        name="DKD::Model::BarricadePawn" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6fb4bfe9-2439-4a5c-93ae-0314fde4360e"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::Dice" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="36de2b5e-d144-4797-8b7d-71ce57c9fc75"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::ViewLevel" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4ff0e4cc-7af3-4821-ad70-4415fcb32f31"
+        name="DKD::Controller::LoadGame" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d5d5208c-3009-4bce-99ba-fd0a4a3b46ad"
+        name="DKD::Jeu_De_Barricade_Eindproject::MainWindow" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="14f25c73-0b29-4604-9985-0f400e0706a7"
+        name="DKD::Controller::Pawn" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="9983af32-f8b7-4d00-a2b7-c1b88d0aaec2"
+        name="DKD::Controller::SaveGame" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="17563ba9-ad82-483d-8267-ca145491521c"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::Skip" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="63a1e1fe-7563-4d5e-961e-d90bbe47f47a"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::ViewMessage" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1eb8bd7a-e2ad-459d-8243-e7be8232b0fe"
+        name="DKD::Jeu_De_Barricade_Eindproject::View::WinnerMessage" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="50149247-f3a4-4102-b012-7cc8e33e3d46"
+        name="DKD::System::Collections::Generic::List&lt;Field‎&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="89c75588-e738-4002-94b4-996378f214a9"
+        name="DKD::System::IO::StreamReader" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fac0061d-d79c-4b34-a814-aa145bd2864c"
+        name="DKD::System::Windows::Input::KeyEventArgs" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3060f719-71f0-48dc-9325-394de3f499a7"
+        name="DKD::Jeu_De_Barricade_Eindproject::Controller::Pawn" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e250b4a5-8ea7-44da-a101-8f1f4dc5bc29"
+        LastKnownName="View"
+        LastKnownLocation="Package_1203.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3adb96db-f4ae-4ed9-ac38-a6c53d4985ee"
+        LastKnownName="Controller"
+        LastKnownLocation="Package1_1203.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e61e827f-ce8e-445c-b2d8-e846b15ef62f"
+        LastKnownName="Model"
+        LastKnownLocation="Package2_1203.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

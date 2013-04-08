@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e250b4a5-8ea7-44da-a101-8f1f4dc5bc29"
+  name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="80428d29-4306-4f95-8106-b8a224a8cba9"
+        name="Skip"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6a95b91a-10a9-44fd-bc47-f185437fea59"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DSkip"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1aad1604-a52f-41ff-9f07-cd5503be57cb"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a150c867-0361-401d-8778-3859fdb889bb">
+                <propertyInstance
+                  Id="a4fee7e6-7eb9-41b8-b2f1-5dc18c8d2a28"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aab71f59-dd30-410c-b466-39ac1c7edc77">
+                <propertyInstance
+                  Id="3a0550a1-8d4c-4600-ad88-be8062d61976"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df9dd40f-91c1-48ad-99cf-f91f96eb3f37">
+                <propertyInstance
+                  Id="238a9f58-a5c0-4d7a-b8a7-ecd2b3664116"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce79cc5b-79d9-4358-bfdb-5b6f08078794">
+                <propertyInstance
+                  Id="9c2821ff-0bae-4ad4-a3b1-c82598086e2f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bc30d258-2fa1-4368-8719-3a9929390b6f">
+                <propertyInstance
+                  Id="4c0488de-d498-474b-8b76-839be3463bfe"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="d5271c47-3c43-405c-8049-f8f5e4aac3ce"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="da4ed174-ac89-46be-a433-748b389d4122"
+              LastKnownName="Game"
+              LastKnownLocation="Package1_1203.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9863f81-0c7e-4b57-8f4d-e134f2e555b6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ee733768-93e3-4c07-99b3-9de035bfbd29"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="56cd819e-37b0-427c-adb6-a9f7897392cc"
+        name="StartLevelOption"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f3173f7b-6df8-484e-b3c6-2c841163ed21"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DStartLevelOption"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="13f85eed-342a-49d1-ac59-51bba469da5e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6d761dc6-82d3-48a0-b058-bb4f56cec4e8">
+                <propertyInstance
+                  Id="40492260-e346-42fe-9bc6-b61b7333fef3"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7019f02e-7e23-4646-86fe-c2a7cc7f2370">
+                <propertyInstance
+                  Id="804cd15d-5d7e-40d5-9e9d-df51392b3e8f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a4bead6-b284-44f9-aeaf-3214ef25d42c">
+                <propertyInstance
+                  Id="218e8603-4638-4879-88c9-1b958c215554"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bea81373-7bf6-4f81-b5c1-b3476afd95ae">
+                <propertyInstance
+                  Id="a73fa855-6538-4463-9ec1-bbe87b264e24"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1e0a6590-c984-4308-ab45-02adff4991c8">
+                <propertyInstance
+                  Id="9765f5c4-c02f-470f-aa71-1cd0446604b1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="a319e6da-7527-431e-a2f0-c71ac17989c2"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="507de17a-cd96-4875-9c5f-77346619c483"
+              LastKnownName="MainWindow"
+              LastKnownLocation="Package_1203.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b83b546c-9e4b-449f-8fa2-ac8bae5e40f5"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4a78b212-feee-4231-bae8-b65e42ea62ba"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0e6f265a-59ea-4140-bd95-9e1deb8ceeea"
+        name="ViewLevel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="105a8ab3-8f40-4b55-9d27-4133cba647d8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DViewLevel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="81e2016d-87c6-4b93-9c27-eba222f89a8c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2e7fbb8d-9df3-416d-b364-8e182dd398e4">
+                <propertyInstance
+                  Id="d996d696-b165-426f-9c26-8b6bdea1ae91"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4c10e341-59da-4961-b776-6fd4141cb1da">
+                <propertyInstance
+                  Id="88b3daa9-286a-41f8-bed1-a0756673cdd5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="df23917b-bece-4238-bc72-357c55b3537c">
+                <propertyInstance
+                  Id="e546f52d-22a6-4502-9366-81c0a91237a2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b91b56c9-a3fa-4ee4-9e52-410a094b608a">
+                <propertyInstance
+                  Id="3416ef03-6032-4517-b41c-117d31d9e2fc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f37d948e-12b0-4e97-ad6b-c8f4df870849">
+                <propertyInstance
+                  Id="9572ba3a-5ddf-4639-933e-646feeba8445"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="72053b54-2769-4087-9509-84aa3d852f4e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2211d905-b4e8-46e7-8d73-803ad7c9b8e0"
+              LastKnownName="ModelLevel"
+              LastKnownLocation="Package2_1203.uml" />
+            <description>Property LevelModel references type ModelLevel.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce8196c1-e2ce-4b2b-9a0f-bae73fea09bd"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ce31a176-51d3-4fdb-83fb-def647674021"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="36912896-3322-4f90-b418-f25af7845864"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5a034f7f-be94-46aa-842b-d55027ab92e0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1aeaa5fd-7d62-4ec1-acf4-1996da97da54"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3edd46a3-1a65-4ed4-95a7-93f323c233ea"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="609a1e05-d3c2-4efc-8927-ca6774c17bdf"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="da4ed174-ac89-46be-a433-748b389d4122"
+              LastKnownName="Game"
+              LastKnownLocation="Package1_1203.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba4e8c74-bc09-4476-8364-d1dccd9ac220"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b609760a-2fae-42c6-95c0-7a55da7b0a50"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b22c1bd7-6c86-408c-b07a-8f79b411bd9b"
+        name="ViewMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="b4cbf0ee-00b1-4131-a722-12950fc6aaac"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DViewMessage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b3620af5-dd71-4726-92b6-fcad88205d8d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="680b03b7-ab97-4817-98b4-199596be61c7">
+                <propertyInstance
+                  Id="c4eca76e-b82f-462f-aeff-d57bbc65d585"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4b001379-fcf0-468b-ab08-4dec3c467203">
+                <propertyInstance
+                  Id="81133e9c-7d68-4f03-9aaa-0579e3e9b450"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50d132e8-4ff7-43d5-8725-ea9aa2afcf8d">
+                <propertyInstance
+                  Id="c7f17215-2293-4a60-8fad-69909ed5b68a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b7fae434-f1aa-4deb-b8a0-29f12490c16e">
+                <propertyInstance
+                  Id="8ad36304-c8cd-4686-9e74-eb653525b395"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af4188fa-315f-47df-8af7-3fc923ccaf3c">
+                <propertyInstance
+                  Id="c4c6de9d-4a1b-40f9-a3a2-47a219671b1f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="697281fb-0236-4fde-a8b7-1a5de7e7c641"
+        name="WinnerMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9c268517-b667-4216-a572-4926bdcdf7a0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DWinnerMessage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b6337963-df6b-4b14-a188-41b3ce3bc6c8"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="818de9a3-41ad-4697-afe4-c6d16582dca0">
+                <propertyInstance
+                  Id="2292d59e-5e8c-45ef-b06e-09ee84790930"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ccbf022e-9ad5-4754-bdb6-8106ea4a5cdc">
+                <propertyInstance
+                  Id="8740f3ce-7d8e-4950-8b69-3ff9a1a629a6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f2b63fc-b039-4075-8e3b-f5e15561a8f4">
+                <propertyInstance
+                  Id="4d634268-cd59-40ab-b3dc-5ec1e5105925"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce5f8906-c435-4aa1-b3ac-73db963673a3">
+                <propertyInstance
+                  Id="ce5b70a1-4fde-4280-8725-f290acde884c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06e0f629-cded-4dcc-bd40-5819e2063aee">
+                <propertyInstance
+                  Id="0acf19be-9356-4095-a5ec-ec5bf5528c3c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0e7a7b2e-3af6-486c-9810-7fc8a71d209a"
+        name="Dice"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="75d6f43d-a0ba-4951-bdb2-ec86d64ab888"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DDice"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9fe18f0d-1c32-4216-9c35-8efdf469e6ef"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c392ea81-a149-43de-bab2-5d0d284319c8">
+                <propertyInstance
+                  Id="e4d5029c-f08c-4f10-b63d-e88767df3414"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5f03b369-36b6-4aff-99f1-8e39d6b87a81">
+                <propertyInstance
+                  Id="cb0d5e6f-826e-481c-ad00-600b4203c9b8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f0d4af5-1280-437f-a24a-555068df5b62">
+                <propertyInstance
+                  Id="bb90665d-ec62-403b-aa1c-55050364ecff"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="34fe6b0f-18ce-4f39-a4ff-a6bcc3e3b21e">
+                <propertyInstance
+                  Id="88ff87fe-54af-4c73-b077-54249ba7eb7a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dc3c7a29-1043-404d-99b6-428174a0ea29">
+                <propertyInstance
+                  Id="8019f241-97fb-45eb-8d52-5f16930f681f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f8dd26d9-b9be-4ea8-8cab-cd0117be5cd6"
+        name="LoadLevelOption"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="99030ab4-1224-463c-ac5e-62744f7ecebe"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject.View Type%3DLoadLevelOption"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9c8799af-b64c-4fbe-af39-68ae53ab6c1e"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af5aaf7d-ebdd-4048-a80a-2f360b06b36d">
+                <propertyInstance
+                  Id="d4ca720c-a82f-422b-b9e0-c8831e3d9222"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8bdaed68-f936-4764-9152-ee0d376f8647">
+                <propertyInstance
+                  Id="84e9b879-5796-4c17-9bf3-6d234fe1c45e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7712a0e1-40ef-4133-9c16-78ee60456535">
+                <propertyInstance
+                  Id="04b08c7f-554e-46c3-b100-302a652aa500"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="66a7d141-d1fb-497b-845f-314c29f67948">
+                <propertyInstance
+                  Id="b8057696-8b31-4f64-86bb-72e2a39da823"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="787c5ba5-385a-481e-a785-e9f167692598">
+                <propertyInstance
+                  Id="5e095083-fe82-42b7-a311-e01649387b38"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="2c5b41d9-851f-41b1-8503-70599ee9b1fa"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="507de17a-cd96-4875-9c5f-77346619c483"
+              LastKnownName="MainWindow"
+              LastKnownLocation="Package_1203.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10dad115-1e4f-4bea-9292-508e1a37198f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9b454b3-3805-42f4-a285-c754f7ab27de"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="507de17a-cd96-4875-9c5f-77346619c483"
+        name="MainWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2ea321cd-b2eb-4433-8c01-27412549fd82"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2Fjohan%2FDocuments%2FVisual Studio 2012%2FProjects%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d6a60db6-42e1-45b5-9558-0bb1b1689511"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ebab37a5-62d4-4fab-901e-e7dcf3d58ce4">
+                <propertyInstance
+                  Id="8bdf1cdb-2116-49ac-b286-c673c5a2bc8b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0fcd7678-9633-4732-8d48-20a9bd48c7c8">
+                <propertyInstance
+                  Id="0250b1cf-b111-4843-86d9-858cedab6468"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f6fa845-d51d-44ce-a543-3629a5cfb8fa">
+                <propertyInstance
+                  Id="57ab63f1-7ab7-43bc-a717-ff9e50d8f109"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f9312d02-e54b-4d21-8b99-0a0750950852">
+                <propertyInstance
+                  Id="d03c72f8-a562-4242-96b5-f83bc37de502"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1df9c1d3-aacf-4e6e-94fc-f5abfff2ef01">
+                <propertyInstance
+                  Id="1444247b-45b2-4a2d-a8fd-9ad6116d207e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="b0d5ae45-0941-4afb-8e58-cbe7be51c84e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="da4ed174-ac89-46be-a433-748b389d4122"
+              LastKnownName="Game"
+              LastKnownLocation="Package1_1203.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a60f066-c779-4b98-baa3-7164ef50c601"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="210e10bb-5bfb-4714-a87a-e75e5fd6e776"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

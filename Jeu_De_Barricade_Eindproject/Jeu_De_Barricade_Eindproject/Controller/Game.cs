@@ -148,7 +148,7 @@ namespace Jeu_De_Barricade_Eindproject.Controller
             }
             catch (Exception e)
             {
-                MessageBox.Show("Er is een probleem ontstaan bij het openen van het opgeslagen spel. \nWaarschijnlijk zijn er verkeerde wijzigingen aangebracht in het bestand.", "Fout bij inladen bestand");
+                MessageBox.Show("Er is een probleem ontstaan bij het openen van het opgeslagen spel. \nWaarschijnlijk zijn er verkeerde wijzigingen aangebracht in het bestand.", "Fout bij inladen bestand \n" + e);
                 destoryMap();
                 return;
             }

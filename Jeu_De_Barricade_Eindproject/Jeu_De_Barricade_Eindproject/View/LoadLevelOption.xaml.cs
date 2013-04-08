@@ -49,6 +49,8 @@ namespace Jeu_De_Barricade_Eindproject.View
             }
             catch (Exception e)
             {
+                MessageBox.Show("Er is een probleem ontstaan bij het ophalen van de opgeslagen spellen.\n" + e);
+                
             }
         }
 

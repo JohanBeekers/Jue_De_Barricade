@@ -9,6 +9,12 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD-abstract", "DKD-abstrac
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD field", "DKD field\DKD field.modelproj", "{105F3F28-1A4D-4361-BDF5-E44C9DB2606D}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CreateBoard", "CreateBoard\CreateBoard.modelproj", "{3F9E47B6-A180-4436-8962-7C6338B3E8CC}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PawnMovement", "PossiblePawnMoves\PawnMovement.modelproj", "{70F912AE-BE4F-4115-B366-76F72CB526B8}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PossiblePawnMovement", "PossiblePawnMovement\PossiblePawnMovement.modelproj", "{A175FBBD-C10F-4530-8015-9955F91EA0A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,18 @@ Global
 		{105F3F28-1A4D-4361-BDF5-E44C9DB2606D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{105F3F28-1A4D-4361-BDF5-E44C9DB2606D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{105F3F28-1A4D-4361-BDF5-E44C9DB2606D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F9E47B6-A180-4436-8962-7C6338B3E8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F9E47B6-A180-4436-8962-7C6338B3E8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F9E47B6-A180-4436-8962-7C6338B3E8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F9E47B6-A180-4436-8962-7C6338B3E8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70F912AE-BE4F-4115-B366-76F72CB526B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F912AE-BE4F-4115-B366-76F72CB526B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F912AE-BE4F-4115-B366-76F72CB526B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F912AE-BE4F-4115-B366-76F72CB526B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2013-04-11T13:49:11" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject' -  (Package)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Controller' -  (Package)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Controller::Pawn' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model' -  (Package)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::BarricadePawn' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Medium" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field' -  (Class)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::Barricade' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::barricadePawn' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::Field' -  (Operation)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::linkEast' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::LinkEast' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::linkNorth' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::LinkNorth' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::linkSouth' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::LinkSouth' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::linkWest' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::LinkWest' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::pawn' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::Pawn' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::x' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::X' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::y' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field::Y' -  (Property)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field to DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field (Association)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field to DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field (Association)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field to DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field (Association)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field to DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field (Association)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field to DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Controller::Pawn (Association)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::Field to DKD-PossiblePawnMovement::Jeu_De_Barricade_Eindproject::Model::BarricadePawn (Association)" />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="High" Text="(2) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2013-04-11T13:49:12" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

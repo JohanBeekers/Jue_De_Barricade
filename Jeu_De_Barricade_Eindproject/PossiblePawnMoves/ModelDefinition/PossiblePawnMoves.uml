@@ -27,18 +27,6 @@
         isAbstract="false"
         isLeaf="false"
         isReentrant="false">
-        <ownedCommentsInternal>
-          <comment
-            Id="7443de63-7bfe-4c16-ae9f-6d6f3f68dea0">
-            <body>Zie: PossiblePawnMovement</body>
-            <annotatedElements>
-              <behaviorExecutionSpecificationMoniker
-                Id="e8ab976a-8499-42fb-821a-6692d4e96c39"
-                LastKnownName="BehaviorExecutionSpecification2"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </annotatedElements>
-          </comment>
-        </ownedCommentsInternal>
         <fragments>
           <behaviorExecutionSpecification
             Id="e399cfe8-14b9-417a-8619-e2cd745768d2"
@@ -1095,6 +1083,10 @@
                 Id="7fd7ea8f-4f71-46cb-822a-bf2bfead249c"
                 LastKnownName="OperandOccurrenceSpecification23"
                 LastKnownLocation="PossiblePawnMoves.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="9484e8aa-c78e-4bdb-bbb2-2459448aa522"
+                LastKnownName="InteractionUseOccurrenceSpecification5"
+                LastKnownLocation="PossiblePawnMoves.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="64e8963f-cf1c-4bd9-91d6-d4cfaec9a5fd"
                 LastKnownName="OperandOccurrenceSpecification24"
@@ -1256,6 +1248,26 @@
             </covered>
           </messageOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="94de33d7-6d6d-412f-9d3e-d5a6012dc1d8"
+            name="OperandOccurrenceSpecification109">
+            <covered>
+              <lifelineMoniker
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="d9101e01-4e94-45ac-a3bf-495b64602352"
+            name="OperandOccurrenceSpecification127">
+            <covered>
+              <lifelineMoniker
+                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
+                LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="f10add94-723f-4b84-9423-ea7ff549e853"
             name="OperandOccurrenceSpecification25">
             <covered>
@@ -1285,23 +1297,57 @@
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="94de33d7-6d6d-412f-9d3e-d5a6012dc1d8"
-            name="OperandOccurrenceSpecification109">
+          <interactionUse
+            Id="7c1e5e15-4726-44d6-b2c5-b59dd0546a71"
+            name="SD: PossiblePawnMovement">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+              <lifelineMoniker
+                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </coveredLifelines>
+            <interactionUseOccurrenceSpecifications>
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="9484e8aa-c78e-4bdb-bbb2-2459448aa522"
+                LastKnownName="InteractionUseOccurrenceSpecification5"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="48482227-7971-44e0-96f2-74ec07c2abe4"
+                LastKnownName="InteractionUseOccurrenceSpecification6"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </interactionUseOccurrenceSpecifications>
+          </interactionUse>
+          <interactionUseOccurrenceSpecification
+            Id="9484e8aa-c78e-4bdb-bbb2-2459448aa522"
+            name="InteractionUseOccurrenceSpecification5">
             <covered>
               <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="d9101e01-4e94-45ac-a3bf-495b64602352"
-            name="OperandOccurrenceSpecification127">
+          </interactionUseOccurrenceSpecification>
+          <interactionUseOccurrenceSpecification
+            Id="48482227-7971-44e0-96f2-74ec07c2abe4"
+            name="InteractionUseOccurrenceSpecification6">
             <covered>
               <lifelineMoniker
-                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
-                LastKnownName=": Dice"
+                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </interactionUseOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1d6f8d13-d187-4e26-9f4b-28cbc6f38b89"
+            name="OperandOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1312,6 +1358,16 @@
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f52cf592-c2fb-4bb2-a58c-9f4850edb5f2"
+            name="OperandOccurrenceSpecification110">
+            <covered>
+              <lifelineMoniker
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1336,22 +1392,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="f52cf592-c2fb-4bb2-a58c-9f4850edb5f2"
-            name="OperandOccurrenceSpecification110">
+            Id="f25f95eb-6c95-41fc-b5f5-5117d1ff11fd"
+            name="OperandOccurrenceSpecification29">
             <covered>
               <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="1d6f8d13-d187-4e26-9f4b-28cbc6f38b89"
-            name="OperandOccurrenceSpecification26">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1362,26 +1408,6 @@
               <lifelineMoniker
                 Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
                 LastKnownName=": Dice"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="3fe32bae-0490-4cbf-a0bf-61aa21e25609"
-            name="OperandOccurrenceSpecification31">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="f25f95eb-6c95-41fc-b5f5-5117d1ff11fd"
-            name="OperandOccurrenceSpecification29">
-            <covered>
-              <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1406,12 +1432,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="c02dbc0a-0ba5-4178-bec2-b56099fd3541"
-            name="OperandOccurrenceSpecification43">
+            Id="3fe32bae-0490-4cbf-a0bf-61aa21e25609"
+            name="OperandOccurrenceSpecification31">
             <covered>
               <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1452,6 +1478,16 @@
               <lifelineMoniker
                 Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
                 LastKnownName=": ViewLevel"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c02dbc0a-0ba5-4178-bec2-b56099fd3541"
+            name="OperandOccurrenceSpecification43">
+            <covered>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1564,12 +1600,12 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="ef5a4951-1426-4ac6-b238-8d4e18b5e1bf"
-            name="OperandOccurrenceSpecification42">
+            Id="d18f56f1-be35-432f-b66b-a9527aafb754"
+            name="OperandOccurrenceSpecification106">
             <covered>
               <lifelineMoniker
-                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
-                LastKnownName=": Pawn"
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1584,6 +1620,16 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="ef5a4951-1426-4ac6-b238-8d4e18b5e1bf"
+            name="OperandOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="ec955248-4343-495b-8ca7-9675d0dddb00"
             name="OperandOccurrenceSpecification124">
             <covered>
@@ -1594,32 +1640,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="d18f56f1-be35-432f-b66b-a9527aafb754"
-            name="OperandOccurrenceSpecification106">
-            <covered>
-              <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="6713fe93-b13d-46e6-93c3-6e8ba3f24843"
             name="OperandOccurrenceSpecification44">
             <covered>
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="998af777-4583-4e9a-8a3e-59618c4a9960"
-            name="OperandOccurrenceSpecification51">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1644,6 +1670,16 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="803ebcbb-99c0-4efb-9a00-487a3aa612c9"
+            name="OperandOccurrenceSpecification47">
+            <covered>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="416f87cc-b51d-44d3-b90b-49e15c2261cc"
             name="OperandOccurrenceSpecification107">
             <covered>
@@ -1654,12 +1690,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="803ebcbb-99c0-4efb-9a00-487a3aa612c9"
-            name="OperandOccurrenceSpecification47">
+            Id="998af777-4583-4e9a-8a3e-59618c4a9960"
+            name="OperandOccurrenceSpecification51">
             <covered>
               <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1714,22 +1750,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="79322cae-4034-486b-ba72-d95e3174680e"
-            name="MessageOccurrenceSpecification32">
-            <covered>
-              <lifelineMoniker
-                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
-                LastKnownName=": Pawn"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="a57447e7-c571-4cc1-a063-2e14c841173a"
             name="MessageOccurrenceSpecification31">
             <covered>
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="79322cae-4034-486b-ba72-d95e3174680e"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
+                LastKnownName=": Pawn"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1880,16 +1916,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="dff73ee4-ba50-4eec-ba10-db5b5657daa6"
-            name="OperandOccurrenceSpecification117">
-            <covered>
-              <lifelineMoniker
-                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
-                LastKnownName=": Dice"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="88e4b57b-2d84-430b-9d3c-abe39355afee"
             name="OperandOccurrenceSpecification99">
             <covered>
@@ -1900,22 +1926,32 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="99e91442-8d31-4300-8b8e-30cbd68a2d19"
-            name="OperandOccurrenceSpecification93">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="5cf2f1d4-8b4f-4c4b-997f-c58fcb25db54"
             name="OperandOccurrenceSpecification83">
             <covered>
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="dff73ee4-ba50-4eec-ba10-db5b5657daa6"
+            name="OperandOccurrenceSpecification117">
+            <covered>
+              <lifelineMoniker
+                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
+                LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="99e91442-8d31-4300-8b8e-30cbd68a2d19"
+            name="OperandOccurrenceSpecification93">
+            <covered>
+              <lifelineMoniker
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1970,16 +2006,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="d6c9a42f-4929-495a-b1c2-46b7874d95f5"
-            name="MessageOccurrenceSpecification44">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="1c214fe8-6ec2-48fb-bd89-aa50eb5c014d"
             name="MessageOccurrenceSpecification43">
             <covered>
@@ -1990,8 +2016,8 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="6bde0de3-f5b2-477f-b0e2-171aa20284ae"
-            name="MessageOccurrenceSpecification45">
+            Id="d6c9a42f-4929-495a-b1c2-46b7874d95f5"
+            name="MessageOccurrenceSpecification44">
             <covered>
               <lifelineMoniker
                 Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
@@ -2006,6 +2032,16 @@
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6bde0de3-f5b2-477f-b0e2-171aa20284ae"
+            name="MessageOccurrenceSpecification45">
+            <covered>
+              <lifelineMoniker
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2048,16 +2084,6 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="42d8f844-d8a6-4038-8f3b-97a90f03d36b"
-            name="OperandOccurrenceSpecification94">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="6fe5fc92-9453-4b24-80c8-aa00d059eaa8"
             name="OperandOccurrenceSpecification100">
             <covered>
@@ -2068,8 +2094,8 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="a5fd6918-cb07-4cc0-98c1-6fcd0da7320e"
-            name="OperandOccurrenceSpecification95">
+            Id="42d8f844-d8a6-4038-8f3b-97a90f03d36b"
+            name="OperandOccurrenceSpecification94">
             <covered>
               <lifelineMoniker
                 Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
@@ -2104,6 +2130,16 @@
               <lifelineMoniker
                 Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
                 LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a5fd6918-cb07-4cc0-98c1-6fcd0da7320e"
+            name="OperandOccurrenceSpecification95">
+            <covered>
+              <lifelineMoniker
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2260,22 +2296,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="af35511f-337c-43fb-9afc-235fea8ff254"
-            name="MessageOccurrenceSpecification68">
-            <covered>
-              <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="3232113f-18f1-425d-b451-71585815da52"
             name="MessageOccurrenceSpecification67">
             <covered>
               <lifelineMoniker
                 Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
                 LastKnownName=": ViewLevel"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="af35511f-337c-43fb-9afc-235fea8ff254"
+            name="MessageOccurrenceSpecification68">
+            <covered>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2368,22 +2404,22 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1bb74f04-2412-4cfd-a9af-939f69d4afe1"
-            name="MessageOccurrenceSpecification72">
-            <covered>
-              <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="2a2d7e6a-4cce-4177-b5a6-76438984521e"
             name="MessageOccurrenceSpecification71">
             <covered>
               <lifelineMoniker
                 Id="42fe822c-fa72-4409-96a8-051691b35b0e"
                 LastKnownName=": WinnerMessage"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1bb74f04-2412-4cfd-a9af-939f69d4afe1"
+            name="MessageOccurrenceSpecification72">
+            <covered>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2424,26 +2460,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="a3b90167-ccae-4c2f-be62-a6abcb9262a0"
-            name="OperandOccurrenceSpecification102">
-            <covered>
-              <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="461986e9-e21d-4759-8f17-6e4e75ebee24"
-            name="OperandOccurrenceSpecification88">
-            <covered>
-              <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="3b063567-c047-4e3d-a76e-95b54bc363d8"
             name="OperandOccurrenceSpecification96">
             <covered>
@@ -2460,6 +2476,26 @@
               <lifelineMoniker
                 Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
                 LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a3b90167-ccae-4c2f-be62-a6abcb9262a0"
+            name="OperandOccurrenceSpecification102">
+            <covered>
+              <lifelineMoniker
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="461986e9-e21d-4759-8f17-6e4e75ebee24"
+            name="OperandOccurrenceSpecification88">
+            <covered>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2628,16 +2664,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="62c8f114-ba16-46c6-b2a5-063757f2408e"
-            name="MessageOccurrenceSpecification73">
-            <covered>
-              <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="4848edf7-97be-413b-a671-390dc35fc5e6"
             name="MessageOccurrenceSpecification74">
             <covered>
@@ -2648,12 +2674,12 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="5f14c6fe-6391-4a83-a093-02247bec1fc4"
-            name="MessageOccurrenceSpecification75">
+            Id="62c8f114-ba16-46c6-b2a5-063757f2408e"
+            name="MessageOccurrenceSpecification73">
             <covered>
               <lifelineMoniker
-                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
-                LastKnownName=": Dice"
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2664,6 +2690,16 @@
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5f14c6fe-6391-4a83-a093-02247bec1fc4"
+            name="MessageOccurrenceSpecification75">
+            <covered>
+              <lifelineMoniker
+                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
+                LastKnownName=": Dice"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -2714,6 +2750,16 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="dfdf0278-0d55-4113-b678-fc94e6cc27bb"
+            name="OperandOccurrenceSpecification122">
+            <covered>
+              <lifelineMoniker
+                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
+                LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="1f696a7e-e097-4d21-8068-70c9acb75375"
             name="OperandOccurrenceSpecification104">
             <covered>
@@ -2726,36 +2772,6 @@
           <operandOccurrenceSpecification
             Id="7e387f9f-0080-404c-a826-2daa612b0f2b"
             name="OperandOccurrenceSpecification98">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="dfdf0278-0d55-4113-b678-fc94e6cc27bb"
-            name="OperandOccurrenceSpecification122">
-            <covered>
-              <lifelineMoniker
-                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
-                LastKnownName=": Dice"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="6443272b-31c3-4b8b-95db-3f65c2ab664d"
-            name="OperandOccurrenceSpecification126">
-            <covered>
-              <lifelineMoniker
-                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
-                LastKnownName=": Dice"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ea93d693-863e-4848-a022-4e13a275b213"
-            name="OperandOccurrenceSpecification52">
             <covered>
               <lifelineMoniker
                 Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
@@ -2784,6 +2800,16 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="ea93d693-863e-4848-a022-4e13a275b213"
+            name="OperandOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="4b3e358c-4a1f-4174-b234-efedcb390330"
             name="OperandOccurrenceSpecification48">
             <covered>
@@ -2794,12 +2820,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="a9729ad3-8fd1-4f75-a267-0dcf0d80486b"
-            name="OperandOccurrenceSpecification112">
+            Id="6443272b-31c3-4b8b-95db-3f65c2ab664d"
+            name="OperandOccurrenceSpecification126">
             <covered>
               <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
+                Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
+                LastKnownName=": Dice"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2824,12 +2850,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="f90ac49b-3e42-4269-8682-c544f25bdf6f"
-            name="OperandOccurrenceSpecification28">
+            Id="a9729ad3-8fd1-4f75-a267-0dcf0d80486b"
+            name="OperandOccurrenceSpecification112">
             <covered>
               <lifelineMoniker
-                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
-                LastKnownName=": Pawn"
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2840,6 +2866,16 @@
               <lifelineMoniker
                 Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
                 LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f90ac49b-3e42-4269-8682-c544f25bdf6f"
+            name="OperandOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
+                LastKnownName=": Pawn"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2990,16 +3026,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="4c732e58-d9df-4708-ae98-fe0111e1f2f3"
-            name="OperandOccurrenceSpecification78">
-            <covered>
-              <lifelineMoniker
-                Id="263d0990-e0da-40d1-bbe0-be9dd7f7f8de"
-                LastKnownName=": BarricadePawn"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="9f625e4f-7ba2-435e-87f1-36f1c3f49940"
             name="OperandOccurrenceSpecification10">
             <covered>
@@ -3010,12 +3036,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="8bfdea7b-438b-4549-82f3-3939d1d232c0"
-            name="OperandOccurrenceSpecification114">
+            Id="41ad60ef-33d6-43a1-b757-51c9cb8a91d4"
+            name="OperandOccurrenceSpecification12">
             <covered>
               <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3040,52 +3066,22 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="41ad60ef-33d6-43a1-b757-51c9cb8a91d4"
-            name="OperandOccurrenceSpecification12">
+            Id="8bfdea7b-438b-4549-82f3-3939d1d232c0"
+            name="OperandOccurrenceSpecification114">
             <covered>
               <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="bf69b2ac-6ea3-4dd6-b575-bce22c9f2dc7"
-            name="OperandOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="984924dc-0e2a-413c-acf5-cf03918b0850"
-            name="OperandOccurrenceSpecification79">
+            Id="4c732e58-d9df-4708-ae98-fe0111e1f2f3"
+            name="OperandOccurrenceSpecification78">
             <covered>
               <lifelineMoniker
                 Id="263d0990-e0da-40d1-bbe0-be9dd7f7f8de"
                 LastKnownName=": BarricadePawn"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="1ec6730e-78e9-45a9-933a-2edc5cf84aaf"
-            name="OperandOccurrenceSpecification19">
-            <covered>
-              <lifelineMoniker
-                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
-                LastKnownName=": Pawn"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="55fe188a-a1db-434e-8f75-f014028d13a3"
-            name="OperandOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
-                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3100,12 +3096,52 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="55fe188a-a1db-434e-8f75-f014028d13a3"
+            name="OperandOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="6acb477d-67a7-4acf-916d-71919bfb35d6"
+                LastKnownName=": ViewLevel"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="984924dc-0e2a-413c-acf5-cf03918b0850"
+            name="OperandOccurrenceSpecification79">
+            <covered>
+              <lifelineMoniker
+                Id="263d0990-e0da-40d1-bbe0-be9dd7f7f8de"
+                LastKnownName=": BarricadePawn"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="bf69b2ac-6ea3-4dd6-b575-bce22c9f2dc7"
+            name="OperandOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="880b268f-9738-4b06-821f-641c2d15b9d9"
+                LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="3b822e00-c76a-4c0e-aaad-102e3999fea7"
             name="OperandOccurrenceSpecification133">
             <covered>
               <lifelineMoniker
                 Id="7a12bdad-89a8-4125-bbe6-e4e24fbab437"
                 LastKnownName=": Dice"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1ec6730e-78e9-45a9-933a-2edc5cf84aaf"
+            name="OperandOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="3737f736-fe7c-4a49-8629-8c930b5c1b8f"
+                LastKnownName=": Pawn"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3662,16 +3698,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="9db1c7ae-f54e-4cd7-b9d8-b4bcc4abc4d3"
-            name="OperandOccurrenceSpecification80">
-            <covered>
-              <lifelineMoniker
-                Id="263d0990-e0da-40d1-bbe0-be9dd7f7f8de"
-                LastKnownName=": BarricadePawn"
-                LastKnownLocation="PossiblePawnMoves.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="78cfb2da-0cb1-4f3f-a014-9899f9f799e7"
             name="OperandOccurrenceSpecification16">
             <covered>
@@ -3692,12 +3718,12 @@
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="5d265410-f7df-47f2-979f-d234b7c7a448"
-            name="OperandOccurrenceSpecification116">
+            Id="9db1c7ae-f54e-4cd7-b9d8-b4bcc4abc4d3"
+            name="OperandOccurrenceSpecification80">
             <covered>
               <lifelineMoniker
-                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
-                LastKnownName=": WinnerMessage"
+                Id="263d0990-e0da-40d1-bbe0-be9dd7f7f8de"
+                LastKnownName=": BarricadePawn"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3718,6 +3744,16 @@
               <lifelineMoniker
                 Id="880b268f-9738-4b06-821f-641c2d15b9d9"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5d265410-f7df-47f2-979f-d234b7c7a448"
+            name="OperandOccurrenceSpecification116">
+            <covered>
+              <lifelineMoniker
+                Id="42fe822c-fa72-4409-96a8-051691b35b0e"
+                LastKnownName=": WinnerMessage"
                 LastKnownLocation="PossiblePawnMoves.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3846,6 +3882,10 @@
               <operandOccurrenceSpecificationMoniker
                 Id="635eaa3b-e496-4bf0-ada5-80f96039d4d0"
                 LastKnownName="OperandOccurrenceSpecification21"
+                LastKnownLocation="PossiblePawnMoves.uml" />
+              <interactionUseOccurrenceSpecificationMoniker
+                Id="48482227-7971-44e0-96f2-74ec07c2abe4"
+                LastKnownName="InteractionUseOccurrenceSpecification6"
                 LastKnownLocation="PossiblePawnMoves.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="dae241fa-6660-43dd-8158-61b6794de229"

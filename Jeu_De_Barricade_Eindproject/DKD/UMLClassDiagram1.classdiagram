@@ -7566,6 +7566,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="9829653f-ae5f-4744-9cfc-13a75680a0a5" />
                 </association>
+                <association Id="f07943a9-eda3-4774-8876-d048d29edac0" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="4d39f782-3ed7-4ea6-9d88-2e0c1520f18d" LastKnownName="ModelLevel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="11173767-1900-4dfd-94c9-912b2fa40e43" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="6b7c2982-9199-4a12-a0ba-7bee029ae549" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2159951e-cd8f-460f-b204-e44af3080845" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="bf8bbd0e-7fb5-4c4a-bb3c-922af35acc4c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="c1faa7f9-f336-4871-8aac-2f7b2e13f16f" />
+                </association>
               </targetEnds>
               <ownedAttributesInternal>
                 <property Id="01719496-e2b9-4616-9289-bb8f83cf6e82" name="APawnMovementOptions" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">

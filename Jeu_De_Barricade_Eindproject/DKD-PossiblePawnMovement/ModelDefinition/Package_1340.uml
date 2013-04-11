@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6500edc9-3ecb-4088-8eb5-81305df8248f"
+  name="Jeu_De_Barricade_Eindproject"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="4743b32f-ad52-4b70-a9c1-74ed467ff430"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DJeu_De_Barricade_Eindproject"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c18a123e-d93d-4409-bb31-9e4596088237"
+        LastKnownName="Controller"
+        LastKnownLocation="Package1_1340.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="062e5351-4a43-4af1-bc86-af661f95cf19"
+        name="MainWindow"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ca358427-27b3-48ea-9d20-207c8cb6b94b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FE:%2FAvans%2FBlok 7%2FGithub%2FJue_De_Barricade%2FJeu_De_Barricade_Eindproject%2FJeu_De_Barricade_Eindproject%2Fbin%2FDebug%2FJeu_De_Barricade_Eindproject.exe&quot; Namespace%3DJeu_De_Barricade_Eindproject Type%3DMainWindow"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7b820490-1437-4fa1-b05b-785e45d0251b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f48ef18-b7a7-4c92-8dca-dc5e60ebd11a">
+                <propertyInstance
+                  Id="e6683e18-68c6-4700-b4e8-6105b8014f5a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="26ade3c5-ed86-4c71-b0c2-5fa8a30ff537">
+                <propertyInstance
+                  Id="235f62c9-a6d2-4f10-8c32-5ae36a91a544"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78836213-6811-4e8a-baaf-062a714885a5">
+                <propertyInstance
+                  Id="5e222c9e-b099-4638-91a1-193eadd13072"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f5165404-3884-417a-a249-2eb52cf31cc8">
+                <propertyInstance
+                  Id="e67adc46-e776-4ac6-b1fc-b8d09468feeb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1f614af-c27b-4df2-af88-7a00ac6ffad3">
+                <propertyInstance
+                  Id="129e7b1d-4016-411b-bcc6-e0fb2a8ee918"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1191d7d0-96ab-41d9-8721-bd14926fe3bb"
+        LastKnownName="Model"
+        LastKnownLocation="Package2_1340.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="92f09134-de1f-44ff-bfb4-a115c9984ae4"
+        LastKnownName="View"
+        LastKnownLocation="Package7_1340.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

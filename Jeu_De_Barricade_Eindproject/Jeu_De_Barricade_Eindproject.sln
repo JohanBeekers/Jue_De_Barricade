@@ -7,13 +7,17 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD", "DKD\DKD.modelproj", 
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD-abstract", "DKD-abstract\DKD-abstract.modelproj", "{A1E7939B-A52E-43E7-88A2-931951EB8756}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD field", "DKD field\DKD field.modelproj", "{105F3F28-1A4D-4361-BDF5-E44C9DB2606D}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD-field", "DKD field\DKD-field.modelproj", "{105F3F28-1A4D-4361-BDF5-E44C9DB2606D}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CreateBoard", "CreateBoard\CreateBoard.modelproj", "{3F9E47B6-A180-4436-8962-7C6338B3E8CC}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SD-CreateBoard", "CreateBoard\SD-CreateBoard.modelproj", "{3F9E47B6-A180-4436-8962-7C6338B3E8CC}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PawnMovement", "PossiblePawnMoves\PawnMovement.modelproj", "{70F912AE-BE4F-4115-B366-76F72CB526B8}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SD-PawnMovement", "PossiblePawnMoves\SD-PawnMovement.modelproj", "{70F912AE-BE4F-4115-B366-76F72CB526B8}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PossiblePawnMovement", "PossiblePawnMovement\PossiblePawnMovement.modelproj", "{A175FBBD-C10F-4530-8015-9955F91EA0A7}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SD-PossiblePawnMovement", "PossiblePawnMovement\SD-PossiblePawnMovement.modelproj", "{A175FBBD-C10F-4530-8015-9955F91EA0A7}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD-PossiblePawnMovement", "DKD-PossiblePawnMovement\DKD-PossiblePawnMovement.modelproj", "{FD44AF8D-4CCB-463E-8EBC-568042BF33DA}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DKD-PawnMovement", "DKD-PawnMovement\DKD-PawnMovement.modelproj", "{1549DCF5-A311-4F8D-9125-613AC51B032A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A175FBBD-C10F-4530-8015-9955F91EA0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD44AF8D-4CCB-463E-8EBC-568042BF33DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD44AF8D-4CCB-463E-8EBC-568042BF33DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD44AF8D-4CCB-463E-8EBC-568042BF33DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD44AF8D-4CCB-463E-8EBC-568042BF33DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1549DCF5-A311-4F8D-9125-613AC51B032A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1549DCF5-A311-4F8D-9125-613AC51B032A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1549DCF5-A311-4F8D-9125-613AC51B032A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1549DCF5-A311-4F8D-9125-613AC51B032A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

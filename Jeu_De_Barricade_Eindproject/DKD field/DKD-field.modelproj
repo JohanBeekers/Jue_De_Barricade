@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{70f912ae-be4f-4115-b366-76f72cb526b8}</ProjectGuid>
+    <ProjectGuid>{105f3f28-1a4d-4361-bdf5-e44c9db2606d}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>PawnMovement</Name>
-    <RootNamespace>PossiblePawnMoves</RootNamespace>
+    <Name>DKD-field</Name>
+    <RootNamespace>DKD field</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -22,15 +22,15 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="PawnMovement.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="PawnMovement.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>PawnMovement.sequencediagram</DependentUpon>
-    </Content>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\PossiblePawnMoves.uml">
+    <Content Include="DKD field.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DKD field.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DKD field.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\DKD field.uml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

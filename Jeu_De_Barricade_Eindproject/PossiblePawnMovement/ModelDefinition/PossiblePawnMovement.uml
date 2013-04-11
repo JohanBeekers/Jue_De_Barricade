@@ -27,9 +27,129 @@
         isAbstract="false"
         isLeaf="false"
         isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="a78fafaf-f6ec-40a9-aba7-4c30a26b30fd">
+            <body>Er word niet gecontroleerd in de richting waar die vandaan komt.</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="8d159e5c-461c-4c44-bb9e-82020486ff32"
+                LastKnownName="BehaviorExecutionSpecification1"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
         <fragments>
           <behaviorExecutionSpecification
-            Id="1fcb1e50-4b52-488d-9c3e-0a8d27fc7b22"
+            Id="b8e2a7a6-90ba-4b2e-bdcd-75f50b449722"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="075ba336-6b93-454d-955c-df0ef7ee6396"
+                LastKnownName=": Field"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="cdf304e4-a60b-4040-80b0-79720e97c4ac"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="babeb60e-ed5a-42f9-8905-96d70f40232f"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="4160aeb6-8cc9-4f75-a302-72d6a46d240e"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f701a73f-3e25-4345-bc0c-ceabf80c2384"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="babeb60e-ed5a-42f9-8905-96d70f40232f"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b12a3f43-43eb-41ff-a707-2d3965b3a8ed"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PossiblePawnMovement.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="075ba336-6b93-454d-955c-df0ef7ee6396"
+                LastKnownName=": Field"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4160aeb6-8cc9-4f75-a302-72d6a46d240e"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="075ba336-6b93-454d-955c-df0ef7ee6396"
+                LastKnownName=": Field"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="33bf0aae-11d0-48e4-ba8a-d8db910aec9e"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
+                LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="89ddae62-dfd3-4794-8ed6-9044d3e00cba"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
+                LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f701a73f-3e25-4345-bc0c-ceabf80c2384"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="075ba336-6b93-454d-955c-df0ef7ee6396"
+                LastKnownName=": Field"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="cdf304e4-a60b-4040-80b0-79720e97c4ac"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b476ee60-d489-4ab8-a65b-094bd924456f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PossiblePawnMovement.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="075ba336-6b93-454d-955c-df0ef7ee6396"
+                LastKnownName=": Field"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="8d159e5c-461c-4c44-bb9e-82020486ff32"
             name="BehaviorExecutionSpecification1">
             <coveredLifelines>
               <lifelineMoniker
@@ -39,34 +159,62 @@
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="f269f496-9961-4401-88bf-75266d26ab50"
+                Id="0e4a95c6-5cbc-47a5-b406-0b930831a756"
                 LastKnownName="ExecutionOccurrenceSpecification2"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="c0c4f7ad-f4b0-41b3-88af-8c7e018bd862"
+                Id="a990dc5f-8809-4deb-bd90-616c962b74e1"
                 LastKnownName="ExecutionOccurrenceSpecification1"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="db20ee03-e7c6-41bb-b8fb-ef2ff3058a7e"
+                Id="e6ef8101-fef6-4b8d-8b6c-d45b8309f755"
                 LastKnownName="MessageOccurrenceSpecification2"
                 LastKnownLocation="PossiblePawnMovement.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="8f4e1a3f-6639-40be-ad07-1e0718cfcd21"
+                LastKnownName="OperandOccurrenceSpecification5"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="bca0d163-8cc4-4e93-9dbc-c61c21844a9a"
+                LastKnownName="OperandOccurrenceSpecification7"
+                LastKnownLocation="PossiblePawnMovement.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="9cea1fd7-e2ef-4cc0-a6f6-8ebc8d9d496b"
+                Id="59ce00cf-f007-413e-b679-dad4d6411936"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0649df2b-82c9-487d-92f4-5c7f470aed3d"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="05b0ee03-19de-4a5d-b534-e84fca6db440"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="cce45bb8-5416-4c4a-9ca0-60425706dc9e"
+                LastKnownName="OperandOccurrenceSpecification8"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="f5ad31b7-5d2f-48a6-ab93-9b9e52bd96a1"
+                LastKnownName="OperandOccurrenceSpecification6"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2aad0b28-e67a-4166-8efd-cbc7e0b6718d"
                 LastKnownName="MessageOccurrenceSpecification3"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="c0c4f7ad-f4b0-41b3-88af-8c7e018bd862"
+            Id="a990dc5f-8809-4deb-bd90-616c962b74e1"
             name="ExecutionOccurrenceSpecification1">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="8915efc0-b32c-4ada-b6d6-e3dbfe7bf992"
+                  Id="49e429f6-06be-415c-b2a2-80d202eca677"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="PossiblePawnMovement.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -79,7 +227,7 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1ceb67bc-7b10-4def-bd55-a3d0a87edda1"
+            Id="755d8970-b8b0-4e03-ae94-c7443c7dd185"
             name="MessageOccurrenceSpecification1">
             <covered>
               <lifelineMoniker
@@ -89,7 +237,7 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="db20ee03-e7c6-41bb-b8fb-ef2ff3058a7e"
+            Id="e6ef8101-fef6-4b8d-8b6c-d45b8309f755"
             name="MessageOccurrenceSpecification2">
             <covered>
               <lifelineMoniker
@@ -98,9 +246,129 @@
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <combinedFragment
+            Id="b6a32ce1-3a6e-4d34-976b-637b16003356"
+            name="CombinedFragment1"
+            interactionOperator="Loop">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="489c1b99-8ab6-4117-9125-9af329a8945d"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                    LastKnownName=": Pawn"
+                    LastKnownLocation="PossiblePawnMovement.uml" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment
+                    Id="26cc85ae-989b-46e5-afd9-8e4fffe8501e"
+                    name="CombinedFragment1"
+                    interactionOperator="Loop">
+                    <coveredLifelines>
+                      <lifelineMoniker
+                        Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                        LastKnownName=": Pawn"
+                        LastKnownLocation="PossiblePawnMovement.uml" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand
+                        Id="48f17441-ca4a-437d-a3a3-51164e858f34"
+                        name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker
+                            Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                            LastKnownName=": Pawn"
+                            LastKnownLocation="PossiblePawnMovement.uml" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint
+                            Id="b48f6a2c-5f0e-424d-8333-bf0346c31eca"
+                            guardText="max. 3 kanten">
+                            <maxInt>
+                              <literalString
+                                Id="029d4bef-5f68-47d6-98f3-27efb988f0cb"
+                                name="LiteralString1" />
+                            </maxInt>
+                            <minInt>
+                              <literalString
+                                Id="1872530a-7a88-467b-a373-b84597302748"
+                                name="LiteralString2" />
+                            </minInt>
+                          </interactionConstraint>
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker
+                            Id="bca0d163-8cc4-4e93-9dbc-c61c21844a9a"
+                            LastKnownName="OperandOccurrenceSpecification7"
+                            LastKnownLocation="PossiblePawnMovement.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="cce45bb8-5416-4c4a-9ca0-60425706dc9e"
+                            LastKnownName="OperandOccurrenceSpecification8"
+                            LastKnownLocation="PossiblePawnMovement.uml" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint
+                    Id="8912a230-bc5f-4a46-983d-f95d4bc16cb8"
+                    guardText="aantal worpen">
+                    <maxInt>
+                      <literalString
+                        Id="49d84b59-b434-4778-9a00-6ac8aa1794cf"
+                        name="LiteralString1" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="f78eb9a6-4b33-49fc-bb9d-b150e2438153"
+                        name="LiteralString2" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="8f4e1a3f-6639-40be-ad07-1e0718cfcd21"
+                    LastKnownName="OperandOccurrenceSpecification5"
+                    LastKnownLocation="PossiblePawnMovement.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="f5ad31b7-5d2f-48a6-ab93-9b9e52bd96a1"
+                    LastKnownName="OperandOccurrenceSpecification6"
+                    LastKnownLocation="PossiblePawnMovement.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="8f4e1a3f-6639-40be-ad07-1e0718cfcd21"
+            name="OperandOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="bca0d163-8cc4-4e93-9dbc-c61c21844a9a"
+            name="OperandOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="9cea1fd7-e2ef-4cc0-a6f6-8ebc8d9d496b"
-            name="MessageOccurrenceSpecification3">
+            Id="59ce00cf-f007-413e-b679-dad4d6411936"
+            name="MessageOccurrenceSpecification33">
             <covered>
               <lifelineMoniker
                 Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
@@ -108,8 +376,102 @@
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b03f0b2f-d0c6-41bd-be4b-597a54dd90a8"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="05b0ee03-19de-4a5d-b534-e84fca6db440"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0649df2b-82c9-487d-92f4-5c7f470aed3d"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f2227862-3533-4570-ac10-1dc29a5ad182"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0649df2b-82c9-487d-92f4-5c7f470aed3d"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6a10e04a-e6b0-4999-81ad-318dd3fd35de"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PossiblePawnMovement.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="feb693ef-3f89-41a5-bc84-1337af12567b"
+            Id="f2227862-3533-4570-ac10-1dc29a5ad182"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="05b0ee03-19de-4a5d-b534-e84fca6db440"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b8f0425f-92e4-4240-8bfd-e833d924caf0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PossiblePawnMovement.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="cce45bb8-5416-4c4a-9ca0-60425706dc9e"
+            name="OperandOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="f5ad31b7-5d2f-48a6-ab93-9b9e52bd96a1"
+            name="OperandOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="14cbcc89-c918-44af-83a8-867987e6af30"
             name="MessageOccurrenceSpecification4">
             <covered>
               <lifelineMoniker
@@ -118,13 +480,23 @@
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </covered>
           </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2aad0b28-e67a-4166-8efd-cbc7e0b6718d"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
+                LastKnownName=": Pawn"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="f269f496-9961-4401-88bf-75266d26ab50"
+            Id="0e4a95c6-5cbc-47a5-b406-0b930831a756"
             name="ExecutionOccurrenceSpecification2">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="e7c89a45-bd42-435b-ba3e-c365c93d7e0e"
+                  Id="c4aea79b-4a6e-483f-9915-48f3add58a0d"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="PossiblePawnMovement.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -303,22 +675,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="a82ea661-0f96-4aa8-ab5b-8d6568abefb5"
-            name="MessageOccurrenceSpecification20">
-            <covered>
-              <lifelineMoniker
-                Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMovement.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="1a9c7a95-2a26-4d05-8b1b-a3d4f8730a62"
             name="MessageOccurrenceSpecification19">
             <covered>
               <lifelineMoniker
                 Id="4e77d947-ff91-4254-91bd-b9eec8a13a28"
                 LastKnownName=": ViewLevel"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a82ea661-0f96-4aa8-ab5b-8d6568abefb5"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -391,16 +763,6 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="9492dfc2-85de-4ed4-a0bd-40368328918c"
-            name="MessageOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
-                LastKnownName=": Game"
-                LastKnownLocation="PossiblePawnMovement.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="1200b173-9e8e-4ac8-938d-f2f69da060ef"
             name="MessageOccurrenceSpecification24">
             <covered>
@@ -411,12 +773,12 @@
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="81c5dac6-85b7-4c3e-8b51-0c4f00fc4587"
-            name="MessageOccurrenceSpecification25">
+            Id="9492dfc2-85de-4ed4-a0bd-40368328918c"
+            name="MessageOccurrenceSpecification23">
             <covered>
               <lifelineMoniker
-                Id="4e77d947-ff91-4254-91bd-b9eec8a13a28"
-                LastKnownName=": ViewLevel"
+                Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
+                LastKnownName=": Game"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -427,6 +789,16 @@
               <lifelineMoniker
                 Id="9168f4c6-d941-4121-90ea-5da1d0dceb3e"
                 LastKnownName=": Game"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="81c5dac6-85b7-4c3e-8b51-0c4f00fc4587"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="4e77d947-ff91-4254-91bd-b9eec8a13a28"
+                LastKnownName=": ViewLevel"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -481,11 +853,19 @@
             lifelineDisplayName=": Game">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="1ceb67bc-7b10-4def-bd55-a3d0a87edda1"
+                Id="33bf0aae-11d0-48e4-ba8a-d8db910aec9e"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="89ddae62-dfd3-4794-8ed6-9044d3e00cba"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="755d8970-b8b0-4e03-ae94-c7443c7dd185"
                 LastKnownName="MessageOccurrenceSpecification1"
                 LastKnownLocation="PossiblePawnMovement.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="feb693ef-3f89-41a5-bc84-1337af12567b"
+                Id="14cbcc89-c918-44af-83a8-867987e6af30"
                 LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="PossiblePawnMovement.uml" />
               <messageOccurrenceSpecificationMoniker
@@ -507,17 +887,33 @@
             </topLevelOccurrences>
           </lifeline>
           <lifeline
+            Id="075ba336-6b93-454d-955c-df0ef7ee6396"
+            name=": Field"
+            isActor="false"
+            lifelineDisplayName=": Field">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="babeb60e-ed5a-42f9-8905-96d70f40232f"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="cdf304e4-a60b-4040-80b0-79720e97c4ac"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
             Id="b47abd08-9c35-45cc-818b-6e91341d10c5"
             name=": Pawn"
             isActor="false"
             lifelineDisplayName=": Pawn">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="c0c4f7ad-f4b0-41b3-88af-8c7e018bd862"
+                Id="a990dc5f-8809-4deb-bd90-616c962b74e1"
                 LastKnownName="ExecutionOccurrenceSpecification1"
                 LastKnownLocation="PossiblePawnMovement.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="f269f496-9961-4401-88bf-75266d26ab50"
+                Id="0e4a95c6-5cbc-47a5-b406-0b930831a756"
                 LastKnownName="ExecutionOccurrenceSpecification2"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </topLevelOccurrences>
@@ -525,39 +921,96 @@
         </lifelines>
         <messages>
           <message
-            Id="293b181e-ec14-4907-a900-4c90c883fe64"
+            Id="d2d12ad5-74d4-4ed0-aa36-d579c60df9e1"
+            name="Field.Pawn()"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="33bf0aae-11d0-48e4-ba8a-d8db910aec9e"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4160aeb6-8cc9-4f75-a302-72d6a46d240e"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="969c5725-a335-4486-a05a-01d8ea98f27b"
+            name="Pawn"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f701a73f-3e25-4345-bc0c-ceabf80c2384"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="89ddae62-dfd3-4794-8ed6-9044d3e00cba"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="393792b4-575d-49f7-b0eb-5fa0ae1e0ed4"
             name="getPossibleMoves()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="1ceb67bc-7b10-4def-bd55-a3d0a87edda1"
+                Id="755d8970-b8b0-4e03-ae94-c7443c7dd185"
                 LastKnownName="MessageOccurrenceSpecification1"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="db20ee03-e7c6-41bb-b8fb-ef2ff3058a7e"
+                Id="e6ef8101-fef6-4b8d-8b6c-d45b8309f755"
                 LastKnownName="MessageOccurrenceSpecification2"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="bb7d5fcc-f519-460c-b63e-1784f653df89"
+            Id="4a1e5c6d-6158-4d55-a3da-77dfcffccd55"
+            name="getPossibleMoves()"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="59ce00cf-f007-413e-b679-dad4d6411936"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f2227862-3533-4570-ac10-1dc29a5ad182"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="PossiblePawnMovement.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="15a65b8d-9189-4150-93ec-0b496fcaba5c"
             name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="9cea1fd7-e2ef-4cc0-a6f6-8ebc8d9d496b"
+                Id="2aad0b28-e67a-4166-8efd-cbc7e0b6718d"
                 LastKnownName="MessageOccurrenceSpecification3"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="feb693ef-3f89-41a5-bc84-1337af12567b"
+                Id="14cbcc89-c918-44af-83a8-867987e6af30"
                 LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="PossiblePawnMovement.uml" />
             </receiveEvent>
@@ -662,16 +1115,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="8915efc0-b32c-4ada-b6d6-e3dbfe7bf992"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e7c89a45-bd42-435b-ba3e-c365c93d7e0e"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
         Id="b14356c0-8edc-4819-a1d2-c09edb64ae23"
         name="ExecutionEvent" />
     </packageHasNamedElement>
@@ -698,6 +1141,36 @@
     <packageHasNamedElement>
       <executionEvent
         Id="aff8bd37-6aee-4d9e-9138-6a7f8c693494"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b12a3f43-43eb-41ff-a707-2d3965b3a8ed"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b476ee60-d489-4ab8-a65b-094bd924456f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="49e429f6-06be-415c-b2a2-80d202eca677"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c4aea79b-4a6e-483f-9915-48f3add58a0d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6a10e04a-e6b0-4999-81ad-318dd3fd35de"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b8f0425f-92e4-4240-8bfd-e833d924caf0"
         name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>

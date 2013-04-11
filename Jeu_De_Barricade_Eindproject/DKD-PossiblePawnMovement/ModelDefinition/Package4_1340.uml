@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b9faa93b-003f-46e1-9231-fac2333e59ff"
+  name="Windows"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ac5b2763-0c00-44c6-b5f4-7ad627d4a5ff"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Windows"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="645348c3-34ef-4578-9041-21a92bd3dbfd"
+        LastKnownName="Shapes"
+        LastKnownLocation="Package5_1340.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="68fea16d-33db-407e-85bb-b403d7240b5b"
+        LastKnownName="Input"
+        LastKnownLocation="Package6_1340.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4603801d-a8a6-481c-bad8-eb661f93b978"
+        LastKnownName="Media"
+        LastKnownLocation="Package_1342.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="84b1defd-db6e-4222-b864-629c0db48661"
+        LastKnownName="Controls"
+        LastKnownLocation="Package1_1342.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ec3db467-de74-477c-8ec9-26a79825889c"
+        LastKnownName="Resources"
+        LastKnownLocation="Package2_1342.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f0342549-8c66-4729-8f9e-6fac4d4176e7"
+        LastKnownName="Markup"
+        LastKnownLocation="Package3_1342.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
